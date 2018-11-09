@@ -1,1 +1,1 @@
-mmshost.github.com
+mmchost.github.com

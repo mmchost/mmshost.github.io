@@ -250,7 +250,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<td class=\"header-cell\" style=\"background:#005B99;\"><a href=\"https://mediosmedical.ro\"><img src=\"images/" + "logo-store.png\" class=\"header-logo\" onContextMenu=\"return false;\"/></a></td>" +
 				"<td class=\"menu-separator\"></td>" +
 				"<td class=\"menu-item\">" +
-				"<a href=\"index.html\">ACAS&#258;</a>" +
+				homeMenu +
 				"</td>" +
 				storeMenu +
 				"<td class=\"menu-item\">" +

@@ -1,0 +1,21 @@
+.hyperlink-default
+{
+	text-decoration:none;
+	color:#000;	
+}
+
+.hyperlink-default:hover
+{
+	text-decoration:underline;
+}
+
+.hyperlink-highlight
+{
+	text-decoration:none;
+	color:#0074BB;
+}
+
+.hyperlink-highlight:hover
+{
+	text-decoration:underline;
+}

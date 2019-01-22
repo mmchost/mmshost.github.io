@@ -131,7 +131,7 @@ function Page_OnResize(imagesPath)
 
 function Page_OnLoad(addCart, showInfoBar, showCookiesBar, isStore, imagesPath, isMainPage) 
 {
-	InitializeComponent(isStore, addCart, imagesPath);
+	InitializeComponent(isStore, addCart, imagesPath, isMainPage);
 	if (showInfoBar)
 	{
 		InitializeInfoBar(imagesPath);
@@ -208,6 +208,11 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	"<a href=\"https://store.mediosmedical.ro\">MAGAZIN</a>" +
 	"</td>";
 	var cartMenu = "";
+	var homeMenu = "<a href=\"index.html\">ACAS&#258;</a>";
+	if (isMainPage)
+	{
+		homeMenu = "<a href=\"#home\">ACAS&#258;</a>";
+	}
 	if (addCart)
 	{
 		cartMenu = 
@@ -222,16 +227,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	}
 	if (isStore)
 	{
-		storeMenu = 
-		"<td class=\"menu-item\">" +
-		"<a href=\"index.html\">PRODUSE</a>" +
-		"</td>";
+		storeMenu = "<td class=\"menu-item\"><a href=\"index.html\">PRODUSE</a></td>";
 		if (isMainPage)
 		{
-			storeMenu = 
-			"<td class=\"menu-item\">" +
-			"<a href=\"#products\">PRODUSE</a>" +
-			"</td>";
+			storeMenu = "<td class=\"menu-item\"><a href=\"#products\">PRODUSE</a></td>";
 		}
 	}
 

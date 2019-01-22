@@ -198,7 +198,7 @@ function CalculateGrandTotal()
 		var quantityCell = document.getElementById("quantityCell");
 		if (quantityCell)
 		{
-			quantityCell.innerHTML = quantityCount;
+			quantityCell.innerHTML = Math.round(quantityCount);
 		}
 		
 		var subTotal = (Math.round(total * 100) / 100);

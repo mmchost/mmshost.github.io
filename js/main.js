@@ -203,8 +203,14 @@ function RefreshPosition()
 
 function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 {
+	var storeString = "Magazin";
+	if (isStore)
+	{
+		storeString = "Produse";
+	}
+	
 	var homeMenu = "<a href=\"./\">{0}</a>";
-	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">MAGAZIN</a>";
+	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">" + storeString.toUpperCase() + "</a>";
 	var cartMenu = "";
 	
 	if (isMainPage)
@@ -225,10 +231,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	}
 	if (isStore)
 	{
-		storeMenu = "<a href=\"./\">PRODUSE</a>";
+		storeMenu = "<a href=\"./\">" + storeString.toUpperCase() + "</a>";
 		if (isMainPage)
 		{
-			storeMenu = "<a href=\"#products\">PRODUSE</a>";
+			storeMenu = "<a href=\"#products\">" + storeString.toUpperCase() + "</a>";
 		}
 	}
 
@@ -284,7 +290,9 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<td class=\"menu-item\">" +
 				"<center><a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a></center>" +
 				"</td>" +
+				"<td class=\"menu-item\">" +
 				storeMenu +
+				"</td>" +
 				"<td class=\"menu-item\">" +
 				"<center><a href=\"#contact\">CONTACT</a></center>" +
 				"</td>" +

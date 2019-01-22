@@ -203,13 +203,13 @@ function RefreshPosition()
 
 function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 {
-	var homeMenu = "<a href=\"./\">ACAS&#258;</a>";
+	var homeMenu = "<a href=\"./\">{0}</a>";
 	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">MAGAZIN</a>";
 	var cartMenu = "";
 	
 	if (isMainPage)
 	{
-		homeMenu = "<a href=\"#home\">ACAS&#258;</a>";
+		homeMenu = "<a href=\"#home\">{0}</a>";
 	}
 	if (addCart)
 	{
@@ -225,10 +225,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	}
 	if (isStore)
 	{
-		storeMenu = "<td class=\"menu-item\"><a href=\"./\">PRODUSE</a></td>";
+		storeMenu = "<a href=\"./\">PRODUSE</a>";
 		if (isMainPage)
 		{
-			storeMenu = "<td class=\"menu-item\"><a href=\"#products\">PRODUSE</a></td>";
+			storeMenu = "<a href=\"#products\">PRODUSE</a>";
 		}
 	}
 
@@ -248,7 +248,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<td class=\"header-cell\" style=\"background:#005B99;\"><a href=\"https://mediosmedical.ro\"><img src=\"images/" + "logo-store.png\" class=\"header-logo\" onContextMenu=\"return false;\"/></a></td>" +
 				"<td class=\"menu-separator\"></td>" +
 				"<td class=\"menu-item\">" +
-				homeMenu +
+				homeMenu.replace("{0}", "ACAS&#258;") +
 				"</td>" +
 				"<td class=\"menu-item\">" +
 				storeMenu +
@@ -278,7 +278,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<tr id=\"main-menu\">" +
 				"<td class=\"menu-item\">" +
 				"<center>" +
-				homeMenu + 
+				homeMenu.replace("{0}", "ACAS&#258;") + 
 				"</center>" +
 				"</td>" +				
 				"<td class=\"menu-item\">" +
@@ -362,12 +362,6 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	var footerMenu = document.getElementById("footerMenu");
 	if (footerMenu)
 	{
-		var storeMenu = "Magazin";
-		if (isStore)
-		{
-			storeMenu = "Produse";
-		}
-	
 		footerMenu.innerHTML = 
 		"<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"font-size:14px; color:#999999; margin-left:10px;\">" +
 		"<tr>" +
@@ -376,7 +370,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		"<table cellpadding=\"0\" cellspacing=\"0\">" +
 		"<tr>" +
 		"<td class=\"footer-menu\">" +
-		homeMenu + 
+		homeMenu.replace("{0}", "Acasa") + 
 		"</td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +		
 		"<td class=\"footer-menu\"><a href=\"https://www.mediosmedical.ro/#exams\">Servicii</a></td>" +

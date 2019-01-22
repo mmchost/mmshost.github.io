@@ -129,7 +129,7 @@ function Page_OnResize(imagesPath)
 	RefreshPosition();
 }
 
-function Page_OnLoad(addCart, showInfoBar, showCookiesBar, isStore, imagesPath) 
+function Page_OnLoad(addCart, showInfoBar, showCookiesBar, isStore, imagesPath, isMainPage) 
 {
 	InitializeComponent(isStore, addCart, imagesPath);
 	if (showInfoBar)
@@ -201,7 +201,7 @@ function RefreshPosition()
 	}
 }
 
-function InitializeComponent(isStore, addCart, imagesPath)
+function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 {
 	var storeMenu = 
 	"<td class=\"menu-item\">" +
@@ -213,7 +213,7 @@ function InitializeComponent(isStore, addCart, imagesPath)
 		cartMenu = 
 		"<td id=\"cartMenuItem\" class=\"menu-item\" style=\"cursor:pointer;\" title=\"Cosul de cumparaturi\">" +
 		"<center>" +
-		"<a href=\"cart.html\" onclick=\"CartButton_Click()\">" +
+		"<a href=\"cart\" onclick=\"CartButton_Click()\">" +
 		"<table cellpadding=\"0\" cellspacing=\"0\"><tr><td>COS&nbsp;</td><td><img class=\"cart-image\" src=\"" + imagesPath + "cart.png\"/>" +
 		"<span class=\"cart-items-count\" id=\"cartitemscount\">99</span></td></tr></table>" +
 		"</a>" +
@@ -224,8 +224,15 @@ function InitializeComponent(isStore, addCart, imagesPath)
 	{
 		storeMenu = 
 		"<td class=\"menu-item\">" +
-		"<a href=\"index.html#products\">PRODUSE</a>" +
+		"<a href=\"index.html\">PRODUSE</a>" +
 		"</td>";
+		if (isMainPage)
+		{
+			storeMenu = 
+			"<td class=\"menu-item\">" +
+			"<a href=\"#products\">PRODUSE</a>" +
+			"</td>";
+		}
 	}
 
 	var header = document.getElementById("header");

@@ -203,12 +203,10 @@ function RefreshPosition()
 
 function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 {
-	var storeMenu = 
-	"<td class=\"menu-item\">" +
-	"<a href=\"https://store.mediosmedical.ro\">MAGAZIN</a>" +
-	"</td>";
+	var homeMenu = "<a href=\"./\">ACAS&#258;</a>";
+	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">MAGAZIN</a>";
 	var cartMenu = "";
-	var homeMenu = "<a href=\"index.html\">ACAS&#258;</a>";
+	
 	if (isMainPage)
 	{
 		homeMenu = "<a href=\"#home\">ACAS&#258;</a>";
@@ -227,7 +225,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	}
 	if (isStore)
 	{
-		storeMenu = "<td class=\"menu-item\"><a href=\"index.html\">PRODUSE</a></td>";
+		storeMenu = "<td class=\"menu-item\"><a href=\"./\">PRODUSE</a></td>";
 		if (isMainPage)
 		{
 			storeMenu = "<td class=\"menu-item\"><a href=\"#products\">PRODUSE</a></td>";
@@ -252,7 +250,9 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<td class=\"menu-item\">" +
 				homeMenu +
 				"</td>" +
+				"<td class=\"menu-item\">" +
 				storeMenu +
+				"</td>" +
 				"<td class=\"menu-item\">" +
 				"<a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a>" +
 				"</td>" +
@@ -277,7 +277,9 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">" +
 				"<tr id=\"main-menu\">" +
 				"<td class=\"menu-item\">" +
-				"<center><a href=\"index.html\">ACAS&#258;</a></center>" +
+				"<center>" +
+				homeMenu + 
+				"</center>" +
 				"</td>" +				
 				"<td class=\"menu-item\">" +
 				"<center><a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a></center>" +
@@ -373,11 +375,15 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		"<td>" +
 		"<table cellpadding=\"0\" cellspacing=\"0\">" +
 		"<tr>" +
-		"<td class=\"footer-menu\"><a href=\"index.html\">Acas&#259;</a></td>" +
+		"<td class=\"footer-menu\">" +
+		homeMenu + 
+		"</td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +		
 		"<td class=\"footer-menu\"><a href=\"https://www.mediosmedical.ro/#exams\">Servicii</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
-		"<td class=\"footer-menu\"><a href=\"#products\">" + storeMenu + "</a></td>" +
+		"<td class=\"footer-menu\">" +
+		storeMenu +
+		"</td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"<td class=\"footer-menu\"><a href=\"#contact\">Contact</a></td>" +
 		"</tr>" +

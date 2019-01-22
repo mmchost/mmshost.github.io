@@ -210,7 +210,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	}
 	
 	var homeMenu = "<a href=\"./\">{0}</a>";
-	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">" + storeString.toUpperCase() + "</a>";
+	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">{0}</a>";
 	var cartMenu = "";
 	
 	if (isMainPage)
@@ -231,10 +231,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	}
 	if (isStore)
 	{
-		storeMenu = "<a href=\"./\">" + storeString.toUpperCase() + "</a>";
+		storeMenu = "<a href=\"./\">{0}</a>";
 		if (isMainPage)
 		{
-			storeMenu = "<a href=\"#products\">" + storeString.toUpperCase() + "</a>";
+			storeMenu = "<a href=\"#products\">{0}</a>";
 		}
 	}
 
@@ -257,7 +257,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				homeMenu.replace("{0}", "ACAS&#258;") +
 				"</td>" +
 				"<td class=\"menu-item\">" +
-				storeMenu +
+				storeMenu.replace("{0}", storeString.toUpperCase()) +
 				"</td>" +
 				"<td class=\"menu-item\">" +
 				"<a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a>" +
@@ -291,7 +291,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<center><a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a></center>" +
 				"</td>" +
 				"<td class=\"menu-item\">" +
-				storeMenu +
+				storeMenu.replace("{0}", storeString.toUpperCase()) +
 				"</td>" +
 				"<td class=\"menu-item\">" +
 				"<center><a href=\"#contact\">CONTACT</a></center>" +
@@ -384,7 +384,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		"<td class=\"footer-menu\"><a href=\"https://www.mediosmedical.ro/#exams\">Servicii</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"<td class=\"footer-menu\">" +
-		storeMenu +
+		storeMenu.replace("{0}", storeString) +
 		"</td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"<td class=\"footer-menu\"><a href=\"#contact\">Contact</a></td>" +

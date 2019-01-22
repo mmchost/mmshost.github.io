@@ -244,7 +244,7 @@ function InitializeComponent(isStore, addCart, imagesPath)
 				"<td class=\"header-cell\" style=\"background:#005B99;\"><a href=\"https://mediosmedical.ro\"><img src=\"images/" + "logo-store.png\" class=\"header-logo\" onContextMenu=\"return false;\"/></a></td>" +
 				"<td class=\"menu-separator\"></td>" +
 				"<td class=\"menu-item\">" +
-				"<a href=\"index.html#home\">ACAS&#258;</a>" +
+				"<a href=\"index.html\">ACAS&#258;</a>" +
 				"</td>" +
 				storeMenu +
 				"<td class=\"menu-item\">" +
@@ -271,7 +271,7 @@ function InitializeComponent(isStore, addCart, imagesPath)
 				"<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">" +
 				"<tr id=\"main-menu\">" +
 				"<td class=\"menu-item\">" +
-				"<center><a href=\"index.html#home\">ACAS&#258;</a></center>" +
+				"<center><a href=\"index.html\">ACAS&#258;</a></center>" +
 				"</td>" +				
 				"<td class=\"menu-item\">" +
 				"<center><a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a></center>" +
@@ -367,7 +367,7 @@ function InitializeComponent(isStore, addCart, imagesPath)
 		"<td>" +
 		"<table cellpadding=\"0\" cellspacing=\"0\">" +
 		"<tr>" +
-		"<td class=\"footer-menu\"><a href=\"#home\">Acas&#259;</a></td>" +
+		"<td class=\"footer-menu\"><a href=\"index.html\">Acas&#259;</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +		
 		"<td class=\"footer-menu\"><a href=\"https://www.mediosmedical.ro/#exams\">Servicii</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
@@ -407,7 +407,7 @@ function InitializeInfoBar(imagesPath)
 		"<td class=\"info-bar-container\">" +
 		"<div class=\"info-bar-content\">" +
 		"<a title=\"" + 
-		"Informatie: In perioada [29.12.2018 - 02.01.2019], la Medios Medical Center sunt zile libere." + 
+		"TBA" + 
 		"\">" + 
 		"Program de lucru pentru perioada [29.12.2018 - 02.01.2019]" + "<br/>" +
 		"24.12.2018, 27.12.2018, 28.12.2018 : 08:30 - 18:00" + "<br/>" +

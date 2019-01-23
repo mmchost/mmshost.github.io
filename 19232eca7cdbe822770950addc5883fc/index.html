@@ -59,7 +59,7 @@ xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function()
 {
     if (this.readyState == 4 && this.status == 200) 
-	{
+    {
         ReadProducts(this);
     }
 };
@@ -70,8 +70,6 @@ window.onload = function()
 {
 	Page_OnLoad(true, true, true, true, "../images/", true);
 
-	AddProducts(products);
-	
 	var prodHeader = document.getElementById("productsHeader");
 	if (prodHeader)
 	{
@@ -102,6 +100,8 @@ function ReadProducts(xml)
 		}
 		products.push(item);
 	}
+	
+	AddProducts(products);
 }
 
 

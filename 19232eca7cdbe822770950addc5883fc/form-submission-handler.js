@@ -357,11 +357,11 @@
 				if (status == "OK")
 				{
 					document.cookie = "cart=";
-					location.href = "../ordercomplette.html";
+					location.href = "ordercomplette";
 				}
 				else			
 				{
-					location.href = "../orderfailed.html";
+					location.href = "orderfailed";
 				}
 			}
 			return;

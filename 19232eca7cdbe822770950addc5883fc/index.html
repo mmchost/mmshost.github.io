@@ -50,6 +50,21 @@
 </head>
 
 <script>
+	
+var products = [];
+var cart = [];
+
+var xhttp;
+xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function()
+{
+    if (this.readyState == 4 && this.status == 200) 
+	{
+        ReadProducts(this);
+    }
+};
+xhttp.open("GET", "products.xml", true);
+xhttp.send();
 
 window.onload = function() 
 {
@@ -71,23 +86,6 @@ window.onload = function()
 	
 	RefreshCartItemsCount();
 };
-
-var products = [];
-var cart = [];
-
-//TODO: READ THESE FROM XML FILE
-
-var xhttp;
-xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function()
-{
-    if (this.readyState == 4 && this.status == 200) 
-	{
-        ReadProducts(this);
-    }
-};
-xhttp.open("GET", "products.xml", true);
-xhttp.send();
 
 function ReadProducts(xml)
 {

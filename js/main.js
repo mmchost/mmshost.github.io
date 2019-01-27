@@ -324,6 +324,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	if (footerCopyright)
 	{
 		footerCopyright.innerHTML = "<p>&#169; 2018 MEDIOS MEDICAL CENTER. Toate drepturile rezervate.</p>";
+		if (isStore)
+		{
+			footerCopyright.innerHTML = "<p>&#169; 2019 MEDIOS ONLINE STORE. Toate drepturile rezervate.</p>";
+		}
 	}
 }
 

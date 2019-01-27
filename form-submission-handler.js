@@ -149,6 +149,8 @@
 		//if (invalidSaddress) { invalidSaddress.style.display = "block"; }
 		//if (saddressBox) { saddressBox.style.borderColor = "red"; }
 		//isValid = false;
+		if (invalidSaddress) { invalidSaddress.style.display = "none"; }
+		if (saddressBox) { saddressBox.style = null; saddressBox.className = "textbox"; }
 	}
 	else
 	{
@@ -235,6 +237,8 @@
 		//if (invalidAddress) { invalidAddress.style.display = "block"; }
 		//if (addressBox) { addressBox.style.borderColor = "red"; }
 		//isValid = false;
+		if (invalidAddress) { invalidAddress.style.display = "none"; }
+		if (addressBox) { addressBox.style = null; addressBox.className = "textbox"; }
 	}
 	else
 	{
@@ -251,6 +255,8 @@
 		//if (invalidPostalcode) { invalidPostalcode.style.display = "block"; }
 		//if (postalcodeBox) { postalcodeBox.style.borderColor = "red"; }
 		//isValid = false;
+		if (invalidPostalcode) { invalidPostalcode.style.display = "none"; }
+		if (postalcodeBox) { postalcodeBox.style = null; postalcodeBox.className = "textbox"; }
 	}
 	else
 	{

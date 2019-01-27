@@ -3,7 +3,7 @@
 <products>
 	<product>
 		<id>DIHL2025</id>
-		<name>Filme radiologice FujiFilm DI-HL 20x25 cm</name>
+		<name>Filme radiologice FujiFilm DI-HL 20x25 cm (8x10 inch) Blue base</name>
 		<available>true</available>
 		<price>0</price>
 		<quantity>1</quantity>
@@ -22,7 +22,7 @@
 		]
 		</details>
 		<description>
-		Filme radiologice FujiFilm DI-HL 20x25 cm (8x10 inch) <br/>
+		Filme radiologice FujiFilm DI-HL 20x25 cm (8x10 inch) Blue base <br/>
 		- Calitate superioara a imaginii <br/>
 		- Rapiditate termala a developarii <br/>
 		- Filmele radiologide DI-HL se pot folosi pentru: <br/>
@@ -35,7 +35,7 @@
 	</product>
 	<product>
 		<id>DIHL3543</id>
-		<name>Filme radiologice FujiFilm DI-HL 35x43 cm</name>
+		<name>Filme radiologice FujiFilm DI-HL 35x43 cm (14x17 inch) Blue base</name>
 		<available>true</available>
 		<price>0</price>
 		<quantity>1</quantity>
@@ -54,7 +54,7 @@
 		]
 		</details>
 		<description>
-		Filme radiologice FujiFilm DI-HL 20x25 cm (8x10 inch) <br/>
+		Filme radiologice FujiFilm DI-HL 35x43 cm (14x17 inch) Blue base <br/>
 		- Calitate superioara a imaginii <br/>
 		- Rapiditate termala a developarii <br/>
 		- Filmele radiologide DI-HL se pot folosi pentru: <br/>

@@ -71,7 +71,7 @@
 	background:#E6E6E6;	
 }
 
-@media screen and (max-width:990px)
+@media screen and (max-width:1300px)
 {
 	.priceTable
 	{
@@ -159,7 +159,7 @@ window.onload = function()
 			var priceCell = document.getElementById("priceCell");
 			if (priceCell)
 			{
-				priceCell.innerHTML = product[0]["price"] + " Lei";
+				priceCell.innerHTML = "<a class=\"hyperlink-highlight\" style=\"font-size:18px;\" href=\"\">requestoffer</a>";
 			}
 			
 			var availableCell = document.getElementById("availableCell");			
@@ -248,7 +248,7 @@ function AddItem()
 						<tr>
 							<td>
 								<table cellpadding="0" cellspacing="0" style="display:inline-table; float:left;"><tr><td id="productImage" style="padding:5px 5px 5px 5px;"></td></tr></table>								
-								<table id="detailsTable" cellpadding="0" cellspacing="0" style="display:inline-table; margin:10px 0px 15px 5px;"></table>
+								<table id="detailsTable" cellpadding="0" cellspacing="0" style="display:inline-table; margin:10px 0px 15px 5px; max-width:560px;"></table>
 							</td>
 						</tr>
 					</table>

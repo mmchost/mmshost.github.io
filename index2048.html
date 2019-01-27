@@ -119,8 +119,7 @@ function AddProducts(list)
 							 "<tr><td align=\"center\" class=\"item-image-cell\">" + detailsLink + "<div style=\"background:transparent; width:288px; height:150px; position:absolute;\"></div><img class=\"item-image\" src=\"" + list[i]["image"] + "\"/></a></td></tr>" +
 							 "<tr><td align=\"center\" class=\"item-name-cell\">" + detailsLink + list[i]["name"] + "</a></td></tr>" +
 							 "<tr><td align=\"center\" style=\"padding-bottom:10px;\"><a style=\"font-size:13px;\">Cod produs: " + list[i]["id"] + "</a></td></tr>" +
-							 "<tr><td align=\"center\"><button disabled=\"true\" " + isavailable + "</button></td></tr>" +
-							 "<tr><td align=\"center\" class=\"item-price-cell\">" + list[i]["price"] + " Lei</td></tr>" +
+							 "<tr><td align=\"center\"><button disabled=\"true\" " + isavailable + "</button></td></tr>" +							 
 							 "<tr><td align=\"center\" class=\"item-button-cell\"><button " + addbuttondisable + " style=\"width:150px;\" onclick=\"AddItem(" + i + ")\">Cere oferta</button></td></tr>" + "</table>";
 		}
 	}

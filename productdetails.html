@@ -159,7 +159,7 @@ window.onload = function()
 			var priceCell = document.getElementById("priceCell");
 			if (priceCell)
 			{
-				priceCell.innerHTML = "<a class=\"hyperlink-highlight\" style=\"font-size:18px;\" onclikc=\"AddItem()\">Cere oferta</a>";
+				priceCell.innerHTML = "<a class=\"hyperlink-highlight\" style=\"font-size:18px; cursor:pointer;\" onclick=\"AddItem()\">Cere oferta</a>";
 			}
 			
 			var availableCell = document.getElementById("availableCell");			
@@ -217,7 +217,6 @@ function AddItem()
 	//RefreshCartItemsCount();
 	
 	document.cookie = "cart=" + btoa(JSON.stringify(cart));
-	//ShowMessage("Adaugat in cosul de cumparaturi!");
 	
 	RequestOffer();
 }

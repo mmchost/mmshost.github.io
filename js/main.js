@@ -32,31 +32,17 @@ function Page_OnResize(imagesPath)
 	var banner480 = "<img style=\"border-style:none; max-width:480px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/480x320.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
 	var banner320 = "<img style=\"border-style:none; max-width:320px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/320x320.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
 	var banner240 = "<img style=\"border-style:none; max-width:240px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/240x320.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
-
-	var map1920 = "<img style=\"border-style:none; max-width:1920px; max-height:480px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "map/1920x480.png\" alt=\"radiologie dentara cluj, radiografii dentare cluj, medios medical center cluj\"/>";
-	var map1280 = "<img style=\"border-style:none; max-width:1280px; max-height:480px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "map/1280x480.png\" alt=\"radiologie dentara cluj, radiografii dentare cluj, medios medical center cluj\"/>";
-	var map960 = "<img style=\"border-style:none; max-width:960px; max-height:480px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "map/960x480.png\" alt=\"radiologie dentara cluj, radiografii dentare cluj, medios medical center cluj\"/>";
-	var map640 = "<img style=\"border-style:none; max-width:640px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "map/640x320.png\" alt=\"radiologie dentara cluj, radiografii dentare cluj, medios medical center cluj\"/>";
-	var map480 = "<img style=\"border-style:none; max-width:480px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "map/480x320.png\" alt=\"radiologie dentara cluj, radiografii dentare cluj, medios medical center cluj\"/>";
-	var map320 = "<img style=\"border-style:none; max-width:320px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "map/320x320.png\" alt=\"radiologie dentara cluj, radiografii dentare cluj, medios medical center cluj\"/>";
-	var map240 = "<img style=\"border-style:none; max-width:240px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "map/240x320.png\" alt=\"radiologie dentara cluj, radiografii dentare cluj, medios medical center cluj\"/>";
 	
 	var bannerID = "banner";
-	var mapID = "map";
     var w = window.innerWidth || document.documentElement.clientWidth || documentBody.clientWidth;    
 	
 	var banner = document.getElementById(bannerID);
-	var map = document.getElementById(mapID)
 		
     if (w>=1280)
 	{
 		if (banner)
 		{
 			banner.innerHTML = banner1920;
-		}
-		if (map)
-		{		
-			map.innerHTML = map1920;
 		}
 	}
     if (w<=1280)
@@ -65,20 +51,12 @@ function Page_OnResize(imagesPath)
 		{
 			banner.innerHTML = banner1280;
 		}
-		if (map)
-		{
-			map.innerHTML = map1280;
-		}
     }
     if (w<=960)
     {
 		if (banner)
 		{
 			banner.innerHTML = banner960;
-		}
-		if (map)
-		{
-			map.innerHTML = map960;
 		}
     }
 	if (w<=640)
@@ -87,20 +65,12 @@ function Page_OnResize(imagesPath)
 		{
 			banner.innerHTML = banner640;
 		}
-		if (map)
-		{
-			map.innerHTML = map640;
-		}
     }
 	if (w<=480)
     {
 		if (banner)
 		{
 			banner.innerHTML = banner480;
-		}
-		if (map)
-		{
-			map.innerHTML = map480;
 		}
     }
 	if (w<=320)
@@ -109,20 +79,12 @@ function Page_OnResize(imagesPath)
 		{
 			banner.innerHTML = banner320;
 		}
-		if (map)
-		{
-			map.innerHTML = map320;
-		}
     }
 	if (w<=240)
     {
 		if (banner)
 		{
 			banner.innerHTML = banner240;
-		}
-		if (map)
-		{
-			map.innerHTML = map240;
 		}
     }
 	
@@ -305,6 +267,17 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<!-- <![endif]-->";
 			}
 		}
+	}
+	
+	var map  = document.getElementById("map");
+	if (map)
+	{
+		var imageName = "medios-center-map.png";
+		if (isStore)
+		{
+			imageName = "medios-store-map.png";
+		}
+		map.innerHTML = "<div style=\"background-image:url(" + imagesPath + "/map/" + imageName + "); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit; outline:1px solid #F7F7F7;\"></div>";
 	}
 		
 	var footerContact = document.getElementById("footerContact");

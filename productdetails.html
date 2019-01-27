@@ -159,7 +159,7 @@ window.onload = function()
 			var priceCell = document.getElementById("priceCell");
 			if (priceCell)
 			{
-				priceCell.innerHTML = "<a class=\"hyperlink-highlight\" style=\"font-size:18px;\" href=\"\">requestoffer</a>";
+				priceCell.innerHTML = "<a class=\"hyperlink-highlight\" style=\"font-size:18px;\" onclikc=\"AddItem()\">Cere oferta</a>";
 			}
 			
 			var availableCell = document.getElementById("availableCell");			
@@ -171,7 +171,7 @@ window.onload = function()
 			var buttonCell = document.getElementById("buttonCell");
 			if (buttonCell)
 			{
-				buttonCell.innerHTML = "<button class=\"button-default\" onclick=\"AddItem()\"" + addbuttondisable + ">Adauga in Cos</button>";
+				buttonCell.innerHTML = "<button class=\"button-default\" onclick=\"AddItem()\"" + addbuttondisable + ">Cere oferta</button>";
 			}
 		}
 		
@@ -208,16 +208,23 @@ function AddItem()
 	{
 		if (cart[i]["id"] === product[0]["id"])
 		{
-			ShowMessage("Exista deja in cosul de cumparaturi!");
+			RequestOffer();
 			return;
 		}
 	}
 	
 	cart.push(product[0]);
-	RefreshCartItemsCount();
+	//RefreshCartItemsCount();
 	
 	document.cookie = "cart=" + btoa(JSON.stringify(cart));
-	ShowMessage("Adaugat in cosul de cumparaturi!");
+	//ShowMessage("Adaugat in cosul de cumparaturi!");
+	
+	RequestOffer();
+}
+	
+function RequestOffer()
+{
+	window.location = "requestoffer";
 }
 
 </script>

@@ -24,70 +24,21 @@ function RefreshCartItemsCount()
 
 function Page_OnResize(imagesPath)
 {
-	//data:image/png;base64,
-    var banner1920 = "<img style=\"border-style:none; max-width:1920px; max-height:480px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/1920x480.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
-	var banner1280 = "<img style=\"border-style:none; max-width:1280px; max-height:480px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/1280x480.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
-	var banner960 = "<img style=\"border-style:none; max-width:960px; max-height:480px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/960x480.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
-	var banner640 = "<img style=\"border-style:none; max-width:640px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/640x320.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
-	var banner480 = "<img style=\"border-style:none; max-width:480px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/480x320.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
-	var banner320 = "<img style=\"border-style:none; max-width:320px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/320x320.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
-	var banner240 = "<img style=\"border-style:none; max-width:240px; max-height:320px; width:100%; pointer-events:none;\" src=\"" + imagesPath + "banner/240x320.png\" alt=\"radiografii dentare, tomografii 3d cbct, radiologie dentara\"/>";
+	var w = window.innerWidth || document.documentElement.clientWidth || documentBody.clientWidth;    
+	var banner = document.getElementById("banner");
 	
-	var bannerID = "banner";
-    var w = window.innerWidth || document.documentElement.clientWidth || documentBody.clientWidth;    
-	
-	var banner = document.getElementById(bannerID);
-		
-    if (w>=1280)
+	if (w>=721)
 	{
-		if (banner)
-		{
-			banner.innerHTML = banner1920;
-		}
+		banner.innerHTML = "<div style=\"background-image:url(1920.png); height:480px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
 	}
-    if (w<=1280)
-    {
-		if (banner)
-		{
-			banner.innerHTML = banner1280;
-		}
-    }
-    if (w<=960)
-    {
-		if (banner)
-		{
-			banner.innerHTML = banner960;
-		}
-    }
-	if (w<=640)
-    {
-		if (banner)
-		{
-			banner.innerHTML = banner640;
-		}
-    }
-	if (w<=480)
-    {
-		if (banner)
-		{
-			banner.innerHTML = banner480;
-		}
-    }
-	if (w<=320)
-    {	
-		if (banner)
-		{
-			banner.innerHTML = banner320;
-		}
-    }
-	if (w<=240)
-    {
-		if (banner)
-		{
-			banner.innerHTML = banner240;
-		}
-    }
-	
+	if (w<=1080)
+	{
+		banner.innerHTML = "<div style=\"background-image:url(720.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
+	}
+	if (w<=720)
+	{
+		banner.innerHTML = "<div style=\"background-image:url(320.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
+	}
 	RefreshPosition();
 }
 

@@ -146,9 +146,9 @@
 	var saddressBox = document.getElementById("socialaddress");
 	if (data.Sediu_social.length == 0)
 	{	
-		if (invalidSaddress) { invalidSaddress.style.display = "block"; }
-		if (saddressBox) { saddressBox.style.borderColor = "red"; }
-		isValid = false;
+		//if (invalidSaddress) { invalidSaddress.style.display = "block"; }
+		//if (saddressBox) { saddressBox.style.borderColor = "red"; }
+		//isValid = false;
 	}
 	else
 	{
@@ -232,9 +232,9 @@
 	var addressBox = document.getElementById("address");
 	if (data.Adresa_de_livrare.length == 0)
 	{	
-		if (invalidAddress) { invalidAddress.style.display = "block"; }
-		if (addressBox) { addressBox.style.borderColor = "red"; }
-		isValid = false;
+		//if (invalidAddress) { invalidAddress.style.display = "block"; }
+		//if (addressBox) { addressBox.style.borderColor = "red"; }
+		//isValid = false;
 	}
 	else
 	{
@@ -248,9 +248,9 @@
 	var postalcodeBox = document.getElementById("postalcode");
 	if (data.Cod_Postal.length == 0)
 	{	
-		if (invalidPostalcode) { invalidPostalcode.style.display = "block"; }
-		if (postalcodeBox) { postalcodeBox.style.borderColor = "red"; }
-		isValid = false;
+		//if (invalidPostalcode) { invalidPostalcode.style.display = "block"; }
+		//if (postalcodeBox) { postalcodeBox.style.borderColor = "red"; }
+		//isValid = false;
 	}
 	else
 	{
@@ -279,7 +279,7 @@
 	//phone
 	var invalidTel = document.getElementById("tel-invalid");
 	var telBox = document.getElementById("tel");
-	if (data.Numar_de_Telefon.length !== 10)
+	if (data.Numar_de_Telefon.length < 10 || data.Numar_de_Telefon.length > 12)
 	{
 		if (invalidTel) { invalidTel.style.display = "block"; }
 		if (telBox) { telBox.style.borderColor = "red"; }

@@ -5,6 +5,7 @@
 		<id>DIHL2025</id>
 		<name>Filme radiologice FujiFilm DI-HL 20x25 cm</name>
 		<available>true</available>
+		<price>0</price>
 		<quantity>1</quantity>
 		<image>product-images/filme-radiologice-fuji-di-hl-20x25.png</image>
 		<details>
@@ -41,6 +42,7 @@
 		<id>DIHL3543</id>
 		<name>Filme radiologice FujiFilm DI-HL 35x43 cm</name>
 		<available>true</available>
+		<price>0</price>
 		<quantity>1</quantity>
 		<image>product-images/filme-radiologice-fuji-di-hl-35x43.png</image>
 		<details>

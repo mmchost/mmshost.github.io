@@ -29,15 +29,15 @@ function Page_OnResize(imagesPath)
 	
 	if (w>=721)
 	{
-		banner.innerHTML = "<div style=\"background-image:url(1920.png); height:480px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
+		banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "1920.png); height:480px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
 	}
 	if (w<=1080)
 	{
-		banner.innerHTML = "<div style=\"background-image:url(720.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
+		banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "720.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
 	}
 	if (w<=720)
 	{
-		banner.innerHTML = "<div style=\"background-image:url(320.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
+		banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "320.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
 	}
 	RefreshPosition();
 }
@@ -314,7 +314,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		"</table>" +
 		"<table cellpadding=\"0\" cellspacing=\"0\" style=\"display:inline-table;\">" +
 		"<tr>" +
-		"<td class=\"footer-menu\"><a href=\"https://www.anpc.gov.ro\">ANPC</a></td>" +
+		"<td class=\"footer-menu\"><a href=\"www.anpc.gov.ro\">ANPC</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"<td class=\"footer-menu\"><a href=\"returpolicy\">Politica de retur</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +

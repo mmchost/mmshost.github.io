@@ -299,25 +299,28 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		"<tr>" +
 		"<td><img class=\"logo-footer\" src=\"" + imagesPath + "logo_small.png\" alt=\"Medios Online Store\"/></td>" +
 		"<td>" +
-		"<table cellpadding=\"0\" cellspacing=\"0\">" +
-		"<tr>" +
-		"<td class=\"footer-menu\">" +
-		homeMenu.replace("{0}", "Acasa") + 
-		"</td>" +
+		"<table cellpadding=\"0\" cellspacing=\"0\" style=\"display:inline-table;\">" +
+		"<tr><td class=\"footer-menu\">" + homeMenu.replace("{0}", "Acasa") + "</td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +		
 		"<td class=\"footer-menu\"><a href=\"https://www.mediosmedical.ro/#exams\">Servicii</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
-		"<td class=\"footer-menu\">" +
-		storeMenu.replace("{0}", storeString) +
-		"</td>" +
+		"<td class=\"footer-menu\">" + storeMenu.replace("{0}", storeString) + "</td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"<td class=\"footer-menu\"><a href=\"#contact\">Contact</a></td>" +
+		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
+		"<td class=\"footer-menu\"><a href=\"rgpd\">RGPD</a></td>" +
+		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"</tr>" +
 		"</table>" +
-		"</td>" +
-		"<td width=\"100%\"></td>" +
-		"</tr>" +
-		"</table>";
+		"<table cellpadding=\"0\" cellspacing=\"0\" style=\"display:inline-table;\">" +
+		"<tr>" +
+		"<td class=\"footer-menu\"><a href=\"https://www.anpc.gov.ro\">ANPC</a></td>" +
+		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
+		"<td class=\"footer-menu\"><a href=\"returpolicy\">Politica de retur</a></td>" +
+		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
+		"<td class=\"footer-menu\"><a href=\"cookiespolicy\">Politica de cookies</a></td>" +		
+		"</tr></table>" +
+		"</td></tr></table>";
 	}
 	
 	var footerCopyright = document.getElementById("footer-copyright-ws");

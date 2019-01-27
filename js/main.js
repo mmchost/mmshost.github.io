@@ -186,7 +186,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<!--[if gt IE 8]> <!-- -->" +
 				"<table class=\"header-menu\" cellpadding=\"0\" cellspacing=\"0\">" +
 				"<tr>" +
-				"<td class=\"header-cell\"><a href=\"https://store.mediosmedical.ro\"><img class=\"header-logo\" src=\"" + imagesPath + "logo-store.png\" alt=\"Medios Online Store\"/></a></td>" +
+				"<td class=\"header-cell\"><a href=\"https://store.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo-store.png\" alt=\"Medios Online Store\"/></a></td>" +
 				"<td class=\"menu-separator\"></td>" +
 				"</tr>" +
 				"</table>" +

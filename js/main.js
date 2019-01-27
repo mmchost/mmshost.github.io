@@ -41,9 +41,9 @@ function Page_OnResize(imagesPath)
 		if (w<=720)
 		{
 			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/320.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
-		}
-		RefreshPosition();
+		}		
 	}
+	RefreshPosition();
 }
 
 function Page_OnLoad(addCart, showInfoBar, showCookiesBar, isStore, imagesPath, isMainPage) 

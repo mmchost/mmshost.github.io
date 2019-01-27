@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products>
+	<product>
+		<id>DIHL2025</id>
+		<name>Filme radiologice FUJI DI-HL 20 x 25 cm</name>
+		<available>true</available>
+		<quantity>1</quantity>
+		<image>product-images/filme-radiologice-fuji-di-hl-20x25.jpg</image>
+		<details>
+		[
+			"Producator: FUJIFILM",
+			"Dimensiuni: 20 x 25 cm (8″ × 10″)",
+			"Ambalaj: 150 filme / cutie",
+			"Tehnologie printare: Laser",
+		]
+		</details>
+		<description>Filme radiologice / imagistica medicala FUJI DI-HL
+
+Filme laser. Developare uscata.
+
+Filme pentru imprimantele FUJI DRYPIX: 4000, 7000, PLUS, SMART, PRIMA
+
+FUJI DI-HL 20 × 25 cm (8″ × 10″) - 150 filme/cutie</description>
+	</product>
+	<product>
+		<id>DIHL3543</id>
+		<name>Filme radiologice FUJI DI-HL 35 x 43 cm</name>
+		<available>true</available>
+		<quantity>1</quantity>
+		<image>product-images/filme-radiologice-fuji-di-hl-35x43.jpg</image>
+		<details>
+		[
+			"Producator: FUJIFILM",
+			"Dimensiuni: 35 x 43 cm (14″ × 17″)",
+			"Ambalaj: 150 filme / cutie",
+			"Tehnologie printare: Laser",
+		]
+		</details>
+		<description>Filme radiologice / imagistica medicala FUJI DI-HL
+
+Filme laser. Developare uscata.
+
+Filme pentru imprimantele FUJI DRYPIX: 4000, 7000, PLUS, SMART, PRIMA
+
+FUJI DI-HL 35 × 43 cm (14″ × 17″) - 150 filme/cutie</description>
+	</product>
+</products>

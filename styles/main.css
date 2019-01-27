@@ -133,6 +133,16 @@ body
 	font-size:12px;
 }
 
+.text-content
+{
+	padding-left:150px;
+	padding-right:150px;
+	text-align:left;
+	padding-top:32px;
+	padding-bottom:32px;
+	background:white;
+}
+
 
 
 @media screen and (max-width:990px)
@@ -187,6 +197,12 @@ body
 	{
 		font-size:10px;
 	}
+	
+	.text-content
+	{
+		padding-left:50px;
+		padding-right:50px;
+	}
 }
 
 @media screen and (max-width:380px)
@@ -198,5 +214,11 @@ body
 	.exams-name
 	{
 		font-size:12px;
-	}	
+	}
+	
+	.text-content
+	{
+		padding-left:20px;
+		padding-right:20px;
+	}
 }

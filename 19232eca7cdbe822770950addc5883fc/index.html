@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro-ro">
 <head>
 <meta name="robots" content="noindex" />
 
@@ -68,7 +68,7 @@ xhttp.send();
 
 window.onload = function() 
 {
-	Page_OnLoad(true, true, true, true, "../images/", true);
+	Page_OnLoad(true, false, true, true, "../images/", true);
 
 	var prodHeader = document.getElementById("productsHeader");
 	if (prodHeader)
@@ -155,10 +155,10 @@ function AddItem(index)
 
 </script>
 
-<body onresize="Page_OnResize()">
+<body onresize="Page_OnResize('../images/')">
 
 <!--[if lt IE 9]>
-<meta http-equiv="refresh" content="0; url=oldbrowser.html" />
+<meta http-equiv="refresh" content="0; url=oldbrowser" />
 <![endif]-->
 
 <!--[if gt IE 8]> <!-- -->

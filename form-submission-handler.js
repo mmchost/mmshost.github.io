@@ -110,18 +110,6 @@
     var form = event.target || event.srcElement;
     var data = getFormData(form);         // get the values submitted in the form
 	
-	var method2Radio = document.getElementById("method2");
-	if (method2Radio)
-	{
-		var payMethodStr = "Ramburs la curier";			
-		if (method2Radio.checked)
-		{
-			payMethodStr = "Ordin de plata";
-		}
-		//var payMethod = {Modalitate_de_plata:payMethodStr};
-		data.Modalitate_de_plata = payMethodStr;
-	}
-	
 	//validations
 	var isValid = true;
 	
@@ -140,24 +128,6 @@
 		if (nameBox) { nameBox.style = null; nameBox.className = "textbox"; }
 	}
 	//end name
-	
-	//saddress
-	var invalidSaddress = document.getElementById("saddress-invalid");
-	var saddressBox = document.getElementById("socialaddress");
-	if (data.Sediu_social.length == 0)
-	{	
-		//if (invalidSaddress) { invalidSaddress.style.display = "block"; }
-		//if (saddressBox) { saddressBox.style.borderColor = "red"; }
-		//isValid = false;
-		if (invalidSaddress) { invalidSaddress.style.display = "none"; }
-		if (saddressBox) { saddressBox.style = null; saddressBox.className = "textbox"; }
-	}
-	else
-	{
-		if (invalidSaddress) { invalidSaddress.style.display = "none"; }
-		if (saddressBox) { saddressBox.style = null; saddressBox.className = "textbox"; }
-	}
-	//end saddress
 	
 	//cui
 	var invalidCui = document.getElementById("cui-invalid");
@@ -190,80 +160,6 @@
 		if (regcomBox) { regcomBox.style = null; regcomBox.className = "textbox"; }
 	}
 	//end regcom
-	
-	//bankacc
-	if ("Cont_Banca" in data)
-	{
-		var invalidBankacc = document.getElementById("bankacc-invalid");
-		var bankaccBox = document.getElementById("bankacc");
-		if (data.Cont_Banca.length == 0)
-		{	
-			if (invalidBankacc) { invalidBankacc.style.display = "block"; }
-			if (bankaccBox) { bankaccBox.style.borderColor = "red"; }
-			isValid = false;
-		}
-		else
-		{
-			if (invalidBankacc) { invalidBankacc.style.display = "none"; }
-			if (bankaccBox) { bankaccBox.style = null; bankaccBox.className = "textbox"; }
-		}
-	}
-	//end bankacc
-	
-	//bank
-	if ("Banca" in data)
-	{
-		var invalidBank = document.getElementById("bank-invalid");
-		var bankBox = document.getElementById("bank");
-		if (data.Banca.length == 0)
-		{	
-			if (invalidBank) { invalidBank.style.display = "block"; }
-			if (bankBox) { bankBox.style.borderColor = "red"; }
-			isValid = false;
-		}
-		else
-		{
-			if (invalidBank) { invalidBank.style.display = "none"; }
-			if (bankBox) { bankBox.style = null; bankBox.className = "textbox"; }
-		}
-	}
-	//end bank
-	
-	//address
-	var invalidAddress = document.getElementById("address-invalid");
-	var addressBox = document.getElementById("address");
-	if (data.Adresa_de_livrare.length == 0)
-	{	
-		//if (invalidAddress) { invalidAddress.style.display = "block"; }
-		//if (addressBox) { addressBox.style.borderColor = "red"; }
-		//isValid = false;
-		if (invalidAddress) { invalidAddress.style.display = "none"; }
-		if (addressBox) { addressBox.style = null; addressBox.className = "textbox"; }
-	}
-	else
-	{
-		if (invalidAddress) { invalidAddress.style.display = "none"; }
-		if (addressBox) { addressBox.style = null; addressBox.className = "textbox"; }
-	}
-	//end address
-	
-	//postalcode
-	var invalidPostalcode = document.getElementById("postalcode-invalid");
-	var postalcodeBox = document.getElementById("postalcode");
-	if (data.Cod_Postal.length == 0)
-	{	
-		//if (invalidPostalcode) { invalidPostalcode.style.display = "block"; }
-		//if (postalcodeBox) { postalcodeBox.style.borderColor = "red"; }
-		//isValid = false;
-		if (invalidPostalcode) { invalidPostalcode.style.display = "none"; }
-		if (postalcodeBox) { postalcodeBox.style = null; postalcodeBox.className = "textbox"; }
-	}
-	else
-	{
-		if (invalidPostalcode) { invalidPostalcode.style.display = "none"; }
-		if (postalcodeBox) { postalcodeBox.style = null; postalcodeBox.className = "textbox"; }
-	}
-	//end postalcode
 	
 	//email
 	var invalidEmail = document.getElementById("email-invalid"); //form.querySelector(".email-invalid");
@@ -363,11 +259,11 @@
 				if (status == "OK")
 				{
 					document.cookie = "cart=";
-					location.href = "ordercomplette.html";
+					location.href = "ordercomplette";
 				}
 				else			
 				{
-					location.href = "orderfailed.html";
+					location.href = "orderfailed";
 				}
 			}
 			return;

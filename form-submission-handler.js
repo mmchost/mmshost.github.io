@@ -93,7 +93,7 @@
 			*/
 		}
 		
-		fields.unshift("Modalitate_de_plata");
+		//fields.unshift("Modalitate_de_plata");
 		
 		// add form-specific values into the data
 		var order = JSON.stringify(fields);	

@@ -112,13 +112,13 @@ window.onload = function()
 	var localCart = GetCookie("cart");
 	if (localCart)
 	{
-		cart = JSON.parse(localCart);
+		cart = decodeURIComponent(JSON.parse(localCart));
 	}	
 	
 	RefreshCartItemsCount();
 	
-	
-	var productDetails = GetCookie("productDetails");	
+	var detailsCookie = GetCookie("productDetails");
+	var productDetails = decodeURIComponent(detailsCookie);	
 	
 	if (!productDetails)
 	{

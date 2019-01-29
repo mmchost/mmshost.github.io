@@ -117,12 +117,14 @@ window.onload = function()
 	
 	RefreshCartItemsCount();
 	
+	/*
 	var productDetails = GetCookie("productDetails");
 	
 	if (!productDetails)
 	{
 		location.href = "./";
 	}
+	*/
 	
 	var product = JSON.parse(atob(productDetails));
 	if (product)

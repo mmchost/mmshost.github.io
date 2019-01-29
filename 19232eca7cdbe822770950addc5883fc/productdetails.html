@@ -112,7 +112,7 @@ window.onload = function()
 	var localCart = GetCookie("cart");
 	if (localCart)
 	{
-		cart = JSON.parse(decodeURIComponent(atob(localCart)));
+		cart = JSON.parse(localCart);
 	}	
 	
 	RefreshCartItemsCount();
@@ -125,7 +125,7 @@ window.onload = function()
 		//location.href = "./";
 	}	
 	
-	var product = JSON.parse(decodeURIComponent(atob(productDetails)));
+	var product = JSON.parse(productDetails);
 	if (product)
 	{
 		var isavailable = product[0]["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\">stoc epuizat";
@@ -203,7 +203,7 @@ window.onload = function()
 function AddItem()
 {	
 	var productDetails = GetCookie("productDetails");
-	var product = JSON.parse(decodeURIComponent(atob(productDetails)));
+	var product = JSON.parse(productDetails);
 
 	var i;
 	for (i=0; i<cart.length; i++)
@@ -218,7 +218,7 @@ function AddItem()
 	cart.push(product[0]);
 	RefreshCartItemsCount();
 	
-	document.cookie = "cart=" + btoa(encodeURIComponent(JSON.stringify(cart)));
+	document.cookie = "cart=" + JSON.stringify(cart);
 	ShowMessage("Adaugat in cosul de cumparaturi!");
 }
 

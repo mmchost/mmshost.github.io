@@ -78,7 +78,7 @@ window.onload = function()
 	var localCart = GetCookie("cart");
 	if (localCart)
 	{
-		cart = JSON.parse(atob(localCart));
+		cart = JSON.parse(decodeURIComponent(localCart));
 	}
 	
 	//RefreshCartItemsCount();
@@ -133,7 +133,7 @@ function ViewProductDetails(index)
 {
 	var details = [];
 	details.push(products[index]);
-	document.cookie = "productDetails=" + btoa(JSON.stringify(details));
+	document.cookie = "productDetails=" + encodeURIComponent(JSON.stringify(details));
 }
 
 function AddItem(index)
@@ -151,7 +151,7 @@ function AddItem(index)
 	cart.push(products[index]);
 	//RefreshCartItemsCount();
 	
-	document.cookie = "cart=" + btoa(JSON.stringify(cart));	
+	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));	
   
   RequestOffer();
 }
@@ -182,7 +182,7 @@ function RequestOffer()
 <!--slider-->
 <tr><td class="section-title">MAGAZIN ONLINE</td></tr>
 <tr>
-	<td style="min-height:320px; background-color:#F3F3F3; background:url(images/loading.gif); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;">
+	<td style="min-height:320px; background: #F3F3F3 url(images/loading.gif); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;">
 		<div id="banner"></div>
 	</td>
 </tr>

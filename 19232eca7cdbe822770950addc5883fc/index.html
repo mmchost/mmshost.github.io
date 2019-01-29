@@ -79,7 +79,7 @@ window.onload = function()
 	var localCart = GetCookie("cart");
 	if (localCart)
 	{
-		cart = decodeURIComponent(JSON.parse(localCart));
+		cart = JSON.parse(decodeURIComponent(localCart));
 	}
 	
 	RefreshCartItemsCount();

@@ -150,6 +150,7 @@ window.onload = function()
 		if (productDescription)
 		{
 			var pDesc = product[0]["description"];
+			pDesc = pDesc.replace('\n', '<br/>');
 			if (pDesc)
 			{
 				productDescription.innerHTML = pDesc;

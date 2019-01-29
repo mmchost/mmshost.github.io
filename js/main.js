@@ -248,7 +248,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 					var xmlDoc = this.responseXML;
 					
 					var contactElement = xmlDoc.getElementsByTagName("contact");
-					var contact = contactElement[0].innerHTML;
+					var contact = contactElement[0].textContent;
 					contact = contact.trim();
 					while (contact.includes("\n"))
 					{
@@ -256,7 +256,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 					}
 
 					var programElement = xmlDoc.getElementsByTagName("program");
-					var program = programElement[0].innerHTML;
+					var program = programElement[0].textContent;
 					program = program.trim();
 					while (program.includes("\n"))
 					{

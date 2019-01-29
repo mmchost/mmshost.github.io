@@ -60,7 +60,7 @@
 		var cartCookie  = GetCookie("cart");
 		if (cartCookie)
 		{
-			var cart = JSON.parse(atob(cartCookie));
+			var cart = JSON.parse(decodeURIComponent(cartCookie));
 			var cartData = [];
 			for (var i=0; i<cart.length; i++)
 			{

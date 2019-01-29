@@ -112,7 +112,7 @@ window.onload = function()
 	var localCart = GetCookie("cart");
 	if (localCart)
 	{
-		cart = decodeURIComponent(JSON.parse(localCart));
+		cart = JSON.parse(decodeURIComponent(localCart));
 	}	
 	
 	RefreshCartItemsCount();
@@ -218,7 +218,7 @@ function AddItem()
 	cart.push(product[0]);
 	RefreshCartItemsCount();
 	
-	document.cookie = "cart=" + JSON.stringify(cart);
+	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
 	ShowMessage("Adaugat in cosul de cumparaturi!");
 }
 

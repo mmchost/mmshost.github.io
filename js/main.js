@@ -250,18 +250,12 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 					var contactElement = xmlDoc.getElementsByTagName("contact");
 					var contact = contactElement[0].textContent;
 					contact = contact.trim();
-					while (contact.includes("\n"))
-					{
-						contact = contact.replace("\n", "<br/>")
-					}
+					contact = contact.replace(/\n/g, '<br/>');
 
 					var programElement = xmlDoc.getElementsByTagName("program");
 					var program = programElement[0].textContent;
 					program = program.trim();
-					while (program.includes("\n"))
-					{
-						program = program.replace("\n", "<br/>");
-					}
+					program = program.replace(/\n/g, '<br/>');
 					
 					footerContact.innerHTML = 
 					"<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\" border=\"0\">" +

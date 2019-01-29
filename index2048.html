@@ -93,9 +93,12 @@ function ReadProducts(xml)
 	for (i=0; i<elements.length; i++)
 	{
 		var item = {};
-		for (j=0; j<elements[i].children.length; j++)
+		for (j=0; j<elements[i].childNodes.length; j++)
 		{
-			item[elements[i].children[j].nodeName] = elements[i].children[j].innerHTML;
+			if (elements[i].childNodes[j].nodeType == 1) // or nodeType == Node.ELEMENT_NODE
+			{
+				item[elements[i].childNodes[j].nodeName] = elements[i].children[j].textContent;
+			}
 		}
 		products.push(item);
 	}

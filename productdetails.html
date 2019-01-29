@@ -111,7 +111,7 @@ window.onload = function()
 	var localCart = GetCookie("cart");
 	if (localCart)
 	{
-		cart = JSON.parse(atob(localCart));
+		cart = JSON.parse(decodeURIComponent(localCart));
 	}	
 	
 	RefreshCartItemsCount();
@@ -123,7 +123,7 @@ window.onload = function()
 		window.location = "./";
 	}
 	
-	var product = JSON.parse(atob(productDetails));
+	var product = JSON.parse(decodeURIComponent(productDetails));
 	if (product)
 	{
 		var isavailable = product[0]["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\">stoc epuizat";
@@ -148,6 +148,7 @@ window.onload = function()
 		if (productDescription)
 		{
 			var pDesc = product[0]["description"];
+			pDesc = pDesc.replace(/\n/g, '<br/>');
 			if (pDesc)
 			{
 				productDescription.innerHTML = pDesc;
@@ -201,7 +202,7 @@ window.onload = function()
 function AddItem()
 {	
 	var productDetails = GetCookie("productDetails");
-	var product = JSON.parse(atob(productDetails));
+	var product = JSON.parse(decodeURIComponent(productDetails));
 
 	var i;
 	for (i=0; i<cart.length; i++)
@@ -216,7 +217,7 @@ function AddItem()
 	cart.push(product[0]);
 	//RefreshCartItemsCount();
 	
-	document.cookie = "cart=" + btoa(JSON.stringify(cart));
+	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
 	
 	RequestOffer();
 }

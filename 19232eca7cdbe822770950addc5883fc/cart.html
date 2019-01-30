@@ -3,7 +3,7 @@
 <head>	
 <meta name="robots" content="noindex" />
 
-<title>Medios Online Store - Magazin Online cu produse Medicale</title>
+<title>Medios Online Store - Cosul de cumparaturi</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="" />
@@ -104,7 +104,7 @@ function RefreshCart(list)
 				cell.style.textAlign = "left";
 				cell.style.verticalAlign = "top";				
 				
-				var detailsLink = "<a class=\"hyperlink-default\" onclick=\"ViewProductDetails(" + i + ")\" href=\"productdetails.html\">";				
+				var detailsLink = "<a class=\"hyperlink-default\" onclick=\"ViewProductDetails(" + i + ")\" href=\"productdetails\">";				
 				cell.innerHTML = "<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\">" + 
 								 "<tr>" + 
 								 "<td>" + detailsLink + "<div style=\"background:transparent; width:80px; height:80px; position:absolute;\"></div><img style=\"border-style:none;\" src=\"" + list[i]["image"] + "\" width=\"80px\"/></a></td>" +
@@ -123,7 +123,7 @@ function RefreshCart(list)
 								"</tr></table>" +								
 								"</td>" +
 								
-								"<td></td><td style=\"text-align:right; vertical-align:top; padding:0px 0px 0px 5px; white-space:nowrap; width:1px; min-width:108px;\"><a title=\"Pret / buc.\">Pret: " + list[i]["price"] + " Lei</a>" + //<hr style=\"border-style:none; height:1px; background:transparent; margin:0px 0px 0px 0px;\"/>
+								"<td></td><td style=\"text-align:right; vertical-align:top; padding:0px 0px 0px 5px; white-space:nowrap; width:1px; min-width:108px;\"><a title=\"Pret / buc.\">Pret/buc: " + list[i]["price"] + " Lei</a>" + //<hr style=\"border-style:none; height:1px; background:transparent; margin:0px 0px 0px 0px;\"/>
 								"<a style=\"margin-top:0px; display:block; color:#0074BB;\" title=\"Subtotal = Pret * Cantitate\">Subtotal: " + (Math.round((list[i]["price"] * list[i]["quantity"]) * 100) / 100) + " Lei" + "</a></td>" +
 								
 								"</td></tr>" +								

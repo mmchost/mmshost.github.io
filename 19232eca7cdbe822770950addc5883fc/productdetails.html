@@ -204,7 +204,7 @@ window.onload = function()
 function AddItem()
 {	
 	var productDetails = GetCookie("productDetails");
-	var product = JSON.parse(productDetails);
+	var product = JSON.parse(decodeURIComponent(productDetails));
 
 	var i;
 	for (i=0; i<cart.length; i++)

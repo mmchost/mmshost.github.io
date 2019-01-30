@@ -76,7 +76,10 @@ function RefreshPosition()
 		header.setAttribute('style', 'top:' + wb.clientHeight + 'px;');
 		
 		var contentHeight = wb.clientHeight + header.clientHeight;
-		mainContent.setAttribute('style', 'top:' + contentHeight + 'px;');
+		if (mainContent)
+		{
+			mainContent.setAttribute('style', 'top:' + contentHeight + 'px;');
+		}
 		
 		if (sectionTag1)
 		{
@@ -93,8 +96,10 @@ function RefreshPosition()
 	}
 	else	
 	{
-		mainContent.setAttribute('style', 'top:' + header.clientHeight + 'px;');
-	
+		if (mainContent)
+		{
+			mainContent.setAttribute('style', 'top:' + header.clientHeight + 'px;');
+		}
 		if (sectionTag1)
 		{
 			sectionTag1.setAttribute('style', 'height:' + header.clientHeight + 'px; margin-top:' + -header.clientHeight + 'px;');

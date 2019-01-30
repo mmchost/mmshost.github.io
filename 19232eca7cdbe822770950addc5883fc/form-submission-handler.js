@@ -14,9 +14,10 @@
 		var fields = Object.keys(elements).filter(function(k) 
 		{
 			var elm = elements[k];
-			var elmName = elm.name;
-			var elmType = elm.type;
-			return (elements[k].name !== "honeypot" && elements[k].style.display !== "none" && elements[k].type !== "radio");
+			if (elm.style !== undefined)
+			{
+				return (elements[k].name !== "honeypot" && elements[k].style.display !== "none" && elements[k].type !== "radio");
+			}
 		}).map(function(k) 
 		{
 			if(elements[k].name !== undefined) 

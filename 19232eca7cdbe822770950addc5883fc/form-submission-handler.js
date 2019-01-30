@@ -283,7 +283,7 @@
 	//phone
 	var invalidTel = document.getElementById("tel-invalid");
 	var telBox = document.getElementById("tel");
-	if (data.Numar_de_Telefon.length !== 10)
+	if (data.Numar_de_Telefon.length < 10 || data.Numar_de_Telefon.length > 12)
 	{
 		if (invalidTel) { invalidTel.style.display = "block"; }
 		if (telBox) { telBox.style.borderColor = "red"; }

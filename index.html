@@ -54,17 +54,20 @@
 var products = [];
 var cart = [];
 
-var xhttp;
-xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function()
+function LoadXml()
 {
-    if (this.readyState == 4 && this.status == 200) 
-    {
-        ReadProducts(this);
-    }
-};
-xhttp.open("GET", "products.xml", true);
-xhttp.send();
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function()
+	{
+	    if (this.readyState == 4 && this.status == 200) 
+	    {
+		ReadProducts(this);
+	    }
+	};
+	xhttp.open("GET", "products.xml", true);
+	xhttp.send();
+}
 
 window.onload = function() 
 {
@@ -82,7 +85,8 @@ window.onload = function()
 		cart = JSON.parse(decodeURIComponent(localCart));
 	}
 	
-	//RefreshCartItemsCount();
+	LoadXml();
+	//RefreshCartItemsCount();	
 };
 
 function ReadProducts(xml)

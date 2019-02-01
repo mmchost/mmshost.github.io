@@ -3,7 +3,7 @@
 <head>
 <meta name="robots" content="noindex" />
 
-<title>Medios Online Store - Magazin Online cu produse Medicale</title>
+<title>Medios Online Store - Filme radiologice FujiFilm</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="Medios Online Store" />
@@ -54,17 +54,20 @@
 var products = [];
 var cart = [];
 
-var xhttp;
-xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function()
+function LoadXml()
 {
-    if (this.readyState == 4 && this.status == 200) 
-    {
-        ReadProducts(this);
-    }
-};
-xhttp.open("GET", "products.xml", true);
-xhttp.send();
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function()
+	{
+	    if (this.readyState == 4 && this.status == 200) 
+	    {
+		ReadProducts(this);
+	    }
+	};
+	xhttp.open("GET", "products.xml", true);
+	xhttp.send();
+}
 
 window.onload = function() 
 {
@@ -81,8 +84,10 @@ window.onload = function()
 	{
 		cart = JSON.parse(decodeURIComponent(localCart));
 	}
-	
+		
 	RefreshCartItemsCount();
+	
+	LoadXml();
 };
 
 function ReadProducts(xml)

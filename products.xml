@@ -10,7 +10,7 @@
 		<price>0</price>
 		<quantity>1</quantity>
 		<image>product-images/filme-radiologice-fuji-di-hl-20x25.png</image>
-		<page>filme+radiologice+fuji+di-hl+20x25</page>
+		<page>filme+radiologice+fuji+di-hl+20x25+cm+blue+base</page>
 	</product>
 	<product>
 		<id>DIHL3543</id>
@@ -21,6 +21,6 @@
 		<price>0</price>
 		<quantity>1</quantity>
 		<image>product-images/filme-radiologice-fuji-di-hl-35x43.png</image>
-		<page>filme+radiologice+fuji+di-hl+35x43</page>		
+		<page>filme+radiologice+fuji+di-hl+35x43+cm+blue+base</page>		
 	</product>
 </products>

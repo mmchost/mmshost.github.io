@@ -3,7 +3,7 @@
 <head>
 <meta name="google-site-verification" content="i0VInNRpi0sRNNEYWkIXL1L7fZQ8OdW6soLpI7-71Jo" />
 
-<title>Medios Online Store - Filme radiologice FujiFilm</title>
+<title>Medios Online Store - Filme radiologice FujiFilm DI-HL</title>
 <meta name="keywords" content="filme radiologice fuji, fuji, fujifilm DI-HL, filme imagistica medicala fuji, medios online store" />
 <meta name="description" content="filme radiologice fuji di-hl filme imagistica medicala fujifilm filme radiologie dentara filme laser digitale" />
 <meta name="author" content="Medios Online Store" />
@@ -72,12 +72,6 @@ function LoadXml()
 window.onload = function() 
 {
 	Page_OnLoad(false, false, true, true, "images/", true);
-
-	var prodHeader = document.getElementById("productsHeader");
-	if (prodHeader)
-	{
-		prodHeader.innerHTML = "PRODUSE MEDICALE"; // (" + products.length + ")";
-	}
     
 	var localCart = GetCookie("cart");
 	if (localCart)
@@ -85,8 +79,7 @@ window.onload = function()
 		cart = JSON.parse(decodeURIComponent(localCart));
 	}
 	
-	LoadXml();
-	//RefreshCartItemsCount();	
+	LoadXml();	
 };
 
 function ReadProducts(xml)
@@ -124,7 +117,7 @@ function AddProducts(list)
 			var itemName = list[i]["name"].replace(/\n/g, '<br/>');
 			var isavailable = list[i]["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\"><a style=\"line-height:22px;\">stoc epuizat</a>";
 			var addbuttondisable = list[i]["available"] == "true" ? "class=\"button-default\"" : "class=\"button-default-disabled\" disabled=\"true\"";
-			var detailsLink = "<a class=\"hyperlink-default\" onclick=\"ViewProductDetails(" + i + ")\" href=\"productdetails\">";
+			var detailsLink = "<a class='hyperlink-default' href='" + list[i]['page'] + "'>";
 			cell.innerHTML += " <table cellpadding=\"0\" cellspacing=\"0\" class=\"item-table\">" +
 							 "<tr><td align=\"center\" class=\"item-image-cell\">" + detailsLink + "<div style=\"background:transparent; width:288px; height:150px; position:absolute;\"></div><img class=\"item-image\" src=\"" + list[i]["image"] + "\"/></a></td></tr>" +
 							 "<tr><td align=\"center\" class=\"item-name-cell\">" + detailsLink + itemName + "</a></td></tr>" +
@@ -133,13 +126,6 @@ function AddProducts(list)
 							 "<tr><td align=\"center\" class=\"item-button-cell\"><button " + addbuttondisable + " style=\"width:150px;\" onclick=\"AddItem(" + i + ")\">Cere oferta</button></td></tr>" + "</table>";
 		}
 	}
-}
-
-function ViewProductDetails(index)
-{
-	var details = [];
-	details.push(products[index]);
-	document.cookie = "productDetails=" + encodeURIComponent(JSON.stringify(details));
 }
 
 function AddItem(index)
@@ -155,7 +141,6 @@ function AddItem(index)
 	}
 	
 	cart.push(products[index]);
-	//RefreshCartItemsCount();
 	
 	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));	
   
@@ -192,7 +177,7 @@ function RequestOffer()
 		<div id="banner"></div>
 	</td>
 </tr>
-<tr><td class="section-title">↓ <a href="#products">VEZI PRODUSE MEDICALE</a> ↓</td></tr>
+<tr><td class="section-title">↓ <a href="#products">PRODUSE MEDICALE</a> ↓</td></tr>
 <!--end slider-->
 
 <!--info-content-->

@@ -10,30 +10,7 @@
 		<price>0</price>
 		<quantity>1</quantity>
 		<image>product-images/filme-radiologice-fuji-di-hl-20x25.png</image>
-		<details>
-		[
-			"Producator: FujiFilm",
-			"Tip film: Fuji Medical Dry Laser Imaging Film (DI-HL)",
-			"Fabricat in: Japonia",
-			"Culoarea filmului: Albastru transparent (Blue base)",
-			"Dimensiune film: 20x25 cm (8x10 inch)",
-			"Ambalaj: 150 filme / cutie",
-			"Categorie: Filme radiologice",
-			"Tehnologie printare: Laser, Uscata",
-			"Compatibil cu imprimantele: DRYPIX 4000, DRYPIX 5000, DRYPIX 7000, DRYPIX Plus, DRYPIX EDGE (8000), DRYPIX SMART, DRYPIX PRIMA"
-		]
-		</details>
-		<description>Filme radiologice FujiFilm DI-HL 20x25 cm (8x10 inch) Blue base
-		- Calitate superioara a imaginii
-		- Rapiditate termala a developarii
-		
-		Filmele radiologide DI-HL se pot folosi pentru:
-		- Radiografii Dentare / Dental Radiography
-		- Radiografii Computerizate / Computed Radiography (CR)
-		- Tomografii Computerizate / Computed Tomography (CT)
-		- Rezonanta Magnetica / Magnetic Resonance Imaging (MRI)
-		- Angiografii Digitale / Digital Subtraction Angiography (DSA)
-		</description>
+		<page>filme+radiologice+fuji+di-hl+20x25</page>
 	</product>
 	<product>
 		<id>DIHL3543</id>
@@ -44,29 +21,6 @@
 		<price>0</price>
 		<quantity>1</quantity>
 		<image>product-images/filme-radiologice-fuji-di-hl-35x43.png</image>
-		<details>
-		[
-			"Producator: FujiFilm",
-			"Tip film: Fuji Medical Dry Laser Imaging Film (DI-HL)",
-			"Fabricat in: Japonia",
-			"Culoarea filmului: Albastru transparent (Blue base)",
-			"Dimensiune film: 35x43 cm (14x17 inch)",
-			"Ambalaj: 100 filme / cutie",
-			"Categorie: Filme radiologice",
-			"Tehnologie printare: Laser, Uscata",
-			"Compatibil cu imprimantele: DRYPIX 4000, DRYPIX 5000, DRYPIX 7000, DRYPIX Plus, DRYPIX EDGE (8000), DRYPIX SMART, DRYPIX PRIMA"
-		]
-		</details>
-		<description>Filme radiologice FujiFilm DI-HL 35x43 cm (14x17 inch) Blue base
-		- Calitate superioara a imaginii
-		- Rapiditate termala a developarii
-		
-		Filmele radiologide DI-HL se pot folosi pentru:
-		- Radiografii Dentare / Dental Radiography
-		- Radiografii Computerizate / Computed Radiography (CR)
-		- Tomografii Computerizate / Computed Tomography (CT)
-		- Rezonanta Magnetica / Magnetic Resonance Imaging (MRI)
-		- Angiografii Digitale / Digital Subtraction Angiography (DSA)
-		</description>
+		<page>filme+radiologice+fuji+di-hl+35x43</page>		
 	</product>
 </products>

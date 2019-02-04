@@ -149,10 +149,10 @@ function ReadProducts(xml)
 		products.push(item);
 	}
 	
-	InitializeComponent();
+	InitializePage();
 }
 	
-function InitializeComponent()
+function InitializePage()
 {
 	var product = products.find(obj => {return obj.id === 'DIHL2025'});
 	if (product)

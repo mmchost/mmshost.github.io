@@ -162,8 +162,7 @@ window.onload = function()
 	
 	LoadXml();
 	
-	var currentProduct = products.find(obj => {return obj.id === 'DIHL2025'});	
-	var product = JSON.parse(decodeURIComponent(currentProduct));
+	var product = products.find(obj => {return obj.id === 'DIHL2025'});
 	if (product)
 	{
 		var isavailable = product[0]["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\">stoc epuizat";

@@ -200,8 +200,7 @@ window.onload = function()
 
 function AddItem()
 {	
-	var productDetails = GetCookie("productDetails");
-	var product = JSON.parse(decodeURIComponent(productDetails));
+	var product = products.find(obj => {return obj.id === 'DIHL2025'});
 	var i;
 	for (i=0; i<cart.length; i++)
 	{

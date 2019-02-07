@@ -3,7 +3,7 @@
 <head>
 <meta name="robots" content="noindex" />
 
-<title>Medios Online Store - Filme radiologice FujiFilm</title>
+<title>Medios Online Store - Filme radiologice Fujifilm DI-HL</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="Medios Online Store" />
@@ -12,7 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png"/>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400"/> 
@@ -71,13 +71,7 @@ function LoadXml()
 
 window.onload = function() 
 {
-	Page_OnLoad(true, false, true, true, "../images/", true);
-
-	var prodHeader = document.getElementById("productsHeader");
-	if (prodHeader)
-	{
-		prodHeader.innerHTML = "PRODUSE MEDICALE"; // (" + products.length + ")";
-	}
+	Page_OnLoad(true, false, true, true, "../images/", true);	
     
 	var localCart = GetCookie("cart");
 	if (localCart)
@@ -125,7 +119,7 @@ function AddProducts(list)
 			var itemName = list[i]["name"].replace(/\n/g, '<br/>');
 			var isavailable = list[i]["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\"><a style=\"line-height:22px;\">stoc epuizat</a>";
 			var addbuttondisable = list[i]["available"] == "true" ? "class=\"button-default\"" : "class=\"button-default-disabled\" disabled=\"true\"";
-			var detailsLink = "<a class=\"hyperlink-default\" onclick=\"ViewProductDetails(" + i + ")\" href=\"productdetails\">";
+			var detailsLink = "<a class='hyperlink-default' href='" + list[i]['page'] + "'>";
 			cell.innerHTML += " <table cellpadding=\"0\" cellspacing=\"0\" class=\"item-table\">" +
 							 "<tr><td align=\"center\" class=\"item-image-cell\">" + detailsLink + "<div style=\"background:transparent; width:288px; height:150px; position:absolute;\"></div><img class=\"item-image\" src=\"" + list[i]["image"] + "\"/></a></td></tr>" +
 							 "<tr><td align=\"center\" class=\"item-name-cell\">" + detailsLink + itemName + "</a></td></tr>" +
@@ -137,24 +131,14 @@ function AddProducts(list)
 	}
 }
 
-function ViewProductDetails(index)
-{
-	var details = [];
-	details.push(products[index]);
-	document.cookie = "productDetails=" + encodeURIComponent(JSON.stringify(details));
-}
-
 function AddItem(index)
 {
-	var i;
-	for (i=0; i<cart.length; i++)
+	var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
+	if (product)
 	{
-		if (cart[i]["id"] === products[index]["id"])
-		{
-			ShowMessage("Exista deja in cosul de cumparaturi!");
-			return;
-		}
-	}
+		ShowMessage("Exista deja in cosul de cumparaturi!");
+		return;
+	}	
 	
 	cart.push(products[index]);
 	RefreshCartItemsCount();
@@ -168,7 +152,7 @@ function AddItem(index)
 <body onresize="Page_OnResize('../images/')">
 
 <!--[if lt IE 9]>
-<meta http-equiv="refresh" content="0; url=oldbrowser" />
+<meta http-equiv="refresh" content="0; url=https://store.mediosmedical.ro/oldbrowser" />
 <![endif]-->
 
 <!--[if gt IE 8]> <!-- -->
@@ -188,7 +172,7 @@ function AddItem(index)
 		<div id="banner"></div>
 	</td>
 </tr>
-<tr><td class="section-title">↓ <a href="#products">VEZI PRODUSE MEDICALE</a> ↓</td></tr>
+<tr><td class="section-title">↓ <a href="#products">PRODUSE MEDICALE</a> ↓</td></tr>
 <!--end slider-->
 
 <!--info-content-->
@@ -223,7 +207,7 @@ function AddItem(index)
 </td>
 <td class="info-cell">
 <center>
-<img style="margin-bottom:8px;" src="../images/mail.png" width="48px"/><br/><a>EMAIL</a><br/><a class="info-text">mediosmedical@gmail.com<br/><br/></a>
+<img style="margin-bottom:8px;" src="../images/mail.png" width="48px"/><br/><a>EMAIL</a><br/><a class="info-text">medios.store@gmail.com<br/><br/></a>
 </center>
 </td>
 </tr>

@@ -3,9 +3,9 @@
 <products>
 	<product>
 		<id>DIHL2025</id>
-		<name>Filme radiologice FujiFilm
+		<name>Filme radiologice Fujifilm
 		DI-HL 20x25 cm (8x10 inch)
-		Blue base</name>
+		Blue base, 150 filme / cutie</name>
 		<available>true</available>
 		<price>0</price>
 		<quantity>1</quantity>
@@ -14,9 +14,9 @@
 	</product>
 	<product>
 		<id>DIHL3543</id>
-		<name>Filme radiologice FujiFilm
+		<name>Filme radiologice Fujifilm
 		DI-HL 35x43 cm (14x17 inch)
-		Blue base</name>
+		Blue base, 100 filme / cutie</name>
 		<available>true</available>
 		<price>0</price>
 		<quantity>1</quantity>

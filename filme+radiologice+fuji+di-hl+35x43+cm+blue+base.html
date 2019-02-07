@@ -112,7 +112,6 @@
 <script>
 
 var products = [];
-var cart = [];
 	
 function LoadXml()
 {
@@ -154,7 +153,7 @@ function ReadProducts(xml)
 	
 function InitializePage()
 {
-	var product = products.find(obj => {return obj.id === 'DIHL3543'});
+	var product = products.find(obj => { return obj.id === 'DIHL3543' });
 	if (product)
 	{
 		var isavailable = product["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\">stoc epuizat";
@@ -163,13 +162,18 @@ function InitializePage()
 		var priceTable = document.getElementById("priceTable");
 				
 		if (priceTable)
-		{
-			var priceCell = document.getElementById("priceCell");
-			if (priceCell)
+		{	
+			var quantityCell = document.getElementById("quantityCell");
+			if (quantityCell)
 			{
-				priceCell.innerHTML = "<a class=\"hyperlink-highlight\" style=\"font-size:18px; cursor:pointer;\" onclick=\"AddItem()\">Cere oferta</a>";
+				quantityCell.innerHTML = 
+				"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" + 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + -1 + ")'>-</button></td>" + 
+				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px; background:#fff;'><input class='textbox-numeric' type='text' value='" + products[i]["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + 1 + ")'>+</button></td>" +										 
+				"</tr></table>";
 			}
-		
+			
 			var availableCell = document.getElementById("availableCell");			
 			if (availableCell)
 			{
@@ -179,7 +183,7 @@ function InitializePage()
 			var buttonCell = document.getElementById("buttonCell");
 			if (buttonCell)
 			{
-				buttonCell.innerHTML = "<button class=\"button-default\" onclick=\"AddItem()\"" + addbuttondisable + ">Cere oferta</button>";
+				buttonCell.innerHTML = "<button class='button-default' onclick='RequestOffer(" + i + ")'" + addbuttondisable + ">Cere oferta</button>";
 			}
 		}
 	}
@@ -188,39 +192,31 @@ function InitializePage()
 window.onload = function() 
 {
 	Page_OnLoad(false, false, true, true, "images/", false);
-
-	var localCart = GetCookie("cart");
-	if (localCart)
-	{
-		JSON.parse(decodeURIComponent(localCart));
-	}
 	
 	LoadXml();
 };
-
-function AddItem()
-{	
-	var product = products.find(obj => {return obj.id === 'DIHL3543'});
-	var i;
-	for (i=0; i<cart.length; i++)
+	
+function RequestOffer(i)
+{
+	var shoppingBag = [];
+	shoppingBag.push(products[i]);
+		
+	document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag));
+	
+	location.href = "requestoffer";
+}
+	
+function CalculateTotal(index, value)
+{
+	if (value < 1)
 	{
-		if (cart[i]["id"] === product["id"])
+		if (products[index]["quantity"] == 1)
 		{
-			RequestOffer();
 			return;
 		}
 	}
-	
-	cart.push(product);
-	
-	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
-	
-	RequestOffer();
-}
-	
-function RequestOffer()
-{
-	window.location = "requestoffer";
+	products[index]["quantity"] = Math.round(products[index]["quantity"]) + value;
+	InitializePage();
 }
 
 </script>
@@ -250,7 +246,7 @@ function RequestOffer()
 						</tr>
 						<tr>
 							<td>
-								<table cellpadding="0" cellspacing="0" style="display:inline-table; float:left;"><tr><td id="productImage" style="padding:5px 5px 5px 5px;"><img src="product-images/filme-radiologice-fuji-di-hl-20x25.png" width="300px" alt="filme radiologice fuji di-hl 20x25 cm" style="pointer-events:none;"/></td></tr></table>								
+								<table cellpadding="0" cellspacing="0" style="display:inline-table; float:left;"><tr><td id="productImage" style="padding:5px 5px 5px 5px;"><img src="product-images/filme-radiologice-fuji-di-hl-35x43.png" width="300px" alt="filme radiologice fuji di-hl 35x43 cm" style="pointer-events:none;"/></td></tr></table>								
 								<table id="detailsTable" cellpadding="0" cellspacing="0" style="display:inline-table; margin:10px 0px 15px 5px; max-width:560px; border-style:solid; border-width:0px 1px 1px 0px; border-color:#E6E6E6;">
 									<tr><td class="details-cell">Cod produs</td><td class="details-cell">DIHL3543</td></tr>
 									<tr><td class="details-cell">Producator</td><td class="details-cell">FujiFilm</td></tr>
@@ -273,8 +269,8 @@ function RequestOffer()
 		
 		<table id="priceTable" class="priceTable" cellpadding="10" cellspacing="0">
 			<tr>
-				<td>Pret:</td>
-				<td id="priceCell" class="normal-fontsize" style="font-weight:bold; text-align:right; color:#0074BB;">Cere oferta</td>
+				<td>Cantitate:</td>
+				<td id="quantityCell" style="text-align:right;"></td>
 			</tr>
 			<tr>
 				<td>Disponibilitate:</td>
@@ -288,7 +284,7 @@ function RequestOffer()
 					<table cellspacing="0" cellpadding="5" align="center">						
 						<tr>
 							<td></td>
-							<td>Pentru comenzile cu suma mai mare sau egala cu 2000 Lei costul livrarii este gratuit.</td>
+							<td></td>
 						</tr>
 					</table>
 				</td>

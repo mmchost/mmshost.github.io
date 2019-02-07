@@ -1,7 +1,8 @@
 .hyperlink-default
 {
 	text-decoration:none;
-	color:#000;	
+	/*color:#000;*/
+	color:#484848;
 }
 
 .hyperlink-default:hover

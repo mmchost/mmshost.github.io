@@ -320,8 +320,8 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		"<td class=\"footer-menu\"><a href=\"http://anpc.gov.ro\">ANPC</a></td>" +
 		//"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		//"<td class=\"footer-menu\"><a href=\"returpolicy\">Politica de retur</a></td>" +
-		//"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
-		//"<td class=\"footer-menu\"><a href=\"cookiespolicy\">Politica de cookies</a></td>" +		
+		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
+		"<td class=\"footer-menu\"><a href=\"cookiespolicy\">Politica de cookies</a></td>" +		
 		"</tr></table>" +
 		"</td></tr></table>";
 	}

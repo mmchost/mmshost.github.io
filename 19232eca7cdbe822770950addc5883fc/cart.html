@@ -3,7 +3,7 @@
 <head>	
 <meta name="robots" content="noindex" />
 
-<title>Medios Online Store - Cosul de cumparaturi</title>
+<title>Cosul de cumparaturi - Medios Online Store</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="" />
@@ -12,7 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png"/>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400"/> 
@@ -227,7 +227,7 @@ function CalculateGrandTotal()
 		var totalCell = document.getElementById("totalCell");
 		if (totalCell)
 		{
-			totalCell.innerHTML = (Math.round((total + shipmentFee) * 100) / 100) + " Lei";
+			totalCell.innerHTML = (Math.round((total + shipmentFee) * 100) / 100) + " Lei <a style='font-size:12px; font-weight:300; color:#000;'>(TVA inclus)</a>";
 		}
 	}
 }

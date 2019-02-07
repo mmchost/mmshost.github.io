@@ -12,59 +12,396 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+<link rel="shortcut icon" type="image/x-icon" href="https://www.mediosmedical.ro/images/favicon.png" />
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400"/> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700"/> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:800"/>
 
-<link rel="stylesheet" type="text/css" href="styles/main.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/footer.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/messageBox.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/button.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/hyperlink.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/tag.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/infoBar.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/header.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/menu.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/section.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/mainContent.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/info.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/overlay.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/textBox.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/item.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/cart.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="styles/form.css" charset="utf-8"/>
+<style type="text/css">
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.scrollTo.js"></script>	
-<script type="text/javascript" src="js/jquery.smoothAnchors.js"></script>
+@font-face {
+    font-family:'open_sanslight';
+    src: url('https://www.mediosmedical.ro/styles/OpenSans-Light-webfont.eot');
+    src: url('https://www.mediosmedical.ro/styles/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://www.mediosmedical.ro/styles/OpenSans-Light-webfont.woff2#open_sanslight') format('woff2'),
+         url('https://www.mediosmedical.ro/styles/OpenSans-Light-webfont.woff#open_sanslight') format('woff'),
+         url('https://www.mediosmedical.ro/styles/OpenSans-Light-webfont.ttf#open_sanslight') format('truetype'),
+         url('https://www.mediosmedical.ro/styles/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-<script type="text/javascript" src="js/buttonEvents.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/getCookie.js"></script>
-<script type="text/javascript" src="js/messageBox.js"></script>
+.light-theme
+{
+	background-color:#E6E6E6;
+	color:#343434;
+}
+.dark-theme
+{
+	background-color:#404040;
+	color:#fff;
+}
+
+body
+{
+	font-family:'open_sanslight';	
+	font-size:16px;	
+	font-style:normal;
+	font-weight:300;
+	margin:0px;
+}
+
+.normal-fontsize
+{
+	font-size:16px;
+}
+
+.large-fontsize
+{
+	font-size:32px;
+}
+
+.huge-fontsize
+{
+	font-size:128px;
+}
+
+.light-theme .main-content
+{
+	position:absolute;
+	border-style:solid;
+	border-width:0px;
+	left:0px;
+	margin-right:0px;
+	width:100%;
+	background:#F3F3F3;
+}
+.dark-theme .main-content
+{
+	position:absolute;
+	border-style:solid;
+	border-width:0px;
+	left:0px;
+	margin-right:0px;
+	width:100%;
+	background:#343434;
+}
+
+.button-default
+{
+	display:cell;
+	font-size:16px;
+	color:white;
+	min-width:128px;
+	max-width:302px;
+	width:100%;
+	height:46px;
+	padding:0px;
+	font-family:open_sanslight;
+	cursor:pointer;	
+	background:#0074BB;
+	border:none;
+	border-radius:4px;
+	border-style:solid;
+	border-width:0px;
+	border-color:#0074BB;
+	padding:0px;
+	//transition:0.3s;
+}
+.button-default:hover
+{
+	//border-color:#0066A2;
+	background:#0088D3;
+}
+.button-default:focus
+{
+  outline:0px solid orange;
+}
+.button-default:active
+{
+	outline:0px solid orange;
+	background:#0066A2;
+}
+.button-default-disabled
+{
+	display:cell;
+	font-size:16px;	
+	min-width:128px;
+	max-width:302px;
+	width:100%;
+	height:46px;
+	padding:0px;
+	font-family:open_sanslight;	
+	border:none;
+	border-radius:4px;
+	background:#ccc;
+	color:#666666;
+	cursor:auto;
+}
+
+.theme-button-container
+{
+	display:block;
+	position:absolute;
+	width:100%;
+	height:80px;
+	margin-top:-80px;	
+}
+.theme-button-light
+{
+	display:block;
+	float:right;	
+	margin-top:11px;
+	display:block;
+	width:34px;
+	height:26px;
+	background:url(https://www.mediosmedical.ro/images/light-theme-icon.png);
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-position-y:center;
+	background-size:10px;
+	box-sizing:inherit;
+	cursor:pointer;
+}
+.theme-button-light:hover
+{
+	background-color:#0088D3;
+}
+.theme-button-light:active
+{
+	background-color:#0066A2;
+}
+.theme-button-dark
+{
+	display:block;
+	float:right;	
+	margin-top:11px;
+	display:block;
+	width:34px;
+	height:26px;
+	background:url(https://www.mediosmedical.ro/images/dark-theme-icon.png);
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-position-y:center;
+	background-size:10px;
+	box-sizing:inherit;
+	cursor:pointer;
+}
+.theme-button-dark:hover
+{
+	background-color:#0088D3;
+}
+.theme-button-dark:active
+{
+	background-color:#0066A2;
+}
+
+.maximize-button
+{
+	display:block;
+	float:right;
+	margin-right:11px;
+	margin-top:11px;
+	display:block;
+	width:34px;
+	height:26px;
+	background:url(https://www.mediosmedical.ro/images/maximize-icon.png);
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-position-y:center;
+	background-size:10px;
+	box-sizing:inherit;
+	cursor:pointer;
+}
+.maximize-button:hover
+{
+	background-color:#0088D3;
+}
+.maximize-button:active
+{
+	background-color:#0066A2;
+}
+
+.minimize-button
+{
+	display:block;
+	float:right;
+	margin-right:11px;
+	margin-top:11px;
+	display:block;
+	width:34px;
+	height:26px;
+	background:url(https://www.mediosmedical.ro/images/maximize-icon.png);
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-position-y:center;
+	background-size:10px;
+	box-sizing:inherit;
+	cursor:pointer;
+}
+.minimize-button:hover
+{
+	background-color:#0088D3;
+}
+.minimize-button:active
+{
+	background-color:#0066A2;
+}
+
+.header-menu
+{
+	width:100%;
+	height:80px;
+	background:#0074BB url(https://store.mediosmedical.ro/images/logo-store-light.png);
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-position-y:center;
+	background-size:auto auto;
+	box-sizing:inherit;
+}
+
+.light-theme .footer-copyright
+{	
+	min-height:48px;
+	text-align:center;
+	font-size:14px;
+	background:#E6E6E6;
+	color:#999999;
+	border-style:solid none solid none;
+	border-color:#FFFFFF;
+	border-width:0px;
+	vertical-align:top;
+}
+.dark-theme .footer-copyright
+{	
+	min-height:48px;
+	text-align:center;
+	font-size:14px;
+	background:#404040;
+	color:#999999;
+	border-style:solid none solid none;
+	border-color:#FFFFFF;
+	border-width:0px;
+	vertical-align:top;
+}
+
+@media screen and (max-width:990px)
+{
+	.normal-fontsize
+	{
+		font-size:12px;
+	}
+	
+	.large-fontsize
+	{
+		font-size:18px;
+	}
+	
+	.huge-fontsize
+	{
+		font-size:96px;
+	}
+	
+	.header-menu
+	{
+		height:48px;
+	}
+	
+	.theme-button
+	{
+	}	
+	.theme-button-container
+	{
+		height:48px;
+		margin-top:-48px;
+	}
+}
+@media screen and (max-width:380px)
+{
+	.header-menu
+	{
+		background-position-x:left 10px;
+	}
+}
+</style>
 
 <script type="text/javascript">	
-window.onload = function() 
+function GoBack()
 {
-	Page_OnLoad(false, false, false, true, "images/", false);
-};
+	location.href = "https://store.mediosmedical.ro";
+}
+
+function ChangeTheme()
+{
+	var body = document.getElementById("body");
+	var currentClass = body.className;
+	body.className = currentClass == "dark-theme" ? "light-theme" : "dark-theme";
+		
+	var imageName = currentClass == "dark-theme" ? "light-theme-icon.png" : "dark-theme-icon.png";	
+	var themeButton = document.getElementById("themeButton");
+	var className = currentClass == "dark-theme" ? "theme-button-light" : "theme-button-dark";
+	if (themeButton)
+	{
+		themeButton.className = className;		
+	}	
+}
+
+function Maximize()
+{
+    var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
+        (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+        (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+        (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+    var docElm = document.documentElement;
+    if (!isInFullScreen) {
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        } else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        } else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        } else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
 </script>
 
 </head>
 
-<body onresize="Page_OnResize('images/')" bgcolor="#E6E6E6">
+<body id="body" class="light-theme">
 
-<!--headerBar-->
-<div id="headerBar"></div>
-<!--end headerBar-->
+<table cellpadding="0" cellspacing="0" class="header-menu"><tr><td></td></tr></table>
 
-<table id="header" cellpadding="0" cellspacing="0" border="0"></table>
-
-<table id="main-content" class="main-content" cellpadding="0" cellspacing="0" height="90%">
-
+<table id="mainContent" class="main-content" cellpadding="0" cellspacing="0" height="90%">
 
 <!--404-->
 <tr>
@@ -74,27 +411,15 @@ window.onload = function()
 <a class="large-fontsize">Ne pare r&#259;u, dar pagina pe care a&#539;i accesat-o nu poate fi g&#259;sit&#259;.</a>
 <br/><br/>
 <a class="normal-fontsize">Este posibil ca adresa s&#259; fie gre&#537;it&#259; sau pagina pe care o c&#259;uta&#539;i nu mai este disponibil&#259;.</a>
+<br/><br/>
+<button class="button-default" onclick="GoBack()">Inapoi la site</button>
 </td>
 </tr>
 <!--END 404-->
 
-
-<!--FOOTER-->
-<tr>
-<td class="footer-content" id="footerContact"></td>
-</tr>
-<!--END FOOTER-->
-
-<!--FOOTER MENU-->
-<tr>
-<td class="footer-menu-container" id="footerMenu"></td>
-</tr>
-<!--END FOOTER MENU-->
-
-
 <!--COPYRIGHT-->
 <tr>
-<td class="footer-copyright" id="footer-copyright-ws"></td>
+<td class="footer-copyright"><p>&#169; 2018 MEDIOS ONLINE STORE. Toate drepturile rezervate.</p></td>
 </tr>
 <!--END COPYRIGHT-->
 
@@ -103,6 +428,11 @@ window.onload = function()
 <!--footerBar-->
 <div id="footerBar"></div>
 <!--end footerBar-->
+
+<div class="theme-button-container">
+<a id="maximizeButton" class="minimize-button" onclick="Maximize()"/>
+<a id="themeButton" class="theme-button-light" onclick="ChangeTheme()"/>
+</div>
 
 </body>
 </html>

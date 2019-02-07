@@ -153,9 +153,10 @@ function ReadProducts(xml)
 	
 function InitializePage()
 {
-	var product = products.find(obj => { return obj.id === 'DIHL3543' });
+	var product = products.find(obj => { return obj.id === 'DIHL3543' });	
 	if (product)
 	{
+		var i = products.indexOf(product);
 		var isavailable = product["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\">stoc epuizat";
 		var addbuttondisable = product["available"] == "true" ? "" : "disabled=\"true\"";
 	
@@ -228,7 +229,7 @@ function CalculateTotal(index, value)
 <table id="main-content" class="main-content" cellpadding="0" cellspacing="0">
 
 <!--SLIDER-->
-<tr><td class="section-title">Filme radiologice FujiFilm DI-HL 35x43 cm</td></tr>
+<tr><td class="section-title">Filme radiologice Fujifilm DI-HL 35x43 cm</td></tr>
 <!--END SLIDER-->
 
 <tr>

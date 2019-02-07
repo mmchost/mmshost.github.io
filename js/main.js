@@ -387,11 +387,7 @@ function InitializeCookiesBar(imagesPath)
 		"<td style=\"text-align:right; padding-right:10px;\"><img class=\"info-bar-icon\" src=\"" + imagesPath + "info.png\"/></td>" +
 		"<td class=\"info-bar-container\" style=\"font-weight:normal;\">" +
 		"<div class=\"info-bar-content\">" +
-		"<a title=\"" + 
-		"Informa&#539;ie: Acest website foloseste cookies. Navigand in continuare, sunteti de acord cu politica de cookies!" +
-		"\">" +
-		"Informa&#539;ie: Acest website foloseste cookies. Navigand in continuare, sunteti de acord cu <a class=\"hyperlink-highlight\" href=\"cookiespolicy\">politica de cookies</a>!" +
-		"</a>" +
+		"<a>Informa&#539;ie: Acest website foloseste cookies. Navigand in continuare, va exprimati acordul asupra <a class=\"hyperlink-highlight\" href=\"cookiespolicy\">politicii de cookies</a>!</a>" +
 		"</td>" +
 		"<td class=\"info-bar-cell\"><button class=\"button\" onclick=\"CookiesButton_Click()\">OK</button></td>" +
 		"</tr>" +

@@ -123,7 +123,7 @@ function LoadXml()
 	{
 	    if (this.readyState == 4 && this.status == 200) 
 	    {
-        ReadProducts(this);
+		    ReadProducts(this);
 	    }
 	};
 	xhttp.open("GET", "products.xml", true);
@@ -166,15 +166,10 @@ function InitializePage()
 				
 		if (priceTable)
 		{
-			var quantityCell = document.getElementById("quantityCell");
-			if (quantityCell)
+			var priceCell = document.getElementById("priceCell");
+			if (priceCell)
 			{
-				quantityCell.innerHTML = 
-				"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + -1 + ")'>-</button></td>" + 
-				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px; background:#fff;'><input class='textbox-numeric' type='text' value='" + products[i]["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + 1 + ")'>+</button></td>" +										 
-				"</tr></table>";
+				priceCell.innerHTML = product["price"] + " Lei";
 			}
 		
 			var availableCell = document.getElementById("availableCell");			
@@ -186,7 +181,7 @@ function InitializePage()
 			var buttonCell = document.getElementById("buttonCell");
 			if (buttonCell)
 			{
-				buttonCell.innerHTML = "<button class='button-default' onclick='RequestOffer(" + i + ")'" + addbuttondisable + ">Cere oferta</button>";
+				buttonCell.innerHTML = "<button class='button-default' onclick='AddItem(" + i + ")'" + addbuttondisable + ">Adauga in Cos</button>";
 			}
 		}
 	}
@@ -196,7 +191,7 @@ window.onload = function()
 {
 	Page_OnLoad(true, true, true, true, "../images/", false);
   
-  var localCart = GetCookie("cart");
+  	var localCart = GetCookie("cart");
 	if (localCart)
 	{
 		cart = JSON.parse(decodeURIComponent(localCart));
@@ -205,28 +200,21 @@ window.onload = function()
 	
 	LoadXml();
 };
-
-function RequestOffer(i)
-{
-	var shoppingBag = [];
-	shoppingBag.push(products[i]);
-		
-	document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag));
 	
-	location.href = "requestoffer";
-}
-
-function CalculateTotal(index, value)
-{
-	if (value < 1)
+function AddItem(index)
+{	
+	var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
+	if (product)
 	{
-		if (products[index]["quantity"] == 1)
-		{
-			return;
-		}
+		ShowMessage("Exista deja in cosul de cumparaturi!");
+		return;
 	}
-	products[index]["quantity"] = Math.round(products[index]["quantity"]) + value;
-	InitializePage();
+	
+	cart.push(products[index]);
+	RefreshCartItemsCount();
+	
+	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
+	ShowMessage("Adaugat in cosul de cumparaturi!");
 }
 
 </script>
@@ -278,8 +266,8 @@ function CalculateTotal(index, value)
 		
 		<table id="priceTable" class="priceTable" cellpadding="10" cellspacing="0">
 			<tr>
-				<td>Cantitate:</td>
-				<td id="quantityCell" style="text-align:right;"></td>
+				<td>Pret:</td>
+				<td id="priceCell" class="normal-fontsize" style="font-weight:bold; text-align:right; color:#0074BB;"></td>
 			</tr>
 			<tr>
 				<td>Disponibilitate:</td>

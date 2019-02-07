@@ -258,7 +258,7 @@
 				var status = xhr.statusText;
 				if (status == "OK")
 				{
-					document.cookie = "cart=";
+					//document.cookie = "cart=";
 					location.href = "ordercomplette";
 				}
 				else			

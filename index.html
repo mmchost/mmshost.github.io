@@ -118,23 +118,26 @@ function AddProducts(list)
 				"<tr><td align='center' style='padding-bottom:10px;'><a style='font-size:13px;'>Cod produs: " + list[i]["id"] + "</a></td></tr>" +
 				"<tr><td align='center'><button disabled='true' " + isavailable + "</button></td></tr>" +
 				"<tr><td style='padding-top:10px;' id='qtCell'></td></tr>" +
-				"<tr><td align='center' class='item-button-cell'><button " + addbuttondisable + " style='width:150px;' onclick='AddItem(" + i + ")'>Cere oferta</button></td></tr>" + "</table>";
-			InitializeQt(i);
+				"<tr><td align='center' class='item-button-cell'><button " + addbuttondisable + " style='width:150px;' onclick='AddItem(" + i + ")'>Cere oferta</button></td></tr>" + "</table>";			
 		}
 	}
+	InitializeQt();
 }
 	
-function InitializeQt(i)
+function InitializeQt()
 {
-	var qtCell = document.getElementById("qtCell");
-	if (qtCell)
+	for (var i=0; i<products.length; i++)
 	{
-		qtCell.innerHTML =
-			"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" +
-			"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + -1 + ")'>-</button></td>" + 
-			"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px;'><input class='textbox-numeric' type='text' value='" + products[i]["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
-			"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + 1 + ")'>+</button></td>" +
-			"</tr></table>"
+		var qtCell = document.getElementById("qtCell");
+		if (qtCell)
+		{
+			qtCell.innerHTML =
+				"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" +
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + -1 + ")'>-</button></td>" + 
+				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px;'><input class='textbox-numeric' type='text' value='" + products[i]["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + 1 + ")'>+</button></td>" +
+				"</tr></table>"
+		}
 	}
 }
 

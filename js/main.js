@@ -175,7 +175,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<!--[if lt IE 9]>" +
 				"<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"display:inline-block;\">" +
 				"<tr>" +
-				"<td class=\"header-cell\" style=\"background:#005B99;\"><a href=\"https://mediosmedical.ro\"><img src=\"images/" + "logo-store.png\" class=\"header-logo\" onContextMenu=\"return false;\"/></a></td>" +
+				"<td class=\"header-cell\" style=\"background:#005B99;\">" + appLogo + "</td>" +
 				"<td class=\"menu-separator\"></td>" +
 				"<td class=\"menu-item\">" +
 				homeMenu.replace("{0}", "ACAS&#258;") +

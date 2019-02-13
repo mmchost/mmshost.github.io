@@ -27,8 +27,21 @@
     /*resize: vertical; /*for texarea only*/
 	font-family:open_sanslight;	
 }
-
 .textbox:focus 
+{
+    border:1px solid #0074BB;
+}
+
+.searchbox
+{
+	min-width:480px;
+    max-width:480px;
+    padding:10px 32px 10px 10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+	font-family:open_sanslight;	
+}
+.searchbox:focus 
 {
     border:1px solid #0074BB;
 }
@@ -70,7 +83,11 @@
 
 @media screen and (max-width:640px)
 {
-	
+	.searchbox
+	{
+		max-width:250px;
+		min-width:250px;
+	}
 
 	.textarea
 	{

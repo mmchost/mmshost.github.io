@@ -49,11 +49,11 @@ function Page_OnResize(imagesPath)
 function Page_OnLoad(addCart, showInfoBar, showCookiesBar, isStore, imagesPath, isMainPage) 
 {
 	InitializeComponent(isStore, addCart, imagesPath, isMainPage);
-	if (showInfoBar)
+	if (showInfoBar == true)
 	{
 		InitializeInfoBar(imagesPath);
 	}
-	if (showCookiesBar)
+	if (showCookiesBar == true)
 	{
 		InitializeCookiesBar(imagesPath);
 	}
@@ -126,7 +126,7 @@ function RefreshPosition()
 function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 {
 	var storeString = "Magazin";
-	if (isStore)
+	if (isStore == true)
 	{
 		storeString = "Produse";
 	}
@@ -136,11 +136,11 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	var cartMenu = "";
 	var appLogo = "<a href=\"https://www.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo.png\" alt=\"Medios Medical Center\"/></a>";
 	
-	if (isMainPage)
+	if (isMainPage == true)
 	{
 		homeMenu = "<a href=\"#home\">{0}</a>";
 	}
-	if (addCart)
+	if (addCart == true)
 	{
 		cartMenu = 
 		"<td id=\"cartMenuItem\" class=\"menu-item\" style=\"cursor:pointer;\" title=\"Cosul de cumparaturi\">" +
@@ -152,7 +152,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		"</center>" +
 		"</td>";		
 	}
-	if (isStore)
+	if (isStore == true)
 	{
 		storeMenu = "<a href=\"./\">{0}</a>";
 		if (isMainPage)
@@ -236,7 +236,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	if (map)
 	{
 		var imageName = "medios-center-map-l.png";
-		if (isStore)
+		if (isStore == true)
 		{
 			imageName = "medios-store-map-l.png";
 		}
@@ -333,7 +333,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	if (footerCopyright)
 	{
 		footerCopyright.innerHTML = "<p>&#169; 2019 MEDIOS MEDICAL CENTER. Toate drepturile rezervate.</p>";
-		if (isStore)
+		if (isStore == true)
 		{
 			footerCopyright.innerHTML = "<p>&#169; 2019 MEDIOS ONLINE STORE. Toate drepturile rezervate.</p>";
 		}

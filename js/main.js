@@ -183,9 +183,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<td class=\"menu-item\">" +
 				homeMenu.replace("{0}", "ACAS&#258;") +
 				"</td>" +
-				"<td class=\"menu-item\">" +
-				servicesMenu +
-				"</td>" +
+				"<td class=\"menu-item\">" + servicesMenu + "</td>" +
 				"<td class=\"menu-item\">" +
 				storeMenu.replace("{0}", storeString.toUpperCase()) +
 				"</td>" +
@@ -214,9 +212,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				homeMenu.replace("{0}", "ACAS&#258;") + 
 				"</center>" +
 				"</td>" +				
-				"<td class=\"menu-item\">" +
-				"<center><a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a></center>" +
-				"</td>" +
+				"<td class=\"menu-item\"><center>" + servicesMenu + "</center></td>" +
 				"<td class=\"menu-item\">" +
 				storeMenu.replace("{0}", storeString.toUpperCase()) +
 				"</td>" +

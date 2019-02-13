@@ -250,12 +250,12 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 					var xmlDoc = this.responseXML;
 					
 					var contactElement = xmlDoc.getElementsByTagName("contact");
-					var contact = contactElement.context.text; //[0].textContent;
+					var contact = contactElement[0].text; //[0].textContent;
 					contact = contact.trim();
 					contact = contact.replace(/\n/g, '<br/>');
 
 					var programElement = xmlDoc.getElementsByTagName("program");
-					var program = programElement[0].textContent;
+					var program = programElement[0].text;
 					program = program.trim();
 					program = program.replace(/\n/g, '<br/>');
 					

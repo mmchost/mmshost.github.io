@@ -226,6 +226,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"</td>" +
 				"</tr>" +
 				"</table>" +
+				"<div id='theme-button' style='position:absolute; width:100%; pointer-events:none; height:80px; margin-top:-80px;'><a id='maximizeButton' class='maximize-button' onclick='Maximize()'></a></div>" +
 				"<!-- <![endif]-->";
 			}
 		}
@@ -395,4 +396,35 @@ function InitializeCookiesBar(imagesPath)
 		"</tr>" +
 		"</table>";
 	}
+}
+
+function Maximize()
+{
+    var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
+        (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+        (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+        (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+    var docElm = document.documentElement;
+    if (!isInFullScreen) {
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        } else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        } else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        } else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
 }

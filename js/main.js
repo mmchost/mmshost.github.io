@@ -251,12 +251,12 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 					
 					var contactElement = xmlDoc.getElementsByTagName("contact");
 					var contact = contactElement[0].text; //[0].textContent;
-					contact = contact.trim();
+					contact = contact.replace(/^\s+|\s+$/g, '');
 					contact = contact.replace(/\n/g, '<br/>');
 
 					var programElement = xmlDoc.getElementsByTagName("program");
 					var program = programElement[0].text;
-					program = program.trim();
+					program = program.replace(/^\s+|\s+$/g, '');
 					program = program.replace(/\n/g, '<br/>');
 					
 					footerContact.innerHTML = 

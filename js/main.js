@@ -182,6 +182,9 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a>" +
 				"</td>" +
 				"<td class=\"menu-item\">" +
+				storeMenu.replace("{0}", storeString.toUpperCase()) +
+				"</td>" +
+				"<td class=\"menu-item\">" +
 				"<a href=\"#contact\">CONTACT</a>" +
 				"</td>" +
 				cartMenu +

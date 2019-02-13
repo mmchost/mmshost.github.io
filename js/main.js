@@ -133,12 +133,13 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	
 	var homeMenu = "<a href=\"./\">{0}</a>";
 	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">{0}</a>";
-	var servicesMenu = "<a href='#exams'>SERVICII</a>";
+	var servicesMenu = "<a href='./'>SERVICII</a>";
 	var cartMenu = "";
 	var appLogo = "<a href=\"https://www.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo.png\" alt=\"Medios Medical Center\"/></a>";
 	
 	if (isMainPage == true)
 	{
+		servicesMenu = "<a href='#exams'>SERVICII</a>";
 		homeMenu = "<a href=\"#home\">{0}</a>";
 	}
 	if (addCart == true)

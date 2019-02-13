@@ -133,6 +133,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	
 	var homeMenu = "<a href=\"./\">{0}</a>";
 	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">{0}</a>";
+	var servicesMenu = "<a href='#exams'>SERVICII</a>";
 	var cartMenu = "";
 	var appLogo = "<a href=\"https://www.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo.png\" alt=\"Medios Medical Center\"/></a>";
 	
@@ -154,6 +155,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	}
 	if (isStore == true)
 	{
+		servicesMenu = "<a href='https://www.mediosmedical.ro/#exams'>SERVICII</a>";
 		storeMenu = "<a href=\"./\">{0}</a>";
 		if (isMainPage)
 		{
@@ -181,7 +183,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				homeMenu.replace("{0}", "ACAS&#258;") +
 				"</td>" +
 				"<td class=\"menu-item\">" +
-				"<a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a>" +
+				servicesMenu +
 				"</td>" +
 				"<td class=\"menu-item\">" +
 				storeMenu.replace("{0}", storeString.toUpperCase()) +

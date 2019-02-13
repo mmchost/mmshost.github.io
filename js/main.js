@@ -32,15 +32,15 @@ function Page_OnResize(imagesPath)
 		
 		if (w>=721)
 		{
-			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/1920.png); height:480px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
+			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/1920L.png); height:480px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
 		}
 		if (w<=1080)
 		{
-			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/720.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
+			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/720L.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
 		}
 		if (w<=720)
 		{
-			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/320.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
+			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/320L.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
 		}		
 	}
 	RefreshPosition();

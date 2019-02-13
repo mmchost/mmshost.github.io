@@ -179,9 +179,6 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				homeMenu.replace("{0}", "ACAS&#258;") +
 				"</td>" +
 				"<td class=\"menu-item\">" +
-				storeMenu.replace("{0}", storeString.toUpperCase()) +
-				"</td>" +
-				"<td class=\"menu-item\">" +
 				"<a href=\"https://www.mediosmedical.ro/#exams\">SERVICII</a>" +
 				"</td>" +
 				"<td class=\"menu-item\">" +
@@ -253,7 +250,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 					var xmlDoc = this.responseXML;
 					
 					var contactElement = xmlDoc.getElementsByTagName("contact");
-					var contact = contactElement[0].textContent;
+					var contact = contactElement.context.text; //[0].textContent;
 					contact = contact.trim();
 					contact = contact.replace(/\n/g, '<br/>');
 

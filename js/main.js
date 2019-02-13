@@ -134,6 +134,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	var homeMenu = "<a href=\"./\">{0}</a>";
 	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">{0}</a>";
 	var cartMenu = "";
+	var appLogo = "<a href=\"https://www.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo-center.png\" alt=\"Medios Medical Center\"/></a>";
 	
 	if (isMainPage)
 	{
@@ -158,6 +159,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		{
 			storeMenu = "<a href=\"#products\">{0}</a>";
 		}
+		appLogo = "<a href=\"https://store.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo-store.png\" alt=\"Medios Online Store\"/></a>";
 	}
 
 	var header = document.getElementById("header");
@@ -195,7 +197,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<!--[if gt IE 8]> <!-- -->" +
 				"<table class=\"header-menu\" cellpadding=\"0\" cellspacing=\"0\">" +
 				"<tr>" +
-				"<td class=\"header-cell\"><a href=\"https://store.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo-store.png\" alt=\"Medios Online Store\"/></a></td>" +
+				"<td class=\"header-cell\">" + appLogo + "</td>" +
 				"<td class=\"menu-separator\"></td>" +
 				"</tr>" +
 				"</table>" +

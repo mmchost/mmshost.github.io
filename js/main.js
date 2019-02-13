@@ -326,7 +326,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	var footerCopyright = document.getElementById("footer-copyright-ws");
 	if (footerCopyright)
 	{
-		footerCopyright.innerHTML = "<p>&#169; 2018 MEDIOS MEDICAL CENTER. Toate drepturile rezervate.</p>";
+		footerCopyright.innerHTML = "<p>&#169; 2019 MEDIOS MEDICAL CENTER. Toate drepturile rezervate.</p>";
 		if (isStore)
 		{
 			footerCopyright.innerHTML = "<p>&#169; 2019 MEDIOS ONLINE STORE. Toate drepturile rezervate.</p>";

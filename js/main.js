@@ -235,10 +235,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	var map  = document.getElementById("map");
 	if (map)
 	{
-		var imageName = "medios-center-map.png";
+		var imageName = "medios-center-map-l.png";
 		if (isStore)
 		{
-			imageName = "medios-store-map.png";
+			imageName = "medios-store-map-l.png";
 		}
 		map.innerHTML = "<div style=\"background-image:url(" + imagesPath + "/map/" + imageName + "); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit; outline:1px solid #F7F7F7;\"></div>";
 	}

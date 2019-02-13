@@ -73,45 +73,60 @@ body
 .exams-content
 {
 	width:100%;
-	background:#F3F3F3;	
-}
-.exams-content:hover
-{
-	background:#E6E6E6;
+	background:#F3F3F3;
+	border-style:solid;
+	border-width:0px;
+	border-color:blue;
+	border-collapse:collapse;
+	margin:0px;
 }
 .exams-type
 {
 	padding:8px;
 	font-size:24px;	
-	border-style:none solid solid none;
-	border-width:2px;
-	border-color:#FFFFFF;	
+	border-style:solid;
+	border-width:1px;	
+	border-color:#fff;
+	border-collapse:collapse;
 	text-align:center;
 	width:30%;
 	min-width:90px;
+	background:transparent;
 	/*word-wrap:break-word;*/
+}
+.exams-type:hover
+{
+	background:#E6E6E6;
 }
 .exams-name
 {
-	border-style:none none solid none;
-	border-width:2px;
-	border-color:#FFFFFF;
+	border-style:solid;
+	border-width:1px;
+	border-color:#fff;
+	border-collapse:collapse;
 	padding-left:8px;
 	width:50%;
 	height:32px;
-	/*min-width:150px;*/
+}
+.exams-name:hover
+{
+	background:#E6E6E6;
 }
 .exams-price
 {
-	border-style:none none solid solid;
-	border-width:2px;
-	border-color:#FFFFFF;
+	border-style:solid;
+	border-width:1px;
+	border-color:#fff;
+	border-collapse:collapse;
 	padding-left:8px;
 	width:20%;
 	height:32px;
-	min-width:40px;
+	min-width:40px;	
 }
-
+.exams-price:hover
+{
+	background:#E6E6E6;
+}
 
 .news-content
 {

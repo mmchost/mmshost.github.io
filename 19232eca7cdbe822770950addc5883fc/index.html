@@ -136,7 +136,8 @@ function AddItem(index)
 	var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
 	if (product)
 	{
-		ShowMessage("Exista deja in cosul de cumparaturi!");
+		location.href = "cart";
+		//ShowMessage("Exista deja in cosul de cumparaturi!");
 		return;
 	}	
 	
@@ -144,7 +145,8 @@ function AddItem(index)
 	RefreshCartItemsCount();
 	
 	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
-	ShowMessage("Adaugat in cosul de cumparaturi!");
+	//ShowMessage("Adaugat in cosul de cumparaturi!");
+	location.href = "cart";
 }
 
 </script>

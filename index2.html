@@ -22,6 +22,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700"/> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:800"/>
 
+<link rel="stylesheet" type="text/css" href="https://store.mediosmedical.ro/styles/banner.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://store.mediosmedical.ro/styles/map.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/main.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/footer.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/messageBox.css" charset="utf-8"/>
@@ -34,7 +36,7 @@
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/section.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/mainContent.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/info.css" charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="vstyles/overlay.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/overlay.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/textBox.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/item.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/cart.css" charset="utf-8"/>
@@ -58,7 +60,7 @@ var products = [];
 
 function LoadXml()
 {
-  var xhttp;
+	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function()
 	{
@@ -80,7 +82,7 @@ window.onload = function()
 
 function ReadProducts(xml)
 {
-  var xmlDoc = xml.responseXML;
+	var xmlDoc = xml.responseXML;
 	var elements =  xmlDoc.getElementsByTagName("product");	
 
 	var i, j;

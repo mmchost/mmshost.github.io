@@ -1,0 +1,57 @@
+.light-theme .banner
+{
+	background-image:url(../images/banner/1920L.png);
+	height:480px;
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip: border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-size:auto auto;
+	display:block;
+	box-sizing:inherit;
+}
+
+.dark-theme .banner
+{
+	background-image:url(../images/banner/1920D.png);
+	height:480px;
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip: border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-size:auto auto;
+	display:block;
+	box-sizing:inherit;
+}
+
+@media screen and (max-width:1080px) 
+{
+	.light-theme .banner
+	{
+		background-image:url(../images/banner/720L.png);
+		height:320px;
+	}
+	
+	.dark-theme .banner
+	{
+		background-image:url(../images/banner/720D.png);
+		height:320px;
+	}
+}
+
+@media screen and (max-width:720px) 
+{
+	.light-theme .banner
+	{
+		background-image:url(../images/banner/320L.png);
+		height:320px;
+	}
+	
+	.dark-theme .banner
+	{
+		background-image:url(../images/banner/320D.png);
+		height:320px;
+	}
+}

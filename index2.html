@@ -77,7 +77,21 @@ window.onload = function()
 {
 	Page_OnLoad(false, false, true, true, "images/", true);
 
-	LoadXml();	
+	LoadXml();
+	
+	try
+	{
+		var theme = GetCookie("theme");
+		if (theme === "dark")
+		{
+			var body = document.getElementById("body");
+			if (body)
+			{
+				body.className = "dark-theme";
+			}
+		}
+	}
+	catch(ex){}
 };
 
 function ReadProducts(xml)

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products>
+	<product>
+		<id>DIHL2025</id>
+		<name>Filme radiologice Fujifilm
+		DI-HL 20x25 cm (8x10 inch)
+		Blue base, 150 filme / cutie</name>
+		<available>true</available>
+		<price>0</price>
+		<quantity>1</quantity>
+		<image>product-images/filme-radiologice-fuji-di-hl-20x25.png</image>
+		<page>filme+radiologice+fuji+di-hl+20x25+cm+blue+base</page>
+	</product>
+	<product>
+		<id>DIHL3543</id>
+		<name>Filme radiologice Fujifilm
+		DI-HL 35x43 cm (14x17 inch)
+		Blue base, 100 filme / cutie</name>
+		<available>true</available>
+		<price>0</price>
+		<quantity>1</quantity>
+		<image>product-images/filme-radiologice-fuji-di-hl-35x43.png</image>
+		<page>filme+radiologice+fuji+di-hl+35x43+cm+blue+base</page>
+	</product>
+  <product>
+		<id>ENVA4</id>
+		<name>Plic pentru film radiologic
+		A4 20x25 cm (8x10 inch)</name>
+		<available>true</available>
+		<price>0.99</price>
+		<quantity>1</quantity>
+		<image>product-images/plic-pentru-film-radiologic-a4-20x25.png</image>
+		<page>plic+pentru+film+radiologic+a4+20x25+cm</page>
+	</product>
+  <product>
+		<id>ENVA3</id>
+		<name>Plic pentru film radiologic
+		A3 35x43 cm (14x17 inch)</name>
+		<available>true</available>
+		<price>1.49</price>
+		<quantity>1</quantity>
+		<image>product-images/plic-pentru-film-radiologic-a3-35x43.png</image>
+		<page>plic+pentru+film+radiologic+a3+35x43+cm</page>
+	</product>
+</products>

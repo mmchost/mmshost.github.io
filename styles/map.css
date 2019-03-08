@@ -1,0 +1,18 @@
+.map
+{
+	background-image:url(../images/map/medios-store-map-l.png);
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-position-y:center;
+	background-size:auto auto;
+	display:block;
+	box-sizing:inherit;
+	min-height:320px;
+}
+.dark-theme .map
+{
+	background-image:url(../images/map/medios-store-map-d.png);
+}

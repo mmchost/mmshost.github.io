@@ -57,6 +57,7 @@
 <script>
 
 var products = [];
+var cart = [];
 
 function LoadXml()
 {
@@ -173,10 +174,30 @@ function InitializeQt()
 
 function AddItem(index)
 {
-	var shoppingBag = [];
-	shoppingBag.push(products[index]);	
-	document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag));
-	RequestOffer();
+	if (products[index]["price"] > 0)
+	{
+		var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
+		if (product)
+		{
+			location.href = "cart";
+		}
+		else			
+		{
+			cart.push(products[index]);
+			document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
+			
+			RefreshCartItemsCount();
+			
+			location.href = "cart";
+		}
+	}
+	else
+	{
+		var shoppingBag = [];
+		shoppingBag.push(products[index]);
+		document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag));
+		RequestOffer();
+	}
 }
   
 function RequestOffer()

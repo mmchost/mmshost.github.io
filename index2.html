@@ -127,10 +127,16 @@ function AddProducts(list)
 		for (var i=0; i<list.length; i++)
 		{
 			var itemName = list[i]["name"].replace(/\n/g, '<br/>');
-			var isavailable = list[i]["available"] == "true" ? " class='item-available-true'>in stoc" : " class='item-available-false'><a style='line-height:22px;'>stoc epuizat</a>";
-			var addbuttondisable = list[i]["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
-			var buttonContent = Math.round(list[i]["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
-			var button = "<button " + addbuttondisable + " style='width:150px;' onclick='AddItem(" + i + ")'>" + buttonContent + "</button>";
+			//var isavailable = list[i]["available"] == "true" ? " class='item-available-true'>in stoc" : " class='item-available-false'><a style='line-height:22px;'>stoc epuizat</a>";
+			var buttonState = list[i]["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
+			var buttonText = Math.round(list[i]["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
+			if (list[i]["available"] == "false")
+			{
+				buttonText = "Stoc epuizat";
+			}
+			var iconColor = list[i]["available"] == "false" ? "#0066A2" : "#B7B7B7";
+			var buttonContent = "<table style='background:transparent; height:100%; width:100%;' cellpadding='0' cellspacing='0'><tr><td style='width:46px; background-color:" + iconColor + "; background-image:url(images/cart.png); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;'></td><td>" + buttonText + "</td></tr></table>";			
+			var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem(" + i + ")'>" + buttonContent + "</button>";
 			var detailsLink = "<a class='hyperlink-default' href='" + list[i]['page'] + "'>";
 			var priceCell = Math.round(list[i]["price"]) > 0 ? "<tr><td align='center' class='item-price-cell'>" + list[i]["price"] + " Lei<a style='font-size:12px; color:#484848; font-weight:300;'>&nbsp;&nbsp;*TVA inclus</a></td></tr>" : "<tr><td align='center' class='item-price-cell'></td></tr>";
 			cell.innerHTML +=

@@ -37,7 +37,7 @@
 		<id>ENVA3</id>
 		<name>Plic pentru film radiologic
 		A3 35x43 cm (14x17 inch)</name>
-		<available>true</available>
+		<available>false</available>
 		<price>1.49</price>
 		<quantity>1</quantity>
 		<image>product-images/plic-pentru-film-radiologic-a3-35x43.png</image>

@@ -78,6 +78,12 @@ window.onload = function()
 {
 	Page_OnLoad(true, false, true, true, "images/", true);
 	
+	var localCart = GetCookie("cart");
+	if (localCart)
+	{
+		cart = JSON.parse(decodeURIComponent(localCart));
+	}
+	
 	RefreshCartItemsCount(cart);
 
 	LoadXml();

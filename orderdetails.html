@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro-ro">
+<head>
+<meta name="robots" content="noindex" />
+
+<title>Detalii de livrare - Medios Online Store</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="Medios Online Store" />
+
+<meta name="Resource-type" content="Document" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400"/> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700"/> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:800"/>
+
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/main.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/footer.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/messageBox.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/button.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/hyperlink.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/tag.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/infoBar.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/header.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/menu.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/section.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/mainContent.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/info.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/overlay.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/textBox.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/item.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/cart.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/form.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/label.css" charset="utf-8"/>
+
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/jquery.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/jquery.scrollTo.js"></script>	
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/jquery.smoothAnchors.js"></script>
+
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/buttonEvents.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/main.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/getCookie.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/messageBox.js"></script>
+
+</head>
+
+<script>
+
+function PaymentMethod_Click()
+{
+	var method1Radio = document.getElementById("method1");
+	var method2Radio = document.getElementById("method2");
+	
+	if (method1Radio && method2Radio)
+	{
+		var bankContainer = document.getElementById("bankContainer");
+		var bankaccBox = document.getElementById("bankacc");
+		var bankBox = document.getElementById("bank");
+		
+		if (bankContainer && bankaccBox && bankBox)
+		{
+			if (method1Radio.checked)
+			{
+				bankContainer.style.display ="none"
+				bankaccBox.style.display = "none";
+				bankBox.style.display = "none";
+			}
+			
+			if (method2Radio.checked)
+			{
+				bankContainer.style.display = "";
+				bankaccBox.style.display = "";
+				bankBox.style.display = "";
+			}
+		}
+	}
+}
+
+function Terms_CheckedChanged()
+{
+	var button = document.getElementById("sendButton");
+	var checkbox = document.getElementById("termsCheckbox");
+	if (button && checkbox)
+	{
+		var value = checkbox.checked;
+		button.disabled = !value;
+		if (!value)
+		{
+			button.className = "button-default-disabled";
+		}
+		else		
+		{
+			button.className = "button-default";
+		}
+	}
+}
+
+var cart = [];
+
+window.onload = function() 
+{
+	var localCart = GetCookie("cart");
+	if (!localCart)
+	{
+		document.location = "./";
+	}
+	else
+	{
+		cart = JSON.parse(decodeURIComponent(localCart));
+		if (cart.length == 0)
+		{
+			document.location = "./";
+		}
+	}
+	
+	Page_OnLoad(true, false, true, true, "images/", false);
+	Terms_CheckedChanged();
+	PaymentMethod_Click();
+
+	if (localCart)
+	{
+		RefreshCartItemsCount();
+	}
+	
+	if (cart.length > 0)
+	{
+		var formPage = document.getElementById("formpage");
+		if (formPage)
+		{
+			formPage.style.display = "block";
+		}
+	}
+	else	
+	{
+		var errorPage = document.getElementById("errorPage");
+		if (errorPage)
+		{
+			errorPage.style.display = "block";
+		}
+	}
+};
+
+</script>
+
+<body id="body" class="light-theme">
+
+<!--[if lt IE 9]>
+<meta http-equiv="refresh" content="0; url=oldbrowser" />
+<![endif]-->
+
+<!--[if gt IE 8]> <!-- -->
+
+<table id="header" cellpadding="0" cellspacing="0" border="0" style="top:0px;"></table>
+
+<table id="main-content" class="main-content" cellpadding="0" cellspacing="0" height="90%">
+
+<!--ORDER DETAILS-->
+<tr><td><a name="home" id="hometag" class="tag" style="background:;"/></td></tr>
+<tr><td class="section-title">DETALII DE LIVRARE</td></tr>
+
+<tr>
+<td style="background:white; height:100%; vertical-align:top;">
+	<div id="errorPage" style="margin:5px 0px 5px 0px; display:none;">
+		<table class="cartTable"><tr><td></td></tr></table>
+		<table style="height:1px;" class="summaryTable"><tr><td style="text-align:right; padding:0px 5px 5px 5px;"><a class="highlight-text">← </a><a class="hyperlink-highlight" href="./#products">Inapoi la cumparaturi</a></td></tr></table>
+	
+		<table align="center" id="emptycart" class="emptyCart" width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td style="padding-top:5px; font-weight:bold;">
+					<table cellpadding="5" cellspacing="0" align="center">
+						<tr>
+							<td><img src="images/warning.png"/></td>
+							<td><a>Cosul de cumparaturi este gol.</a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="formpage" style="margin:5px 0px 20px 0px; display:none;">
+		<table class="cartTable"><tr><td></td></tr></table>
+		<table style="height:1px;" class="summaryTable"><tr><td style="text-align:right; padding:0px 5px 5px 5px;"><a class="highlight-text">← </a><a class="hyperlink-highlight" href="./#products">Continua cumparaturile</a></td></tr></table>
+		<table align="center" class="emptyCart" width="100%" cellpadding="0" cellspacing="0" style="padding:0px;">
+			<tr>
+				<td style="padding-top:5px; font-weight:bold;"></td>
+			</tr>
+		</table>
+	
+		<!--THE FORM :: TODO: SUBMIT WITH ENCRYPTION-->	
+		<form method="POST" action="https://script.google.com/macros/s/AKfycbyU7mKIjOqXLkw0gcZ6lFQj9jkuBhY83fKM0QyK/exec">
+				<!--
+				TODO: FOR MOBILE DEVICES: SET WIDTH:100PX;				
+				-->
+				<table class="formTable" cellpadding="0" cellspacing="0" style="padding:5px;" bgcolor="white" align="center">					
+					<tr>
+						<td>
+							<div class="inputContainer" style="display:none;">
+								<input class="textbox" type="text" name="honeypot" id="honeypot"/>
+							</div>							
+							<div class="inputContainer">
+								<label>Modalitate de plata</label>
+								<br/>
+								<div class="inputPlaceholder">
+									<label style="cursor:pointer; display:block;" onclick="PaymentMethod_Click()">
+									<input type="radio" id="method1" checked="true" name="paymentmodeGroup"/>
+									Ramburs la curier
+									</label>
+								</div>
+							</div>
+							<div class="inputContainer" style="vertical-align:bottom;">								
+								<div class="inputPlaceholder">
+									<label style="cursor:pointer; display:block;" onclick="PaymentMethod_Click()">
+									<input type="radio" id="method2" name="paymentmodeGroup"/>
+									Ordin de plata
+									</label>
+								</div>
+							</div>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							<div class="inputContainer">
+								<label>Denumire Societate *</label>
+								<br/>
+								<input class="textbox" type="text" name="Denumire_Societate" id="name" placeholder=""/>
+								<br/>
+								<label id="name-invalid" class="label-invalid">! denumire societate invalida</label>
+							</div>
+							<div class="inputContainer">
+								<label>Sediu social *</label>
+								<br/>
+								<input class="textbox" type="text" name="Sediu_social" id="socialaddress" placeholder=""/>
+								<br/>
+								<label id="saddress-invalid" class="label-invalid">! sediu social invalid</label>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<div class="inputContainer">
+								<label>Cod fiscal / CUI *</label>
+								<br/>
+								<input class="textbox" type="text" name="CUI" id="cui" placeholder=""/>
+								<br/>
+								<label id="cui-invalid" class="label-invalid">! cod fiscal invalid</label>
+							</div>
+							<div class="inputContainer">
+								<label>Nr. Reg. Com. *</label>
+								<br/>
+								<input class="textbox" type="text" name="NRC" id="regcom" placeholder=""/>
+								<br/>
+								<label id="regcom-invalid" class="label-invalid">! nr. reg. com. invalid</label>
+							</div>
+						</td>
+					</tr>
+										
+					<tr>
+						<td id="bankContainer" style="display:none;">
+							<div class="inputContainer">
+								<label>Cont Banca *</label>
+								<br/>
+								<input class="textbox" type="text" name="Cont_Banca" id="bankacc" placeholder=""/>
+								<br/>
+								<label id="bankacc-invalid" class="label-invalid">! cont banca invalid</label>
+							</div>
+							<div class="inputContainer">
+								<label>Banca *</label>
+								<br/>
+								<input class="textbox" type="text" name="Banca" id="bank" placeholder=""/>
+								<br/>
+								<label id="bank-invalid" class="label-invalid">! nume banca invalid</label>
+							</div>
+						</td>
+					</tr>				
+					
+					<tr>
+						<td>
+							<div class="inputContainer">
+								<label>Adresa de livrare *</label>
+								<br/>
+								<input class="textbox" type="text" name="Adresa_de_livrare" id="address" placeholder=""/>
+								<br/>
+								<label id="address-invalid" class="label-invalid">! adresa invalida</label>
+							</div>
+							<div class="inputContainer">
+								<label>Cod Postal *</label>
+								<br/>
+								<input class="textbox" type="text" name="Cod_Postal" id="postalcode" placeholder=""/>
+								<br/>
+								<label id="postalcode-invalid" class="label-invalid">! cod postal invalid</label>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<div class="inputContainer">
+								<label>Adresa de email *</label>
+								<br/>
+								<input class="textbox" type="text" name="Adresa_de_email" id="email" value="" placeholder=""/>
+								<br/>
+								<label id="email-invalid" class="label-invalid">! email invalid</label>
+							</div>
+							<div class="inputContainer">
+								<label>Numar de Telefon *</label>
+								<br/>
+								<input class="textbox" type="text" name="Numar_de_Telefon" id="tel" placeholder=""/>
+								<br/>
+								<label id="tel-invalid" class="label-invalid">! nr. de telefon invalid</label>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<div class="inputContainer">
+								<label>Alte observatii (maxim 200 caractere)</label>
+								<br/>								
+								<textarea class="textarea" name="Alte_observatii" id="obs" value=""></textarea>
+								<br/>
+								<label id="obs-invalid" class="label-invalid"></label>
+							</div>							
+						</td>
+					</tr>
+					
+					<tr><td>
+						<a style="font-size:12px; display:block; margin-top:12px; margin-left:7px;">Campurile notate cu * sunt obligatorii.</a>
+						<a style="font-size:12px; display:block; margin-top:12px; margin-left:7px;">Inainte de a trimite comanda, va rugam sa va asigurati ca toate datele introduse de dvs. sunt corecte.</a>												
+						<br/>
+						<label style="cursor:pointer; display:block; font-size:12px;" onclick="Terms_CheckedChanged()">
+						<input id="termsCheckbox" type="checkbox"/>
+						Am citit si sunt de acord cu <a class="hyperlink-highlight" href="rgpd">prelucrarea datelor cu caracter personal</a>
+						</label>
+						<br/>
+						<center>
+							<button id="sendButton" style="margin-top:5px;">							
+								<table cellpadding="0" cellspacing="0" align="center" width="100%">
+									<tr>
+										<td id="loading" style="display:none; width:32px; height:32px; padding-left:10px; background:url(../images/loading32.gif); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;"></td>
+										<td><center>Trimite comanda</center></td>
+									</tr>
+								</table>								
+							</button>
+						</center>
+					</td></tr>
+				</table>
+			</form>
+			
+			<!-- Submit the Form to Google Using "AJAX" -->
+			<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+		</div>  
+	
+</td>
+</tr>
+<!--END ORDER DETAILS-->
+
+<!--CONTACT-->
+<tr><td><a name="contact" id="sectionTag1" class="tag"/></td></tr>
+
+<tr><td class="section-title">CONTACT</td></tr>
+<tr>
+<td class="footer-content" id="footerContact"></td>
+</tr>
+<!--END CONTACT-->
+
+<!--FOOTER MENU-->
+<tr>
+<td class="footer-menu-container" id="footerMenu"></td>
+</tr>
+<!--END FOOTER MENU-->
+
+<!--COPYRIGHT-->
+<tr>
+<td class="footer-copyright" id="footer-copyright-ws"></td>
+</tr>
+<!--END COPYRIGHT-->
+
+</table>
+
+<!-- <![endif]-->
+
+</body>
+</html>

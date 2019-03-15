@@ -85,11 +85,11 @@
 {
 	display:block;
 	cursor:pointer;
-	border:solid 0px #0074BB;
+	border:none 1px #0074BB;
 }
 .imageGallery:hover
 {
-	border-width:1px;	
+	border-style:solid;	
 }
 
 @media screen and (max-width:1300px)
@@ -260,7 +260,7 @@ function GalleryImage_Click(index)
 	var previewImage = document.getElementById("previewImage");
 	if (previewImage)
 	{
-		previewImage.src = "plicuri-c4-pentru-filme-radiologice-" + index + ".png";
+		previewImage.src = "images/plicuri-c4-pentru-filme-radiologice-" + index + ".png";
 	}
 }
 

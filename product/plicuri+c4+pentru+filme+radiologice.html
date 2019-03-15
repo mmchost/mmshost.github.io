@@ -80,6 +80,17 @@
 	//height:100%;
 	background:#E6E6E6;	
 }
+	
+.imageGallery
+{
+	display:block;
+	cursor:pointer;
+	border:solid 0px #0074BB;
+}
+.imageGallery:hover
+{
+	border-width:1px;	
+}
 
 @media screen and (max-width:1300px)
 {
@@ -243,6 +254,15 @@ function CalculateTotal(index, value)
 	products[index]["quantity"] = Math.round(products[index]["quantity"]) + value;
 	InitializePage();
 }
+	
+function GalleryImage_Click(index)
+{
+	var previewImage = document.getElementById("previewImage");
+	if (previewImage)
+	{
+		previewImage.src = "plicuri-c4-pentru-filme-radiologice-" + index + ".png";
+	}
+}
 
 </script>
 
@@ -267,15 +287,15 @@ function CalculateTotal(index, value)
 				<td style="padding:0px 5px 0px 5px;" class="cart-header" width="100%">
 					<table cellpadding="0" cellspacing="0">						
 						<tr>
-							<td>
-								<a style='display:block;'><img width="96" height="96" src="images/plicuri-c4-pentru-filme-radiologice-1.png"/></a>
-								<a style='display:block;'><img width="96" height="96" src="images/plicuri-c4-pentru-filme-radiologice-2.png"/></a>
-								<a style='display:block;'><img width="96" height="96" src="images/plicuri-c4-pentru-filme-radiologice-3.png"/></a>
-								<a style='display:block;'><img width="96" height="96" src="images/plicuri-c4-pentru-filme-radiologice-4.png"/></a>
+							<td style="vertical-align:top; border-style:solid; border-width:0px 1px 0px 0px; border-color:#E6E6E6;">
+								<a onclick="GalleryImage_Click(1)" class="imageGallery"><img width="96" height="96" src="images/plicuri-c4-pentru-filme-radiologice-1.png"/></a>
+								<a onclick="GalleryImage_Click(2)" class="imageGallery"><img width="96" height="96" src="images/plicuri-c4-pentru-filme-radiologice-2.png"/></a>
+								<a onclick="GalleryImage_Click(3)" class="imageGallery"><img width="96" height="96" src="images/plicuri-c4-pentru-filme-radiologice-3.png"/></a>
+								<a onclick="GalleryImage_Click(4)" class="imageGallery"><img width="96" height="96" src="images/plicuri-c4-pentru-filme-radiologice-4.png"/></a>
 							</td>
 							<td>
-								<table cellpadding="0" cellspacing="0" style="display:inline-table; float:left;"><tr><td id="productImage" style="padding:5px 5px 5px 5px;"><img src="images/plicuri-c4-pentru-filme-radiologice-1.png" width="300px" alt="plicuri c4 pentru filme radiologice" style="pointer-events:none;"/></td></tr></table>
-								<table id="detailsTable" cellpadding="0" cellspacing="0" style="display:inline-table; margin:10px 0px 15px 5px; max-width:560px; border-style:solid; border-width:0px 0px 1px 0px; border-color:#E6E6E6;">
+								<table cellpadding="0" cellspacing="0" style="display:inline-table; float:left;"><tr><td id="productImage" style="padding:5px 5px 5px 5px;"><img id="previewImage" src="images/plicuri-c4-pentru-filme-radiologice-1.png" width="300px" alt="plicuri c4 pentru filme radiologice" style="pointer-events:none;"/></td></tr></table>
+ 								<table id="detailsTable" cellpadding="0" cellspacing="0" style="display:inline-table; margin:10px 0px 15px 5px; max-width:560px; border-style:solid; border-width:0px 0px 1px 0px; border-color:#E6E6E6; border-collapse:collapse;">
 									<tr><td style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;" colspan='2'>Plicuri C4 pentru filme radiologice</td></tr>
 									<tr><td class="details-cell">Cod produs</td><td class="details-cell">ENVC4</td></tr>									
 									<tr><td class="details-cell">Culoare</td><td class="details-cell">Alb</td></tr>

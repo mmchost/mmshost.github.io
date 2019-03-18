@@ -70,6 +70,11 @@
 	width:300px;
 	border:solid 1px blue;
 }
+	
+.preview-container
+{
+	width:1px;	
+}
 
 .description
 {
@@ -141,7 +146,7 @@
 	}
 	.subTitle
 	{
-		display:block;
+		display:inline-block;
 		width:100%;
 	}
 	.subDescription
@@ -154,6 +159,10 @@
 		width:100%;
 		display:block;
 		vertical-align:top;
+	}
+	.preview-container
+	{
+		width:100%;
 	}
 	.parent
 	{
@@ -398,10 +407,12 @@ function GalleryImage_Click(index)
 <table align="center" class="parent"><tr>
 <td class="container">
 
-<table celpadding="0" cellspacing="0" class="sub-container"><tr><td style="width:1px;">
+<table celpadding="0" cellspacing="0" class="sub-container"><tr>
+<td class="preview-container">
 <span class="preview"><img id="previewImage" src="images/plicuri-c4-pentru-filme-radiologice-1.png" width="300px" alt="plicuri c4 pentru filme radiologice" style="pointer-events:none;"/></span>
-</td><td>
 <span class="subTitle"><a style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;">Plicuri C4 pentru filme radiologice</a></span>
+</td>
+<td>
 
 <span class="description">
 <table id="detailsTable" cellpadding="0" cellspacing="0">

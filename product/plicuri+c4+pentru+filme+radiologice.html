@@ -175,14 +175,14 @@
 .detailsTable
 {
 	display:inline-table;
-	float:left;
-	width:70%;	
+	//float:left;
+	width:100%;	
 	text-align:left;
 	border-color:#E6E6E6;
 	border-style:solid;	
-	margin:10px 0px 15px 5px;
-	max-width:560px;	
-	border-width:0px 0px 1px 0px;
+	margin:0px;
+	//min-width:560px;	
+	border-width:0px 1px 0px 1px;
 	border-collapse:collapse;
 }
 .details-cell
@@ -407,7 +407,7 @@ function GalleryImage_Click(index)
 <table align="center" class="parent"><tr>
 <td class="container">
 
-<table celpadding="0" cellspacing="0" class="sub-container"><tr>
+<table cellpadding="0" cellspacing="0" class="sub-container"><tr>
 <td class="preview-container">
 <span class="preview"><img id="previewImage" src="images/plicuri-c4-pentru-filme-radiologice-1.png" width="300px" alt="plicuri c4 pentru filme radiologice" style="pointer-events:none;"/></span>
 <span class="subTitle"><a style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;">Plicuri C4 pentru filme radiologice</a></span>
@@ -415,7 +415,7 @@ function GalleryImage_Click(index)
 <td>
 
 <span class="description">
-<table id="detailsTable" cellpadding="0" cellspacing="0">
+<table id="detailsTable" class="detailsTable" cellpadding="0" cellspacing="0">
 <tr><td class="title" style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;" colspan='2'>Plicuri C4 pentru filme radiologice</td></tr>
 <tr><td class="details-cell">Cod produs</td><td class="details-cell">ENVC4</td></tr>
 <tr><td class="details-cell">Culoare</td><td class="details-cell">Alb</td></tr>

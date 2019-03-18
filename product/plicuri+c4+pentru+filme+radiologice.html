@@ -96,6 +96,7 @@
 {
 	display:inline-block;
 	vertical-align:top;
+	text-align:left;
 	/*border:solid 1px green;*/
 }
 
@@ -114,6 +115,40 @@
 
 .parent
 {
+}
+	
+.detailsTable
+{
+	display:inline-table;
+	//float:left;
+	width:100%;	
+	text-align:left;
+	border-color:#E6E6E6;
+	border-style:solid;	
+	margin:0px;
+	//min-width:560px;	
+	border-width:0px 1px 0px 1px;
+	border-collapse:collapse;
+}
+.details-cell
+{
+	padding:5px;
+	text-align:left;
+	vertical-align:top;
+	border-style:solid;
+	border-width:1px 1px 0px 1px;
+	border-color:#E6E6E6;	
+}
+
+.priceTable
+{
+	//display:inline-table;
+	min-width:300px;
+	max-width:300px;
+	width:100%;
+	//float:left;
+	//height:100%;
+	//background:#E6E6E6;	
 }
 
 @media screen and (max-width:1300px)
@@ -134,6 +169,7 @@
 	.priceTable
 	{
 		max-width:100%;
+		width:100%;
 	}	
 	.detailsTable
 	{
@@ -185,59 +221,6 @@
 	.details-cell
 	{
 		border-width:1px 0px 0px 0px;
-	}
-}
-
-.detailsTable
-{
-	display:inline-table;
-	//float:left;
-	width:100%;	
-	text-align:left;
-	border-color:#E6E6E6;
-	border-style:solid;	
-	margin:0px;
-	//min-width:560px;	
-	border-width:0px 1px 0px 1px;
-	border-collapse:collapse;
-}
-.details-cell
-{
-	padding:5px;
-	text-align:left;
-	vertical-align:top;
-	border-style:solid;
-	border-width:1px 1px 0px 1px;
-	border-color:#E6E6E6;	
-}
-
-.priceTable
-{
-	//display:inline-table;
-	min-width:300px;
-	max-width:300px;
-	width:100%;
-	//float:left;
-	//height:100%;
-	//background:#E6E6E6;	
-}
-	
-.imageGallery
-{
-	display:block;
-	cursor:pointer;
-	border:solid 1px transparent;
-}
-.imageGallery:hover
-{
-	border-color:#0074BB;	
-}
-
-@media screen and (max-width:360px)
-{
-	.priceTable
-	{
-		min-width:310px;
 	}
 }
 

@@ -382,7 +382,14 @@ function NextImage()
 	var previewImage = document.getElementById("previewImage");
 	if (previewImage)
 	{
-		previewImage.src = "images/plicuri-c4-pentru-filme-radiologice-2" + ".png";
+		var currentImage = document.getElementById("currentImage");
+		if (currentImage)
+		{
+			var index = Number(currentImage.innerHTML);
+			index++;
+			previewImage.src = "images/plicuri-c4-pentru-filme-radiologice-" + index + ".png";
+			currentImage.innerHTML = index;
+		}
 	}
 }
 
@@ -410,9 +417,10 @@ function NextImage()
 <span style="display:block; border:solid 1px #000; width:300px;">
 <table cellpadding="0" cellspacing="0">
 <tr>
-<td width="32px"><a style="display:block; cursor:pointer;" onclick="PreviousImage()">&lt;</a></td>
-<td width="100%">1 / 4</td>
-<td width="32px"><a style="display:block; cursor:pointer;" onclick="NextImage()">&gt;</a></td>
+<td width="100%" style="text-align:center;"><a style="display:block; cursor:pointer;" onclick="PreviousImage()">&lt;</a></td>
+<td id="currentImage">1</td>
+<td> / 4</td>
+<td width="100%" style="text-align:center;"><a style="display:block; cursor:pointer;" onclick="NextImage()">&gt;</a></td>
 </tr>
 </table>
 </span>

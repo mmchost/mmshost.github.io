@@ -390,7 +390,27 @@ function NextImage()
 			
 			if (index < maxIndex)
 			{
-				index++;			
+				index++;
+				previewImage.src = "images/plicuri-c4-pentru-filme-radiologice-" + index + ".png";
+				currentImage.innerHTML = index;
+			}
+		}
+	}
+}
+	
+Previousimage()
+{
+	var previewImage = document.getElementById("previewImage");
+	if (previewImage)
+	{
+		var currentImage = document.getElementById("currentImage");
+		if (currentImage)
+		{
+			var index = Number(currentImage.innerHTML);			
+			
+			if (index > 1)
+			{
+				index--;
 				previewImage.src = "images/plicuri-c4-pentru-filme-radiologice-" + index + ".png";
 				currentImage.innerHTML = index;
 			}

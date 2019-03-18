@@ -88,8 +88,8 @@
 {
 	display:none;
 	vertical-align:top;
-	border:solid 1px red; 	
-	width:300px;
+	/*border:solid 1px red; */
+	width:100%;
 }
 
 .price
@@ -130,6 +130,16 @@
 	.sub-container
 	{
 		width:100%;
+	}
+	.priceTable
+	{
+		max-width:100%;
+	}	
+	.detailsTable
+	{
+		max-width:100%;
+		width:100%;
+		border-width:0px 0px 0px 1px;
 	}
 }
 
@@ -223,25 +233,6 @@
 	border-color:#0074BB;	
 }
 
-@media screen and (max-width:1300px)
-{
-	.priceTable
-	{
-		max-width:100%;
-	}	
-	.detailsTable
-	{
-		max-width:100%;
-		width:100%;		
-	}
-}
-@media screen and (max-width:1300px)
-{
-	.detailsTable
-	{
-		width:100%;
-	}
-}
 @media screen and (max-width:360px)
 {
 	.priceTable

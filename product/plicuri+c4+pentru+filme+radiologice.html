@@ -90,6 +90,7 @@
 	vertical-align:top;
 	/*border:solid 1px red; */
 	width:100%;
+	background:#fff;
 }
 
 .price
@@ -177,6 +178,10 @@
 		width:100%;
 		border-width:0px 0px 0px 1px;
 	}
+	.details-cell
+	{
+		border-width:0px;
+	}
 }
 
 @media screen and (max-width:960px)
@@ -201,8 +206,9 @@
 	}
 	.subDescription
 	{
+		max-width:100%;
 		width:100%;
-		display:block;
+		display:block;		
 	}
 	.preview
 	{
@@ -221,6 +227,12 @@
 	.details-cell
 	{
 		border-width:1px 0px 0px 0px;
+	}
+	.detailsTable
+	{
+		border-width:0px;
+		width:100%;
+		max-width:100%;
 	}
 }
 

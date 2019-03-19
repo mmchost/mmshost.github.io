@@ -164,7 +164,17 @@
 }
 .galleryButton:hover
 {
-	
+	background:#ccc;
+}
+.selectedGalleryButton
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:#0074bb;
+	border-radius:8px;
+	cursor:pointer;
+	margin:5px;	
 }
 
 @media screen and (max-width:1200px)
@@ -395,9 +405,9 @@ function PreviewImage(img)
 		{
 			for (var i=0; i<list.length; i++)
 			{
-				list[i].style.background = "#e6e6e6";
+				list[i].class = "galleryButton";
 			}
-			img.style.background = "#0074bb";
+			img.class = "selectedGalleryButton";
 		}
 	}
 }

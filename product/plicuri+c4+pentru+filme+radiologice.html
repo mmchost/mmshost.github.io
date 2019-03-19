@@ -430,10 +430,9 @@ function PreviewImage(img)
 	{
 		container.src = img.name;
 		
-		var galleryButtons = document.getElementById("galleryButtons");
-		if (galleryButtons)
+		var list = document.getElementById("galleryButtons").getElementsByTagName("a");
+		if (list)
 		{
-			var list = document.getElementsByTagName("a");
 			for (var i=0; i<list.length; i++)
 			{
 				list[i].style.background = "#e6e6e6";
@@ -477,10 +476,6 @@ function PreviewImage(img)
 <a name="images/plicuri-c4-pentru-filme-radiologice-3" class="galleryButton" onclick="PreviewImage(this)"/>
 <a name="images/plicuri-c4-pentru-filme-radiologice-4" class="galleryButton" onclick="PreviewImage(this)"/>
 </td>
-<td id="currentImage">1</td>
-<td>&nbsp;/&nbsp;</td>
-<td id="maxImage">4</td>
-<td width="50%" style="text-align:center;"><a style="display:block; cursor:pointer; width:48px; margin-left:10px; float:left;" onclick="NextImage()">&gt;</a></td>
 </tr>
 </table>
 </span>

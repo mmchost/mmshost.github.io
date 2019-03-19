@@ -267,6 +267,7 @@
 <script>
 
 var products = [];
+var cart = [];
 	
 function LoadXml()
 {
@@ -312,11 +313,17 @@ function InitializePage()
 	if (product)
 	{
 		var i = products.indexOf(product);
-		var isavailable = product["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\">stoc epuizat";
-		var addbuttondisable = product["available"] == "true" ? "" : "disabled=\"true\"";
-	
-		var priceTable = document.getElementById("priceTable");
-				
+		//var isavailable = product["available"] == "true" ? " class=\"item-available-true\">in stoc" : " class=\"item-available-false\">stoc epuizat";
+		var buttonState = product["available"] == "true" ? "" : "disabled=\"true\"";
+		var buttonText = Math.round(product["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
+		if (list[i]["available"] == "false")
+		{
+			buttonText = "Stoc epuizat";
+		}
+		var buttonContent = "<table style='background:transparent; height:100%; width:100%;' cellpadding='0' cellspacing='0'><tr><td style='width:0px; background-color:" + iconColor + "; background-image:url(images/cart.png); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;'></td><td>" + buttonText + "</td></tr></table>";
+		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem(" + i + ")'>" + buttonContent + "</button>";
+		
+		var priceTable = document.getElementById("priceTable");				
 		if (priceTable)
 		{
 			var quantityCell = document.getElementById("quantityCell");
@@ -338,8 +345,8 @@ function InitializePage()
 			
 			var buttonCell = document.getElementById("buttonCell");
 			if (buttonCell)
-			{
-				buttonCell.innerHTML = "<button class='button-default' onclick='AddItem(" + i + ")'" + addbuttondisable + ">Cere oferta</button>";
+			{	
+				buttonCell.innerHTML = button;
 			}
 		}
 	}

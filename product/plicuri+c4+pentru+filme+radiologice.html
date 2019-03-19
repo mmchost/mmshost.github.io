@@ -151,6 +151,20 @@
 	//height:100%;
 	//background:#E6E6E6;	
 }
+	
+.galleryButton
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:#e6e6e6;
+	border-radius:8px;
+	cursor:pointer;
+}
+.galleryButton:hover
+{
+	
+}
 
 @media screen and (max-width:1200px)
 {
@@ -408,6 +422,26 @@ function PreviousImage()
 		}
 	}
 }
+	
+function PreviewImage(img)
+{
+	var container = document.getElementById("previewImage");
+	if (container)
+	{
+		container.src = img.name;
+		
+		var galleryButtons = document.getElementById("galleryButtons");
+		if (galleryButtons)
+		{
+			var list = document.getElementsByTagName("a");
+			for (var i=0; i<list.length; i++)
+			{
+				list[i].style.background = "#e6e6e6";
+			}
+			imgs.style.background = "red";
+		}
+	}
+}
 
 </script>
 
@@ -437,7 +471,12 @@ function PreviousImage()
 <span style="display:inline-block; border:none 1px #000; width:300px;">
 <table cellpadding="0" cellspacing="0">
 <tr>
-<td width="50%" style="text-align:center;"><a style="display:block; cursor:pointer;width:48px; margin-right:10px; float:right;" onclick="PreviousImage()">&lt;</a></td>
+<td id="galleryButtons" style="text-align:center;">
+<a name="images/plicuri-c4-pentru-filme-radiologice-1" class="galleryButton" onclick="PreviewImage(this)"/>
+<a name="images/plicuri-c4-pentru-filme-radiologice-2" class="galleryButton" onclick="PreviewImage(this)"/>
+<a name="images/plicuri-c4-pentru-filme-radiologice-3" class="galleryButton" onclick="PreviewImage(this)"/>
+<a name="images/plicuri-c4-pentru-filme-radiologice-4" class="galleryButton" onclick="PreviewImage(this)"/>
+</td>
 <td id="currentImage">1</td>
 <td>&nbsp;/&nbsp;</td>
 <td id="maxImage">4</td>

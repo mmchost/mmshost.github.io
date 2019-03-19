@@ -326,6 +326,18 @@ function InitializePage()
 		var priceTable = document.getElementById("priceTable");				
 		if (priceTable)
 		{
+			if (Math.round(product["price"]) > 0)
+			{
+				var priceCell = document.getElementById("priceCell");
+				var priceCellName = document.getElementById("priceCellName");
+
+				if (priceCell && priceCellName)
+				{
+					priceCell.style.display = "table-cell";
+					priceCellName.style.display = "table-cell";
+				}
+			}
+			
 			var quantityCell = document.getElementById("quantityCell");
 			if (quantityCell)
 			{
@@ -473,6 +485,10 @@ function PreviewImage(img)
 </span>
 </td></tr></table><span class="price">
 <table id="priceTable" class="priceTable" cellpadding="10" cellspacing="0">
+<tr>
+<td id="priceCellName" style="display:none;">Pret:</td>
+<td id="priceCell" class="large-fontsize" style="display:none; text-align:right; font-weight:bold; color:#0074BB;"></td>
+</tr>
 <tr>
 <td>Cantitate:</td>
 <td id="quantityCell" style="text-align:right;"></td>

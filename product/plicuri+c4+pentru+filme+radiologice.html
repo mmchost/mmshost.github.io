@@ -388,7 +388,7 @@ function AddItem(index)
 			cart.push(products[index]);
 			document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
 			
-			RefreshCartItemsCount();
+			RefreshCartItemsCount(cart);
 			
 			location.href = "../cart";
 		}

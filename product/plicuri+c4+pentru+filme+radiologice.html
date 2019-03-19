@@ -333,6 +333,7 @@ function InitializePage()
 
 				if (priceCell && priceCellName)
 				{
+					priceCell.innerHTML = product["price"] + " Lei";
 					priceCell.style.display = "table-cell";
 					priceCellName.style.display = "table-cell";
 				}
@@ -495,16 +496,6 @@ function PreviewImage(img)
 </tr>
 <tr>
 <td colspan="2"><hr style="border-style:none; background:#ccc; height:1px; margin:0px; padding:0px;"/></td>
-</tr>
-<tr>
-<td style="text-align:left; font-size:12px;" colspan="2">
-<table cellspacing="0" cellpadding="5" align="center">
-<tr>
-<td></td>
-<td></td>
-</tr>
-</table>
-</td>
 </tr>
 <tr>
 <td colspan="2" id="buttonCell" style="text-align:center;"></td>

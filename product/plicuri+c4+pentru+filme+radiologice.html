@@ -315,7 +315,7 @@ function InitializePage()
 		var i = products.indexOf(product);		
 		var buttonState = product["available"] == "true" ? "" : "disabled=\"true\"";
 		var buttonText = Math.round(product["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
-		if (list[i]["available"] == "false")
+		if (product["available"] == "false")
 		{
 			buttonText = "Stoc epuizat";
 		}

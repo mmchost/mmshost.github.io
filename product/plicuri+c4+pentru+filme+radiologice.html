@@ -388,9 +388,9 @@ function AddItem(index)
 			cart.push(products[index]);
 			document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
 			
-			RefreshCartItemsCount(cart);
-			
 			location.href = "../cart";
+			
+			//RefreshCartItemsCount(cart);
 		}
 	}
 	else

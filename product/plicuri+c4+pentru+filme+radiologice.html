@@ -160,6 +160,7 @@
 	background:#e6e6e6;
 	border-radius:8px;
 	cursor:pointer;
+	margin:5px;
 }
 .galleryButton:hover
 {
@@ -382,47 +383,6 @@ function CalculateTotal(index, value)
 	InitializePage();
 }
 	
-function NextImage()
-{
-	var previewImage = document.getElementById("previewImage");
-	if (previewImage)
-	{
-		var currentImage = document.getElementById("currentImage");
-		if (currentImage)
-		{
-			var index = Number(currentImage.innerHTML);
-			var maxIndex = Number(maxImage.innerHTML);
-			
-			if (index < maxIndex)
-			{
-				index++;
-				previewImage.src = "images/plicuri-c4-pentru-filme-radiologice-" + index + ".png";
-				currentImage.innerHTML = index;
-			}
-		}
-	}
-}
-	
-function PreviousImage()
-{
-	var previewImage = document.getElementById("previewImage");
-	if (previewImage)
-	{
-		var currentImage = document.getElementById("currentImage");
-		if (currentImage)
-		{
-			var index = Number(currentImage.innerHTML);			
-			
-			if (index > 1)
-			{
-				index--;
-				previewImage.src = "images/plicuri-c4-pentru-filme-radiologice-" + index + ".png";
-				currentImage.innerHTML = index;
-			}
-		}
-	}
-}
-	
 function PreviewImage(img)
 {
 	var container = document.getElementById("previewImage");
@@ -437,7 +397,7 @@ function PreviewImage(img)
 			{
 				list[i].style.background = "#e6e6e6";
 			}
-			imgs.style.background = "red";
+			img.style.background = "#0074bb";
 		}
 	}
 }

@@ -3,7 +3,7 @@
 <head>
 <meta name="robots" content="noindex" />
 
-<title>Medios Online Store - Magazin online cu produse medicale</title>
+<title>Comanda trimisa - Medios Online Store</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="Medios Online Store" />
@@ -58,13 +58,13 @@
 <script>
 window.onload = function()
 {
-	var localCart = GetCookie("cart");
+	var localCart = GetCookie("storeCart");
 	if (localCart)
 	{
 		location.href = "./";
 	}
 
-	Page_OnLoad(false, false, false, true, "../images/", false);
+	Page_OnLoad(false, false, false, true, "../images/", false "");
 };
 </script>
 

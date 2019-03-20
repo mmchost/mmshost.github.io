@@ -193,7 +193,7 @@ function AddItem(index)
 		else			
 		{
 			cart.push(products[index]);
-			document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart));
+			document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
 			
 			location.href = "cart";
 			
@@ -204,7 +204,7 @@ function AddItem(index)
 	{
 		var shoppingBag = [];
 		shoppingBag.push(products[index]);
-		document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag));
+		document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag)) + ";domain=store.mediosmedical.ro;path=/;";
 		RequestOffer();
 	}
 }

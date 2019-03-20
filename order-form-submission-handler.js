@@ -360,6 +360,8 @@
 				var status = xhr.statusText;
 				if (status == "OK")
 				{
+					var cookieName = form.id;					
+					document.cookie = cookieName + "=";
 					location.href = "ordercomplette";
 				}
 				else			

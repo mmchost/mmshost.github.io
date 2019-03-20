@@ -104,7 +104,7 @@ var cart = [];
 
 window.onload = function() 
 {
-	var localCart = GetCookie("cart");
+	var localCart = GetCookie("storeCart");
 	if (!localCart)
 	{
 		document.location = "./";
@@ -118,7 +118,7 @@ window.onload = function()
 		}
 	}
 	
-	Page_OnLoad(true, false, true, true, "images/", false);
+	Page_OnLoad(true, false, true, true, "images/", false, "");
 	Terms_CheckedChanged();
 	PaymentMethod_Click();
 

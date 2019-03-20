@@ -78,7 +78,7 @@ window.onload = function()
 {
 	Page_OnLoad(true, false, true, true, "images/", true);
 	
-	var localCart = GetCookie("cart");
+	var localCart = GetCookie("storeCart");
 	if (localCart)
 	{
 		cart = JSON.parse(decodeURIComponent(localCart));
@@ -192,11 +192,11 @@ function AddItem(index)
 		else			
 		{
 			cart.push(products[index]);
-			document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
-			
-			RefreshCartItemsCount();
+			document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart));
 			
 			location.href = "cart";
+			
+			//RefreshCartItemsCount(cart);
 		}
 	}
 	else

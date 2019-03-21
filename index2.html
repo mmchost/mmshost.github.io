@@ -117,7 +117,7 @@ function ReadProducts(xml)
 			var node = elements[i].childNodes[j];
 			if (node.nodeType == 1) // or nodeType == Node.ELEMENT_NODE
 			{
-				item[node.nodeName] = node.textContent;
+				item[node.nodeName] = node.text || node.textContent;
 			}
 		}
 		products.push(item);

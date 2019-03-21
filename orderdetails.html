@@ -110,11 +110,7 @@ window.onload = function()
 	
 	if (!localCart)
 	{
-		//location.href = "../";
-		if (formPage)
-		{
-			formPage.style.display = "none";
-		}
+		//location.href = "../";		
 		if (errorPage)
 		{
 			errorPage.style.display = "block";
@@ -125,25 +121,25 @@ window.onload = function()
 		cart = JSON.parse(decodeURIComponent(localCart));		
 		if (cart.length == 0)
 		{
-			if (formPage)
-			{
-				formPage.style.display = "none";
-			}
 			if (errorPage)
 			{
 				errorPage.style.display = "block";
 			}
 		}
-	}	
+		else
+		{
+			if (formPage)
+			{
+				formPage.style.display = "block";
+			}
+		}
+	}
 	
-	Page_OnLoad(true, false, true, true, "images/", false, "../");
+	Page_OnLoad(true, false, true, true, "images/", false, "../");	
 	Terms_CheckedChanged();
 	PaymentMethod_Click();
 
-	if (localCart)
-	{
-		RefreshCartItemsCount(cart);
-	}
+	RefreshCartItemsCount(cart);
 };
 
 </script>
@@ -178,7 +174,7 @@ window.onload = function()
 		</table>
 	</div>
 
-	<div id="formpage" style="margin:5px 0px 20px 0px; display:block;">
+	<div id="formpage" style="margin:5px 0px 20px 0px; display:none;">
 		<table class="cartTable"><tr><td></td></tr></table>
 		<table style="height:1px;" class="summaryTable"><tr><td style="text-align:right; padding:0px 5px 5px 5px;"><a class="highlight-text">← </a><a class="hyperlink-highlight" href="./#products">Continua cumparaturile</a></td></tr></table>
 		<table align="center" class="emptyCart" width="100%" cellpadding="0" cellspacing="0" style="padding:0px;">

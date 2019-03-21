@@ -60,8 +60,8 @@
 
 		fields.push("cart");
 		
-		var cookieName = form.id;
-		var cartCookie  = GetCookie(cookieName);
+		//var cookieName = form.id;
+		var cartCookie  = GetCookie("storeCart");
 		if (cartCookie)
 		{
 			var cart = JSON.parse(decodeURIComponent(cartCookie));

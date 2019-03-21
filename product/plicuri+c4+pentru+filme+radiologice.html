@@ -296,7 +296,7 @@ function ReadProducts(xml)
 			var node = elements[i].childNodes[j];			
 			if (node.nodeType == 1) // or nodeType == Node.ELEMENT_NODE
 			{
-				item[node.nodeName] = node.textContent;
+				item[node.nodeName] = node.text || node.textContent;
 			}
 		}
 		products.push(item);
@@ -307,7 +307,16 @@ function ReadProducts(xml)
 	
 function InitializePage()
 {
-	var product = products.find(obj => {return obj.id === 'ENVC4'});
+	//var product = products.find(obj => {return obj.id === 'ENVC4'});
+	var product;
+	for (var i=0; i<products.length; i++)
+	{
+		if (products[i]["id"] === "ENVC4")
+		{
+			product = products[i];
+			break;
+		}
+	}
 	if (product)
 	{
 		var i = products.indexOf(product);		

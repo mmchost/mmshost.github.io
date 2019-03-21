@@ -187,8 +187,19 @@ function AddItem(index)
 	{
 		try
 		{
-			var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
-			if (product)
+			var exists = false;
+			if (cart.length > 0)
+			{
+				for (var i=0; i<cart.length; i++)
+				{
+					if (cart[i]["id"] === products[index]["id"])
+					{
+						exists = true;
+					}
+				}
+			}
+			//var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
+			if (exists)
 			{
 				location.href = "cart";
 			}

@@ -105,19 +105,34 @@ var cart = [];
 window.onload = function() 
 {
 	var localCart = GetCookie("storeCart");
+	var formPage = document.getElementById("formpage");
+	var errorPage = document.getElementById("errorPage");
+	
 	if (!localCart)
 	{
 		//location.href = "../";
+		if (formPage)
+		{
+			formPage.style.display = "none";
+		}
+		if (errorPage)
+		{
+			errorPage.style.display = "block";
+		}
 	}
 	else
 	{
-		cart = JSON.parse(decodeURIComponent(localCart));
-		var formPage = document.getElementById("formpage");
-		var errorPage = document.getElementById("errorPage");
+		cart = JSON.parse(decodeURIComponent(localCart));		
 		if (cart.length == 0)
 		{
-			formPage.style.display = "none";
-			errorPage.style.display = "block";
+			if (formPage)
+			{
+				formPage.style.display = "none";
+			}
+			if (errorPage)
+			{
+				errorPage.style.display = "block";
+			}
 		}
 	}	
 	

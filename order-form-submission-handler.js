@@ -362,11 +362,11 @@
 				{
 					var cookieName = form.id;					
 					document.cookie = cookieName + "=";
-					location.href = "ordercomplette";
+					location.href = "ordercomplette?true";
 				}
 				else			
 				{
-					location.href = "orderfailed";
+					location.href = "orderfailed?true";
 				}
 			}
 			return;

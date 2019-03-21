@@ -309,17 +309,19 @@ function InitializePage()
 {
 	//var product = products.find(obj => {return obj.id === 'ENVC4'});
 	var product;
+	var productIndex = -1;
 	for (var i=0; i<products.length; i++)
 	{
 		if (products[i]["id"] === "ENVC4")
 		{
 			product = products[i];
+			productIndex = i;
 			break;
 		}
 	}
 	if (product)
 	{
-		var i = products.indexOf(product);		
+		var i = productIndex;		
 		var buttonState = product["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
 		var buttonText = Math.round(product["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
 		if (product["available"] == "false")

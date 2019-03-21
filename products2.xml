@@ -25,7 +25,8 @@
 	</product>
   	<product>
 		<id>ENVC4D1</id>
-		<name>Plicuri C4 pentru filme radiologice</name>
+		<name>Plicuri C4 pentru filme radiologice
+		150 buc / ambalaj</name>
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
@@ -34,7 +35,8 @@
 	</product>
 	<product>
 		<id>ENVC4D2</id>
-		<name>Plicuri C4 pentru filme radiologice</name>
+		<name>Plicuri C4 pentru filme radiologice
+		150 buc / ambalaj</name>
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
@@ -43,7 +45,8 @@
 	</product>
 	<product>
 		<id>ENVC4D3</id>
-		<name>Plicuri C4 pentru filme radiologice</name>
+		<name>Plicuri C4 pentru filme radiologice
+		150 buc / ambalaj</name>
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
@@ -52,7 +55,8 @@
 	</product>
 	<product>
 		<id>ENVC4D4</id>
-		<name>Plicuri C4 pentru filme radiologice</name>
+		<name>Plicuri C4 pentru filme radiologice
+		150 buc / ambalaj</name>
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
@@ -61,7 +65,8 @@
 	</product>
 	<product>
 		<id>ENVC4D5</id>
-		<name>Plicuri C4 pentru filme radiologice</name>
+		<name>Plicuri C4 pentru filme radiologice
+		150 buc / ambalaj</name>
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>

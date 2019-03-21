@@ -50,7 +50,7 @@
 <script type="text/javascript">
 	function ContinueShopping()
 	{
-		location.href = "./";
+		location.href = "./#products";
 	}
 </script>
 
@@ -59,10 +59,15 @@
 <script>
 window.onload = function()
 {
-	var localCart = GetCookie("storeCart");
-	if (localCart)
+	//var localCart = GetCookie("storeCart");
+	var param = window.location.search.substr(1);
+	if (param === "true")
 	{
-		location.href = "./";
+		var message = document.getElementById("message");
+		if (message)
+		{
+			message.style.display = "block";
+		}
 	}
 
 	Page_OnLoad(false, false, false, true, "../images/", false, "../");
@@ -79,11 +84,13 @@ window.onload = function()
 <!--Thank you-->
 <tr>
 <td style="height:100%; text-align:center; padding-top:64px; padding-bottom:64px; padding-left:10px; padding-right:10px;">
+<span id="message" style="display:none;">
 <a class="large-fontsize">Va multumim!</a>
 <br/><br/>
 <a class="normal-fontsize">Comanda dumneavoastra a fost trimisa cu succes.</a>
+</span>
 <br/><br/>
-<button class="button-default" onclick="ContinueShopping()">Inapoi la produse</button>
+<button class="button-default" onclick="ContinueShopping()">Continuati cumparaturile</button>
 </td>
 </tr>
 <!--end Thank you-->

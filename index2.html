@@ -185,20 +185,24 @@ function AddItem(index)
 {
 	if (products[index]["price"] > 0)
 	{
-		var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
-		if (product)
+		try
 		{
-			location.href = "cart";
+			var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
+			if (product)
+			{
+				location.href = "cart";
+			}
+			else			
+			{
+				cart.push(products[index]);
+				document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
+
+				location.href = "cart";
+
+				//RefreshCartItemsCount(cart);
+			}
 		}
-		else			
-		{
-			cart.push(products[index]);
-			document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
-			
-			location.href = "cart";
-			
-			//RefreshCartItemsCount(cart);
-		}
+		catch(ex){}
 	}
 	else
 	{

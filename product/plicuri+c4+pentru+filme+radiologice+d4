@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro-ro">
+<head>	
+
+<title>Plicuri C4 pentru filme radiologice - Medios Online Store</title>
+<meta name="keywords" content="plicuri C4 pentru filme radiologice" />
+<meta name="description" content="Cumpara online Plicuri C4 pentru filme radiologice, 150 buc / ambalaj, culoare alb, deschidere latura mica. Radiografii dentare, radiografii computerizate, tomografii computerizate, rezonanta magnetica, angiografii digitale - Medios Online Store, Cluj-Napoca, Cluj" />
+<meta name="author" content="Medios Online Store" />
+
+<meta name="Resource-type" content="Document" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png"/>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400"/> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700"/> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:800"/>
+
+<link rel="stylesheet" type="text/css" href="https://store.mediosmedical.ro/styles/map.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/main.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/footer.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/messageBox.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/button.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/hyperlink.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/tag.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/infoBar.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/header.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/menu.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/section.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/mainContent.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/info.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/overlay.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/textBox.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/item.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/cart.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/form.css" charset="utf-8"/>
+
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/jquery.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/jquery.scrollTo.js"></script>	
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/jquery.smoothAnchors.js"></script>
+
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/buttonEvents.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/main.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/getCookie.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/messageBox.js"></script>
+
+</head>
+
+<style>
+
+.theme-button-light, .theme-button-dark
+{
+	display:none;	
+}
+
+.container
+{
+	vertical-align:top;	
+}
+	
+.sub-container
+{
+	width:1px;
+	display:inline-table;
+	background:#fff;
+	border:solid 1px #e6e6e6;
+}
+
+.preview
+{
+	display:inline-block;
+	vertical-align:top;
+	width:300px;
+	/*border:solid 1px blue;*/
+}
+	
+.preview-container
+{
+	width:1px;
+	vertical-align:top;
+}
+
+.description
+{
+	display:inline-block;
+	vertical-align:top;
+	min-width:560px;
+}
+.subDescription
+{
+	display:none;
+	vertical-align:top;
+	width:100%;
+	background:#fff;
+}
+
+.price
+{
+	display:inline-block;
+	vertical-align:top;
+	text-align:left;
+	/*border:solid 1px green;*/
+}
+
+.title
+{
+	padding-top:10px;
+}
+.subTitle
+{
+	display:none;
+	/*border:solid 1px orange;*/
+	min-height:40px;
+	line-height:40px;
+	vertical-align:middle;
+}
+
+.parent
+{
+	border-style:none;
+	background:#e6e6e6;
+}
+	
+.detailsTable
+{
+	display:inline-table;
+	width:100%;	
+	text-align:left;
+	border-color:#E6E6E6;
+	border-style:solid;	
+	margin:0px;	
+	border-width:0px;
+	border-collapse:collapse;
+}
+.details-cell
+{
+	padding:5px;
+	text-align:left;
+	vertical-align:top;
+	border-style:solid;
+	border-width:1px 0px 0px 1px;
+	border-color:#E6E6E6;
+}
+
+.priceTable
+{
+	//display:inline-table;
+	min-width:300px;
+	max-width:300px;
+	width:100%;
+	//float:left;
+	//height:100%;
+	//background:#E6E6E6;	
+}
+	
+.galleryButton
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:#e6e6e6;
+	border-radius:8px;
+	cursor:pointer;
+	margin:5px;
+}
+.galleryButton:hover
+{
+	background:#ccc;
+}
+.selectedGalleryButton
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:#0074bb;
+	border-radius:8px;
+	cursor:pointer;
+	margin:5px;	
+}
+
+@media screen and (max-width:1200px)
+{
+	.price
+	{
+		width:100%;
+		height:300px;
+	}
+	.description
+	{
+		width:100%;
+	}
+	.sub-container
+	{
+		width:100%;
+	}
+	.priceTable
+	{
+		max-width:100%;
+		width:100%;
+	}	
+	.detailsTable
+	{
+		max-width:100%;
+		width:100%;
+		border-width:0px 0px 0px 1px;
+	}
+}
+
+@media screen and (max-width:960px)
+{
+	.container
+	{
+		width:100%;
+		text-align:center;
+	}
+	.price
+	{
+		width:100%;		
+	}
+	.description
+	{
+		display:none;
+	}
+	.subTitle
+	{
+		display:inline-block;
+		width:100%;
+	}
+	.subDescription
+	{
+		max-width:100%;
+		width:100%;
+		display:block;		
+	}
+	.preview
+	{
+		width:100%;
+		display:block;
+		vertical-align:top;
+	}
+	.preview-container
+	{
+		width:100%;
+	}
+	.parent
+	{
+		width:100%;
+	}
+	.detailsTable
+	{
+		border-width:0px 1px 1px 0px;
+		width:100%;
+		max-width:100%;
+	}
+	.details-cell
+	{
+		border-width:1px 1px 0px 1px;
+	}
+}
+
+</style>
+
+<script>
+
+var products = [];
+var cart = [];
+	
+function LoadXml()
+{
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function()
+	{
+	    if (this.readyState == 4 && this.status == 200) 
+	    {
+          ReadProducts(this);
+	    }
+	};
+	xhttp.open("GET", "../products2.xml", true);
+	xhttp.send();
+}
+	
+function ReadProducts(xml)
+{
+	var xmlDoc = xml.responseXML;
+	var elements =  xmlDoc.getElementsByTagName("product");	
+	
+	var i, j;
+	for (i=0; i<elements.length; i++)
+	{
+		var item = {};
+		for (j=0; j<elements[i].childNodes.length; j++)
+		{
+			var node = elements[i].childNodes[j];			
+			if (node.nodeType == 1) // or nodeType == Node.ELEMENT_NODE
+			{
+				item[node.nodeName] = node.text || node.textContent;
+			}
+		}
+		products.push(item);
+	}
+	
+	InitializePage();
+}
+	
+function InitializePage()
+{
+	var product;
+	var productIndex = -1;
+	for (var i=0; i<products.length; i++)
+	{
+		if (products[i]["id"] === "ENVC4D4")
+		{
+			product = products[i];
+			productIndex = i;
+			break;
+		}
+	}
+	if (product)
+	{
+		var i = productIndex;		
+		var buttonState = product["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
+		var buttonText = Math.round(product["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
+		if (product["available"] == "false")
+		{
+			buttonText = "Stoc epuizat";
+		}
+		var iconColor = "#fff";
+		var buttonContent = "<table style='background:transparent; height:100%; width:100%;' cellpadding='0' cellspacing='0'><tr><td style='width:0px; background-color:" + iconColor + "; background-image:url(images/cart.png); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;'></td><td>" + buttonText + "</td></tr></table>";
+		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem(" + i + ")'>" + buttonContent + "</button>";
+		
+		var priceTable = document.getElementById("priceTable");				
+		if (priceTable)
+		{
+			if (Math.round(product["price"]) > 0)
+			{
+				var priceCell = document.getElementById("priceCell");
+				var priceCellName = document.getElementById("priceCellName");
+
+				if (priceCell && priceCellName)
+				{
+					priceCell.innerHTML = product["price"] + " Lei";
+					priceCell.style.display = "table-cell";
+					priceCellName.style.display = "table-cell";
+				}
+			}
+			
+			var quantityCell = document.getElementById("quantityCell");
+			if (quantityCell)
+			{
+				quantityCell.innerHTML = 
+				"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" + 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + -1 + ")'>-</button></td>" + 
+				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px; background:#fff;'><input class='textbox-numeric' type='text' value='" + products[i]["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + 1 + ")'>+</button></td>" +										 
+				"</tr></table>";
+			}
+			
+			var buttonCell = document.getElementById("buttonCell");
+			if (buttonCell)
+			{	
+				buttonCell.innerHTML = button;
+			}
+		}
+	}
+}
+
+window.onload = function() 
+{
+	Page_OnLoad(true, false, true, true, "../images/", false, "../../");
+	
+	var localCart = GetCookie("storeCart");
+	if (localCart)
+	{
+		cart = JSON.parse(decodeURIComponent(localCart));
+	}
+	
+	RefreshCartItemsCount(cart);
+	
+	LoadXml();
+};
+
+function AddItem(index)
+{
+	if (products[index]["price"] > 0)
+	{
+		//var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
+		var exists = false;
+		for (var i=0; i<cart.length; i++)
+		{
+			if (cart[i]["id"] === products[index]["id"])
+			{
+				exists = true;
+			}
+		}
+		if (exists)
+		{
+			location.href = "../cart";
+		}
+		else			
+		{
+			cart.push(products[index]);
+			document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
+			
+			location.href = "../cart";
+			
+			//RefreshCartItemsCount(cart);
+		}
+	}
+	else
+	{
+		var shoppingBag = [];
+		shoppingBag.push(products[index]);
+		document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag)) + ";domain=store.mediosmedical.ro;path=/;";
+		RequestOffer();
+	}
+}
+
+function RequestOffer()
+{
+	window.location.href = "../requestoffer";
+}
+
+function CalculateTotal(index, value)
+{
+	if (value < 1)
+	{
+		if (products[index]["quantity"] == 1)
+		{
+			return;
+		}
+	}
+	products[index]["quantity"] = Math.round(products[index]["quantity"]) + value;
+	InitializePage();
+}
+	
+function PreviewImage(img)
+{
+	var container = document.getElementById("previewImage");
+	if (container)
+	{
+		container.src = img.name;
+		
+		var list = document.getElementById("galleryButtons").getElementsByTagName("a");
+		if (list)
+		{
+			for (var i=0; i<list.length; i++)
+			{
+				list[i].className = "galleryButton";
+			}
+			img.className = "selectedGalleryButton";
+		}
+	}
+}
+
+</script>
+
+<body id="body" class="light-theme" style="font-size:14px;">
+
+<table id="header" cellpadding="0" cellspacing="0" border="0" style="top:0px;"></table>
+
+<table id="main-content" class="main-content" cellpadding="0" cellspacing="0">
+
+<!--SLIDER-->
+<tr><td class="section-title">Plicuri C4 pentru filme radiologice</td></tr>
+<!--END SLIDER-->
+
+<tr>
+<td style="padding:5px 0px 20px 0px; vertical-align:top; background:#fff;">
+
+<table align="center" class="parent" cellpadding="0" cellspacing="0"><tr>
+<td class="container">
+
+<span style="display:block; background:#fff; text-align:right; vertical-align:bottom; height:32px; line-height:32px;">
+<a class="highlight-text">← </a><a class="hyperlink-highlight" href="../../#products">Continuați cumpărăturile</a>
+</span>
+	
+<table cellpadding="0" cellspacing="0" class="sub-container"><tr>
+<td class="preview-container">
+<span class="preview"><img id="previewImage" src="images/plicuri-c4-pentru-filme-radiologice-design4-1.png" width="300px" alt="plicuri c4 pentru filme radiologice" style="pointer-events:none;"/></span>
+<span style="display:inline-block; border:none 1px #000; width:300px;">
+<table cellpadding="0" cellspacing="0" style="width:100%;">
+<tr>
+<td id="galleryButtons" style="text-align:center;">
+<a title="1/4" name="images/plicuri-c4-pentru-filme-radiologice-design4-1.png" class="selectedGalleryButton" onclick="PreviewImage(this)"/>
+<a title="2/4" name="images/plicuri-pentru-filme-radiologice-design4-2.png" class="galleryButton" onclick="PreviewImage(this)"/>
+<a title="3/4" name="images/plicuri-pentru-filme-radiologice-design4-3.png" class="galleryButton" onclick="PreviewImage(this)"/>
+<a title="4/4" name="images/plicuri-pentru-filme-radiologice-4.png" class="galleryButton" onclick="PreviewImage(this)"/>
+</td>
+</tr>
+</table>
+</span>
+<span class="subTitle"><a style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;">Plicuri C4 pentru filme radiologice</a></span>	
+</td>
+<td>
+
+<span class="description">
+<table id="detailsTable" class="detailsTable" cellpadding="0" cellspacing="0">
+<tr><td class="details-cell" style="font-weight:bold; border-top:0px;" colspan='2'>Plicuri C4 pentru filme radiologice</td></tr>
+<tr><td class="details-cell">Cod produs</td><td class="details-cell">ENVC4D4</td></tr>
+<tr><td class="details-cell">Culoare</td><td class="details-cell">Alb</td></tr>
+<tr><td class="details-cell">Dimensiuni</td><td class="details-cell"></td></tr>
+<tr><td class="details-cell">Deschidere</td><td class="details-cell">Latura mica</td></tr>
+<tr><td class="details-cell">Ambalaj</td><td class="details-cell">150 plicuri</td></tr>
+<tr><td class="details-cell">Tiparire</td><td class="details-cell">Plicurile se tiparesc cu logo-ul companiei si informatiile utile furnizate de firma dvs.</td></tr>
+<tr><td class="details-cell">Dimensiuni compatibile:</td><td class="details-cell">Marimea plicului este compatibila cu filmele radiologice:<br/><br/>FUJI DI-ML 20x25 cm<br/>FUJI DI-ML 25x30 cm<br/>FUJI DI-ML 26x36 cm</br>FUJI DI-ML 35x43 cm<br/>KODAK – CARESTREAM Dry View Film DVB 20 x 25 cm (8 x 10)<br/>KODAK – CARESTREAM Dry View Film DVB 25 x 30 cm (10 x 12)<br/>KODAK – CARESTREAM Dry View Film DVB 28 x 35 cm (11 x 14)<br/>KODAK – CARESTREAM Dry View Film DVB 35 x 35 cm (14 x 14)<br/>KODAK – CARESTREAM Dry View Film DVB 35 x 43 cm (14 x 17)</td></tr>
+</table>
+</span>
+</td></tr></table><span class="price">
+<table id="priceTable" class="priceTable" cellpadding="10" cellspacing="0">
+<tr>
+<td id="priceCellName" style="display:none;">Pret:</td>
+<td id="priceCell" class="large-fontsize" style="display:none; text-align:right; font-weight:bold; color:#0074BB;"></td>
+</tr>
+<tr>
+<td>Cantitate:</td>
+<td id="quantityCell" style="text-align:right;"></td>
+</tr>
+<tr>
+<td colspan="2"><hr style="border-style:none; background:#ccc; height:1px; margin:0px; padding:0px;"/></td>
+</tr>
+<tr>
+<td colspan="2" id="buttonCell" style="text-align:center;"></td>
+</tr>
+</table>
+</span>
+
+<span class="subDescription">
+<table class="detailsTable" cellpadding="0" cellspacing="0">	
+<tr><td class="details-cell">Cod produs</td><td class="details-cell">ENVC4D4</td></tr>
+<tr><td class="details-cell">Culoare</td><td class="details-cell">Alb</td></tr>
+<tr><td class="details-cell">Dimensiuni</td><td class="details-cell"></td></tr>
+<tr><td class="details-cell">Deschidere</td><td class="details-cell">Latura mica</td></tr>
+<tr><td class="details-cell">Ambalaj</td><td class="details-cell">150 plicuri</td></tr>
+<tr><td class="details-cell">Tiparire</td><td class="details-cell">Plicurile se tiparesc cu logo-ul companiei si informatiile utile furnizate de firma dvs.</td></tr>
+<tr><td class="details-cell">Dimensiuni compatibile:</td><td class="details-cell">Marimea plicului este compatibila cu filmele radiologice:<br/><br/>FUJI DI-ML 20x25 cm<br/>FUJI DI-ML 25x30 cm<br/>FUJI DI-ML 26x36 cm</br>FUJI DI-ML 35x43 cm<br/>KODAK – CARESTREAM Dry View Film DVB 20 x 25 cm (8 x 10)<br/>KODAK – CARESTREAM Dry View Film DVB 25 x 30 cm (10 x 12)<br/>KODAK – CARESTREAM Dry View Film DVB 28 x 35 cm (11 x 14)<br/>KODAK – CARESTREAM Dry View Film DVB 35 x 35 cm (14 x 14)<br/>KODAK – CARESTREAM Dry View Film DVB 35 x 43 cm (14 x 17)</td></tr>
+</table>	
+</span>
+</td>
+
+</tr></table>
+
+</td>
+</tr>
+
+<!--map-->
+<tr><td><a name="contact" id="sectionTag2" class="tag"/></td></tr>
+
+<tr>
+<td class="section-title">
+<p style="display:inline-block; padding:0px; margin:0px;">CONTACT</p>
+</td>
+</tr>
+
+<tr>
+<td style="height:320px; min-height:320px; background: url(images/loading.gif); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;">
+<a class="image-hlink" href="https://google.com/maps/place/Strada+Traian+36,+Cluj-Napoca" target="_blank">
+<div class="map"></div>
+</a>
+</td>
+</tr>
+<!--end map-->
+
+<!--content-->
+<tr>
+<td class="footer-content" id="footerContact"></td>
+</tr>
+<!--end content-->
+
+<!--FOOTER MENU-->
+<tr>
+<td class="footer-menu-container" id="footerMenu"></td>
+</tr>
+<!--END FOOTER MENU-->
+
+<!--COPYRIGHT-->
+<tr>
+<td class="footer-copyright" id="footer-copyright-ws"></td>
+</tr>
+<!--END COPYRIGHT-->
+
+</table>
+
+<div id="messageBox"></div>
+
+</body>
+</html>

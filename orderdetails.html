@@ -107,16 +107,19 @@ window.onload = function()
 	var localCart = GetCookie("storeCart");
 	if (!localCart)
 	{
-		document.location = "./";
+		location.href = "../";
 	}
 	else
 	{
 		cart = JSON.parse(decodeURIComponent(localCart));
+		var formPage = document.getElementById("formpage");
+		var errorPage = document.getElementById("errorPage");
 		if (cart.length == 0)
 		{
-			document.location = "./";
+			formPage.style.display = "none";
+			errorPage.style.display = "block";
 		}
-	}
+	}	
 	
 	Page_OnLoad(true, false, true, true, "images/", false, "../");
 	Terms_CheckedChanged();
@@ -125,23 +128,6 @@ window.onload = function()
 	if (localCart)
 	{
 		RefreshCartItemsCount(cart);
-	}
-	
-	if (cart.length > 0)
-	{
-		var formPage = document.getElementById("formpage");
-		if (formPage)
-		{
-			formPage.style.display = "block";
-		}
-	}
-	else	
-	{
-		var errorPage = document.getElementById("errorPage");
-		if (errorPage)
-		{
-			errorPage.style.display = "block";
-		}
 	}
 };
 

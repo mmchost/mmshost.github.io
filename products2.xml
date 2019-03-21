@@ -33,39 +33,12 @@
 		<page>product/plicuri+c4+pentru+filme+radiologice+d1</page>
 	</product>
 	<product>
-		<id>ENVC4</id>
+		<id>ENVC4D2</id>
 		<name>Plicuri C4 pentru filme radiologice</name>
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
 		<image>product/images/plicuri-c4-pentru-filme-radiologice-design2-1.png</image>
 		<page>product/plicuri+c4+pentru+filme+radiologice+d2</page>
-	</product>
-	<product>
-		<id>ENVC4</id>
-		<name>Plicuri C4 pentru filme radiologice</name>
-		<available>true</available>
-		<price>0.99</price>
-		<quantity>1</quantity>
-		<image>product/images/plicuri-c4-pentru-filme-radiologice-design3-1.png</image>
-		<page>product/plicuri+c4+pentru+filme+radiologice+d3</page>
-	</product>
-	<product>
-		<id>ENVC4</id>
-		<name>Plicuri C4 pentru filme radiologice</name>
-		<available>true</available>
-		<price>0.99</price>
-		<quantity>1</quantity>
-		<image>product/images/plicuri-c4-pentru-filme-radiologice-design4-1.png</image>
-		<page>product/plicuri+c4+pentru+filme+radiologice+d4</page>
-	</product>
-	<product>
-		<id>ENVC4</id>
-		<name>Plicuri C4 pentru filme radiologice</name>
-		<available>true</available>
-		<price>0.99</price>
-		<quantity>1</quantity>
-		<image>product/images/plicuri-c4-pentru-filme-radiologice-design5-1.png</image>
-		<page>product/plicuri+c4+pentru+filme+radiologice+d5</page>
 	</product>
 </products>

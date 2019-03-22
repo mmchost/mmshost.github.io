@@ -79,7 +79,7 @@ function LoadXml(url)
 		    }
 		    else
 		    {
-		    	LoadDefault();
+		    	LoadDefault()
 		    }
 	    }	
 	};
@@ -89,8 +89,9 @@ function LoadXml(url)
 			    
 function LoadDefault()
 {
-	var newReader = new XMLHttpRequest();
-	newReader.onreadystatechange = function()
+	var reader;
+	reader = new XMLHttpRequest();
+	reader.onreadystatechange = function()
 	{
 		if (this.readyState == 4)
 		{
@@ -99,7 +100,9 @@ function LoadDefault()
 				ReadProducts(this);
 			}
 		}
-	}
+	};
+	reader.open("GET", "products.xml", true);
+	reader.send();
 }
 
 window.onload = function() 

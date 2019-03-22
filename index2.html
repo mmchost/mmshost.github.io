@@ -92,7 +92,13 @@ window.onload = function()
 	
 	RefreshCartItemsCount(cart);
 
-	LoadXml();
+	var url;
+	var param = window.location.search.substr(1);
+	if (param.length > 0)
+	{
+		url = param;
+	}	
+	LoadXml(url);
 	
 	try
 	{

@@ -131,10 +131,13 @@ window.onload = function()
 	var url;
 	//var param = window.location.search.substr(1);
 	var param = GetParameterByName("source");
-	if (param.length > 0)
+	if (param)
 	{
-		url = param;
-	}	
+		if (param.length > 0)
+		{
+			url = param;
+		}
+	}
 	LoadXml(url);
 	
 	try

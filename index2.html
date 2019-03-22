@@ -59,8 +59,14 @@
 var products = [];
 var cart = [];
 
-function LoadXml()
+function LoadXml(url)
 {
+	var fileName = "products.xml";
+	if (url)
+	{
+		fileName = url + ".xml";
+	}
+		
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function()
@@ -70,7 +76,7 @@ function LoadXml()
 		ReadProducts(this);
 	    }
 	};
-	xhttp.open("GET", "products2.xml", true);
+	xhttp.open("GET", fileName, true);
 	xhttp.send();
 }
 

@@ -98,7 +98,7 @@ function ReadProducts(xml)
 			var node = elements[i].childNodes[j];			
 			if (node.nodeType == 1) // or nodeType == Node.ELEMENT_NODE
 			{
-				item[node.nodeName] = node.textContent;
+				item[node.nodeName] = node.text || node.textContent;
 			}
 		}
 		products.push(item);
@@ -133,31 +133,42 @@ function AddProducts(list)
 
 function AddItem(index)
 {
-	var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
-	if (product)
+	//var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
+	var exists = false;
+	for (var i=0; i<cart.length; i++)
+	{
+		if (cart[i]["id"] === products[index]["id"])
+		{
+			exists = true;
+			break;
+		}
+	}
+	
+	if (exists)
 	{
 		//ShowMessage("Exista deja in cosul de cumparaturi!");
 		location.href = "cart";
-		return;
 	}	
-	
-	cart.push(products[index]);
-	RefreshCartItemsCount();
-	
-	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
-	//ShowMessage("Adaugat in cosul de cumparaturi!");
-	location.href = "cart";
+	else
+	{
+		cart.push(products[index]);
+		//RefreshCartItemsCount();
+
+		document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart));
+		//ShowMessage("Adaugat in cosul de cumparaturi!");
+		location.href = "cart";
+	}
 }
 
 </script>
 
 <body onresize="Page_OnResize('../images/')">
 
-<!--[if lt IE 9]>
+<!--[if lt IE 8]>
 <meta http-equiv="refresh" content="0; url=https://store.mediosmedical.ro/oldbrowser" />
 <![endif]-->
 
-<!--[if gt IE 8]> <!-- -->
+<!--[if gt IE 7]> <!-- -->
 
 <!--headerBar-->
 <div id="headerBar"></div>

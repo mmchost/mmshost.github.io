@@ -9,7 +9,7 @@
 		<available>true</available>
 		<price>0</price>
 		<quantity>1</quantity>
-		<image>product/images/filme-radiologice-fuji-di-hl-20x25-1.png</image>
+		<images>product/images/filme-radiologice-fuji-di-hl-20x25-1.png</images>
 		<page>product/filme+radiologice+fuji+di-hl+20x25+blue+base</page>
 	</product>
 	<product>
@@ -20,7 +20,7 @@
 		<available>true</available>
 		<price>0</price>
 		<quantity>1</quantity>
-		<image>product/images/filme-radiologice-fuji-di-hl-35x43-1.png</image>
+		<images>product/images/filme-radiologice-fuji-di-hl-35x43-1.png</images>
 		<page>product/filme+radiologice+fuji+di-hl+35x43+blue+base</page>
 	</product>
   	<product>
@@ -30,7 +30,12 @@
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
-		<image>product/images/plicuri-c4-pentru-filme-radiologice-design1-1.png</image>
+		<images>
+			plicuri-c4-pentru-filme-radiologice-design1-1.png,
+			plicuri-c4-pentru-filme-radiologice-design1-2.png,
+			plicuri-c4-pentru-filme-radiologice-design1-3.png,
+			plicuri-pentru-filme-radiologice-4.png
+		</images>
 		<page>product/plicuri+c4+pentru+filme+radiologice+d1</page>
 	</product>
 	<product>
@@ -40,7 +45,7 @@
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
-		<image>product/images/plicuri-c4-pentru-filme-radiologice-design2-1.png</image>
+		<images>product/images/plicuri-c4-pentru-filme-radiologice-design2-1.png</images>
 		<page>product/plicuri+c4+pentru+filme+radiologice+d2</page>
 	</product>
 	<product>
@@ -50,7 +55,7 @@
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
-		<image>product/images/plicuri-c4-pentru-filme-radiologice-design3-1.png</image>
+		<images>product/images/plicuri-c4-pentru-filme-radiologice-design3-1.png</images>
 		<page>product/plicuri+c4+pentru+filme+radiologice+d3</page>
 	</product>
 	<product>
@@ -60,7 +65,7 @@
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
-		<image>product/images/plicuri-c4-pentru-filme-radiologice-design4-1.png</image>
+		<images>product/images/plicuri-c4-pentru-filme-radiologice-design4-1.png</images>
 		<page>product/plicuri+c4+pentru+filme+radiologice+d4</page>
 	</product>
 	<product>
@@ -70,7 +75,7 @@
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>1</quantity>
-		<image>product/images/plicuri-c4-pentru-filme-radiologice-design5-1.png</image>
+		<images>product/images/plicuri-c4-pentru-filme-radiologice-design5-1.png</images>
 		<page>product/plicuri+c4+pentru+filme+radiologice+d5</page>
 	</product>
 </products>

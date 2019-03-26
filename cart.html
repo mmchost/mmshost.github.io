@@ -67,13 +67,13 @@ window.onload = function()
 	RefreshCart(cart);	
 	RefreshCartItemsCount(cart);
 	
-	var url = "";
+	var urlSource = "";
 	var param = GetParameterByName("source");
 	if (param)
 	{
 		if (param.length > 0)
 		{
-			url = "?source=" + param;
+			urlSource = "?source=" + param;
 		}
 	}
 	var continueShopping = document.getElementById("continueShopping");

@@ -72,7 +72,7 @@ window.onload = function()
 	var urlSource = GetCookie("urlSource");	
 	if (urlSource)
 	{
-		if (urlSource.length > 0)
+		if (urlSource.length > 0 && urlSource !== "undefined")
 		{
 			url = "?source=" + urlSource;
 		}

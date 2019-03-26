@@ -250,11 +250,9 @@ function ContinueButton_Click()
 
 <body id="body" class="light-theme">
 
-<div id="headerBar"></div>
+<table id="header" cellpadding="0" cellspacing="0" border="0" style="top:0px;"></table>
 
-<table id="header" cellpadding="0" cellspacing="0"></table>
-
-<table id="main-content" class="main-content" cellpadding="0" cellspacing="0" height="90%" style="vertical-align:top;">
+<table id="main-content" class="main-content" cellpadding="0" cellspacing="0">
 
 <!--SLIDER-->
 <tr><td class="section-title">COSUL DE CUMPARATURI</td></tr>
@@ -349,14 +347,20 @@ function ContinueButton_Click()
 
 <!--END CART-->
 
-<!--CONTACT-->
 <tr><td><a name="contact" id="sectionTag1" class="tag"/></td></tr>
 
-<tr><td class="section-title">CONTACT</td></tr>
+<tr>
+<td class="section-title">
+<p style="display:inline-block; padding:0px; margin:0px;">CONTACT</p>
+</td>
+</tr>
+
+
+<!--content-->
 <tr>
 <td class="footer-content" id="footerContact"></td>
 </tr>
-<!--END CONTACT-->
+<!--end content-->
 
 <!--FOOTER MENU-->
 <tr>
@@ -371,8 +375,6 @@ function ContinueButton_Click()
 <!--END COPYRIGHT-->
 
 </table>
-
-<div id="footerBar"></div>
 
 </body>
 </html>

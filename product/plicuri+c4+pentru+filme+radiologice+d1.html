@@ -279,7 +279,17 @@ window.onload = function()
 	
 	RefreshCartItemsCount(cart);
 	
-	LoadXml("ENVC4D1");
+	var url;
+	var param = GetParameterByName("source");
+	if (param)
+	{
+		if (param.length > 0)
+		{
+			url = param;
+		}
+	}
+	
+	LoadXml(url, "ENVC4D1");
 };
 	
 function LoadXml(url, productID)
@@ -330,6 +340,7 @@ function ReadProduct(xml, productID)
 		if (item["id"] === productID)
 		{
 			product = item;
+			break;
 		}
 	}
 	
@@ -345,7 +356,7 @@ function InitializePage()
 		var previewImage = document.getElementById("previewImage");
 		if (previewImage)
 		{
-			previewImage.src = "product/images/" + images[0];			
+			previewImage.src = "product/images/" + images[0];
 		}
 		
 		var galleryButtons = document.getElementById("galleryButtons");

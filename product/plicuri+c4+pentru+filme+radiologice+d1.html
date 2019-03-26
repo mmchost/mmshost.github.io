@@ -380,7 +380,7 @@ function InitializePage()
 		var galleryButtons = document.getElementById("galleryButtons");
 		if (galleryButtons)
 		{
-			var text;
+			var text = "";
 			for (var i=0; i<images.length; i++)
 			{
 				var className = i == 0 ? "selectedGalleryButton" : "galleryButton";
@@ -494,7 +494,7 @@ function PreviewImage(img)
 	var container = document.getElementById("previewImage");
 	if (container)
 	{
-		container.src = "product/images/" + img.name;
+		container.src = "images/" + img.name;
 		
 		var list = document.getElementById("galleryButtons").getElementsByTagName("a");
 		if (list)

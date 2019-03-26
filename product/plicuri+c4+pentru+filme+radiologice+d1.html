@@ -369,6 +369,17 @@ function InitializePage()
 {
 	if (product)
 	{
+		var mainTitle = document.getElementById("mainTitle");
+		if (mainTitle)
+		{
+			mainTitle.innerHTML = product["name"];
+		}
+		var detailsTitle = document.getElementById("detailsTitle");
+		if (detailsTitle)
+		{
+			detailsTitle = product["name"];
+		}
+		
 		var images = product["images"].split(",");
 		
 		var previewImage = document.getElementById("previewImage");
@@ -518,7 +529,7 @@ function PreviewImage(img)
 <table id="main-content" class="main-content" cellpadding="0" cellspacing="0">
 
 <!--SLIDER-->
-<tr><td class="section-title">Plicuri C4 pentru filme radiologice</td></tr>
+<tr><td class="section-title" id="mainTitle"></td></tr>
 <!--END SLIDER-->
 
 <tr>
@@ -537,7 +548,7 @@ function PreviewImage(img)
 <span style="display:inline-block; border:none 1px #000; width:300px;">
 <table cellpadding="0" cellspacing="0" style="width:100%;"><tr><td id="galleryButtons" style="text-align:center;"></td></tr></table>
 </span>
-<span class="subTitle"><a style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;">Plicuri C4 pentru filme radiologice</a></span>	
+<span class="subTitle"><a id="detailsTitle" style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;">Plicuri C4 pentru filme radiologice</a></span>	
 </td>
 <td>
 

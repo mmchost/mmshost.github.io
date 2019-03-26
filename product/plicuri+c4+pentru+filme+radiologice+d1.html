@@ -297,7 +297,7 @@ function LoadXml(url, productID)
 	var fileName = "products.xml";
 	if (url)
 	{
-		fileName = url + ".xml";
+		fileName = "https://store.mediosmedical.ro/" + url + ".xml";
 	}
 		
 	var xhttp;
@@ -347,6 +347,24 @@ function ReadProduct(xml, productID)
 	InitializePage();
 }
 	
+function LoadDefault(productID)
+{
+	var reader;
+	reader = new XMLHttpRequest();
+	reader.onreadystatechange = function()
+	{
+		if (this.readyState == 4)
+		{
+			if (this.status == 200)
+			{
+				ReadProduct(this, productID);
+			}
+		}
+	};
+	reader.open("GET", "https://store.mediosmedical.ro/products.xml", true);
+	reader.send();
+}
+	
 function InitializePage()
 {
 	if (product)
@@ -356,7 +374,7 @@ function InitializePage()
 		var previewImage = document.getElementById("previewImage");
 		if (previewImage)
 		{
-			previewImage.src = "product/images/" + images[0];
+			previewImage.src = "images/" + images[0];
 		}
 		
 		var galleryButtons = document.getElementById("galleryButtons");

@@ -383,8 +383,9 @@ function InitializePage()
 			var text = "";
 			for (var i=0; i<images.length; i++)
 			{
+				var current = i+1;
 				var className = i == 0 ? "selectedGalleryButton" : "galleryButton";
-				text += "<a title='" + i+1 + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='PreviewImage(this)'/>";
+				text += "<a title='" + current + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='PreviewImage(this)'/>";
 			}
 			galleryButtons.innerHTML = text;
 		}

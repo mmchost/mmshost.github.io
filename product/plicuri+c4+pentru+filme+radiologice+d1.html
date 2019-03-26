@@ -264,25 +264,53 @@
 
 <script>
 
-var products = [];
+var product;
 var cart = [];
 	
-function LoadXml()
+window.onload = function() 
 {
+	Page_OnLoad(true, false, true, true, "../images/", false, "../../");
+	
+	var localCart = GetCookie("storeCart");
+	if (localCart)
+	{
+		cart = JSON.parse(decodeURIComponent(localCart));
+	}
+	
+	RefreshCartItemsCount(cart);
+	
+	LoadXml("ENVC4D1");
+};
+	
+function LoadXml(url, productID)
+{
+	var fileName = "products.xml";
+	if (url)
+	{
+		fileName = url + ".xml";
+	}
+		
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function()
 	{
-	    if (this.readyState == 4 && this.status == 200) 
+	    if (this.readyState == 4) 
 	    {
-          ReadProducts(this);
-	    }
+		    if (this.status == 200)
+		    {
+			ReadProduct(this, productID);
+		    }
+		    else
+		    {
+		    	LoadDefault(productID);
+		    }
+	    }	
 	};
-	xhttp.open("GET", "../products2.xml", true);
+	xhttp.open("GET", fileName, true);
 	xhttp.send();
 }
 	
-function ReadProducts(xml)
+function ReadProduct(xml, productID)
 {
 	var xmlDoc = xml.responseXML;
 	var elements =  xmlDoc.getElementsByTagName("product");	
@@ -299,7 +327,10 @@ function ReadProducts(xml)
 				item[node.nodeName] = node.text || node.textContent;
 			}
 		}
-		products.push(item);
+		if (item["id"] === productID)
+		{
+			product = item;
+		}
 	}
 	
 	InitializePage();
@@ -307,20 +338,28 @@ function ReadProducts(xml)
 	
 function InitializePage()
 {
-	var product;
-	var productIndex = -1;
-	for (var i=0; i<products.length; i++)
-	{
-		if (products[i]["id"] === "ENVC4D1")
-		{
-			product = products[i];
-			productIndex = i;
-			break;
-		}
-	}
 	if (product)
 	{
-		var i = productIndex;		
+		var images = product["images"].split(",");
+		
+		var previewImage = document.getElementById("previewImage");
+		if (previewImage)
+		{
+			previewImage.src = images[0];			
+		}
+		
+		var galleryButtons = document.getElementById("galleryButtons");
+		if (galleryButtons)
+		{
+			var text;
+			for (var i=0; i<images.length; i++)
+			{
+				var className = i == 0 ? "selectedGalleryButton" : "galleryButton";
+				text += "<a title='" + i + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='PreviewImage(this)'/>";
+			}
+			galleryButtons.innerHTML = text;
+		}
+		
 		var buttonState = product["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
 		var buttonText = Math.round(product["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
 		if (product["available"] == "false")
@@ -352,9 +391,9 @@ function InitializePage()
 			{
 				quantityCell.innerHTML = 
 				"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + -1 + ")'>-</button></td>" + 
-				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px; background:#fff;'><input class='textbox-numeric' type='text' value='" + products[i]["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + 1 + ")'>+</button></td>" +										 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + -1 + ")'>-</button></td>" + 
+				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px; background:#fff;'><input class='textbox-numeric' type='text' value='" + product["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + 1 + ")'>+</button></td>" +
 				"</tr></table>";
 			}
 			
@@ -367,30 +406,15 @@ function InitializePage()
 	}
 }
 
-window.onload = function() 
+function AddItem()
 {
-	Page_OnLoad(true, false, true, true, "../images/", false, "../../");
-	
-	var localCart = GetCookie("storeCart");
-	if (localCart)
-	{
-		cart = JSON.parse(decodeURIComponent(localCart));
-	}
-	
-	RefreshCartItemsCount(cart);
-	
-	LoadXml();
-};
-
-function AddItem(index)
-{
-	if (products[index]["price"] > 0)
+	if (product["price"] > 0)
 	{
 		//var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
 		var exists = false;
 		for (var i=0; i<cart.length; i++)
 		{
-			if (cart[i]["id"] === products[index]["id"])
+			if (cart[i]["id"] === product["id"])
 			{
 				exists = true;
 			}
@@ -401,7 +425,7 @@ function AddItem(index)
 		}
 		else			
 		{
-			cart.push(products[index]);
+			cart.push(product);
 			document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
 			
 			location.href = "../cart";
@@ -412,7 +436,7 @@ function AddItem(index)
 	else
 	{
 		var shoppingBag = [];
-		shoppingBag.push(products[index]);
+		shoppingBag.push(product);
 		document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag)) + ";domain=store.mediosmedical.ro;path=/;";
 		RequestOffer();
 	}
@@ -423,16 +447,16 @@ function RequestOffer()
 	window.location.href = "../requestoffer";
 }
 
-function CalculateTotal(index, value)
+function CalculateTotal(value)
 {
 	if (value < 1)
 	{
-		if (products[index]["quantity"] == 1)
+		if (product["quantity"] == 1)
 		{
 			return;
 		}
 	}
-	products[index]["quantity"] = Math.round(products[index]["quantity"]) + value;
+	product["quantity"] = Math.round(product["quantity"]) + value;
 	InitializePage();
 }
 	
@@ -479,18 +503,9 @@ function PreviewImage(img)
 	
 <table cellpadding="0" cellspacing="0" class="sub-container"><tr>
 <td class="preview-container">
-<span class="preview"><img id="previewImage" src="images/plicuri-c4-pentru-filme-radiologice-design1-1.png" width="300px" alt="plicuri c4 pentru filme radiologice" style="pointer-events:none;"/></span>
+<span class="preview"><img id="previewImage" width="300px" height="300px" style="pointer-events:none;"/></span>
 <span style="display:inline-block; border:none 1px #000; width:300px;">
-<table cellpadding="0" cellspacing="0" style="width:100%;">
-<tr>
-<td id="galleryButtons" style="text-align:center;">
-<a title="1/4" name="images/plicuri-c4-pentru-filme-radiologice-design1-1.png" class="selectedGalleryButton" onclick="PreviewImage(this)"/>
-<a title="2/4" name="images/plicuri-pentru-filme-radiologice-design1-2.png" class="galleryButton" onclick="PreviewImage(this)"/>
-<a title="3/4" name="images/plicuri-pentru-filme-radiologice-design1-3.png" class="galleryButton" onclick="PreviewImage(this)"/>
-<a title="4/4" name="images/plicuri-pentru-filme-radiologice-4.png" class="galleryButton" onclick="PreviewImage(this)"/>
-</td>
-</tr>
-</table>
+<table cellpadding="0" cellspacing="0" style="width:100%;"><tr><td id="galleryButtons" style="text-align:center;"></td></tr></table>
 </span>
 <span class="subTitle"><a style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;">Plicuri C4 pentru filme radiologice</a></span>	
 </td>

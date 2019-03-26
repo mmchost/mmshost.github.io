@@ -469,7 +469,8 @@ function InitializePage()
 			var subDescription = document.getElementById("subDescription");
 			if (subDescription)
 			{
-				subDescription.innerHTML = description;
+				var content = description.innerHTML
+				subDescription.innerHTML = content;
 			}
 		}
 	}

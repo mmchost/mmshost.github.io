@@ -390,12 +390,12 @@ function InitializePage()
 		var detailsTitle = document.getElementById("detailsTitle");
 		if (detailsTitle)
 		{
-			detailsTitle = product["name"];
+			detailsTitle.innerHTML = product["name"];
 		}
 		var subTitle = document.getElementById("subTitle");
 		if (subTitle)
 		{
-			subTitle = product["name"];
+			subTitle.innerHTML = product["name"];
 		}
 		
 		var images = product["images"].split(",");

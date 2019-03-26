@@ -321,7 +321,7 @@ function LoadXml(url, productID)
 	    {
 		    if (this.status == 200)
 		    {
-			ReadProduct(this, productID);
+			ReadProduct(this, productID, url);
 		    }
 		    else
 		    {
@@ -333,7 +333,7 @@ function LoadXml(url, productID)
 	xhttp.send();
 }
 	
-function ReadProduct(xml, productID)
+function ReadProduct(xml, productID, param)
 {
 	var xmlDoc = xml.responseXML;
 	var elements =  xmlDoc.getElementsByTagName("product");	
@@ -357,7 +357,7 @@ function ReadProduct(xml, productID)
 		}
 	}
 	
-	InitializePage();
+	InitializePage(param);
 }
 	
 function LoadDefault(productID)
@@ -378,10 +378,21 @@ function LoadDefault(productID)
 	reader.send();
 }
 	
-function InitializePage()
+function InitializePage(param)
 {
 	if (product)
 	{
+		var urlSource = "";
+		if (param)
+		{
+			urlSource = "?source=" + param;
+		}
+		var continueShopping = document.getElementById("continueShopping");
+		if (continueShopping)
+		{
+			continueShopping.innerHTML = "<a class='highlight-text'>← </a><a class='hyperlink-highlight' href='../../" + urlSource + "#products'>Continuați cumpărăturile</a>";
+		}
+		
 		var mainTitle = document.getElementById("mainTitle");
 		if (mainTitle)
 		{
@@ -396,7 +407,7 @@ function InitializePage()
 		if (subTitle)
 		{
 			subTitle.innerHTML = product["name"];
-		}
+		}		
 		
 		var images = product["images"].split(",");
 		
@@ -567,9 +578,7 @@ function PreviewImage(img)
 <table align="center" class="parent" cellpadding="0" cellspacing="0"><tr>
 <td class="container">
 
-<span style="display:block; background:#fff; text-align:right; vertical-align:bottom; height:32px; line-height:32px;">
-<a class="highlight-text">← </a><a class="hyperlink-highlight" href="../../#products">Continuați cumpărăturile</a>
-</span>
+<span id="continueShopping" style="display:block; background:#fff; text-align:right; vertical-align:bottom; height:32px; line-height:32px;"></span>
 	
 <table cellpadding="0" cellspacing="0" class="sub-container"><tr>
 <td class="preview-container">

@@ -36,6 +36,8 @@
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/item.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/cart.css" charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/form.css" charset="utf-8"/>
+	
+<link rel="stylesheet" type="text/css" href="https://source.mediosmedical.ro/styles/product.css" charset="utf-8"/>
 
 <script type="text/javascript" src="https://source.mediosmedical.ro/js/jquery.js"></script>
 <script type="text/javascript" src="https://source.mediosmedical.ro/js/jquery.scrollTo.js"></script>	
@@ -45,6 +47,8 @@
 <script type="text/javascript" src="https://source.mediosmedical.ro/js/main.js"></script>
 <script type="text/javascript" src="https://source.mediosmedical.ro/js/getCookie.js"></script>
 <script type="text/javascript" src="https://source.mediosmedical.ro/js/messageBox.js"></script>
+	
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/product.js"></script>
 
 </head>
 
@@ -55,387 +59,14 @@
 	display:none;	
 }
 
-.container
-{
-	vertical-align:top;	
-}
-	
-.sub-container
-{
-	width:1px;
-	display:inline-table;
-	background:#fff;
-	border:solid 1px #e6e6e6;
-}
-
-.preview
-{
-	display:inline-block;
-	vertical-align:top;
-	width:300px;
-	/*border:solid 1px blue;*/
-}
-	
-.preview-container
-{
-	width:1px;
-	vertical-align:top;
-}
-
-.description
-{
-	display:inline-block;
-	vertical-align:top;
-	min-width:560px;
-}
-.subDescription
-{
-	display:none;
-	vertical-align:top;
-	width:100%;
-	background:#fff;
-}
-
-.price
-{
-	display:inline-block;
-	vertical-align:top;
-	text-align:left;
-	/*border:solid 1px green;*/
-}
-
-.title
-{
-	padding-top:10px;
-}
-.subTitle
-{
-	display:none;
-	/*border:solid 1px orange;*/
-	min-height:40px;
-	line-height:40px;
-	vertical-align:middle;
-}
-
-.parent
-{
-	border-style:none;
-	background:#e6e6e6;
-}
-	
-.detailsTable
-{
-	display:inline-table;
-	width:100%;	
-	text-align:left;
-	border-color:#E6E6E6;
-	border-style:solid;	
-	margin:0px;	
-	border-width:0px;
-	border-collapse:collapse;
-}
-.details-cell
-{
-	padding:5px;
-	text-align:left;
-	vertical-align:top;
-	border-style:solid;
-	border-width:1px 0px 0px 1px;
-	border-color:#E6E6E6;
-}
-
-.priceTable
-{
-	//display:inline-table;
-	min-width:300px;
-	max-width:300px;
-	width:100%;
-	//float:left;
-	//height:100%;
-	//background:#E6E6E6;	
-}
-	
-.galleryButton
-{
-	display:inline-block;
-	width:16px;
-	height:16px;
-	background:#e6e6e6;
-	border-radius:8px;
-	cursor:pointer;
-	margin:5px;
-}
-.galleryButton:hover
-{
-	background:#ccc;
-}
-.selectedGalleryButton
-{
-	display:inline-block;
-	width:16px;
-	height:16px;
-	background:#0074bb;
-	border-radius:8px;
-	cursor:pointer;
-	margin:5px;	
-}
-
-@media screen and (max-width:1200px)
-{
-	.price
-	{
-		width:100%;
-		height:300px;
-	}
-	.description
-	{
-		width:100%;
-	}
-	.sub-container
-	{
-		width:100%;
-	}
-	.priceTable
-	{
-		max-width:100%;
-		width:100%;
-	}	
-	.detailsTable
-	{
-		max-width:100%;
-		width:100%;
-		border-width:0px 0px 0px 1px;
-	}
-}
-
-@media screen and (max-width:960px)
-{
-	.container
-	{
-		width:100%;
-		text-align:center;
-	}
-	.price
-	{
-		width:100%;		
-	}
-	.description
-	{
-		display:none;
-	}
-	.subTitle
-	{
-		display:inline-block;
-		width:100%;
-	}
-	.subDescription
-	{
-		max-width:100%;
-		width:100%;
-		display:block;		
-	}
-	.preview
-	{
-		width:100%;
-		display:block;
-		vertical-align:top;
-	}
-	.preview-container
-	{
-		width:100%;
-	}
-	.parent
-	{
-		width:100%;
-	}
-	.detailsTable
-	{
-		border-width:0px 1px 1px 0px;
-		width:100%;
-		max-width:100%;
-	}
-	.details-cell
-	{
-		border-width:1px 1px 0px 1px;
-	}
-}
-
 </style>
 
 <script>
-
-var products = [];
-var cart = [];
 	
-function LoadXml()
-{
-	var xhttp;
-	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function()
-	{
-	    if (this.readyState == 4 && this.status == 200) 
-	    {
-          ReadProducts(this);
-	    }
-	};
-	xhttp.open("GET", "../products2.xml", true);
-	xhttp.send();
-}
-	
-function ReadProducts(xml)
-{
-	var xmlDoc = xml.responseXML;
-	var elements =  xmlDoc.getElementsByTagName("product");	
-	
-	var i, j;
-	for (i=0; i<elements.length; i++)
-	{
-		var item = {};
-		for (j=0; j<elements[i].childNodes.length; j++)
-		{
-			var node = elements[i].childNodes[j];			
-			if (node.nodeType == 1) // or nodeType == Node.ELEMENT_NODE
-			{
-				item[node.nodeName] = node.textContent;
-			}
-		}
-		products.push(item);
-	}
-	
-	InitializePage();
-}
-	
-function InitializePage()
-{
-	var product = products.find(obj => {return obj.id === 'DIHL3543'});
-	if (product)
-	{
-		var i = products.indexOf(product);		
-		var buttonState = product["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
-		var buttonText = Math.round(product["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
-		if (product["available"] == "false")
-		{
-			buttonText = "Stoc epuizat";
-		}
-		var iconColor = "#fff";
-		var buttonContent = "<table style='background:transparent; height:100%; width:100%;' cellpadding='0' cellspacing='0'><tr><td style='width:0px; background-color:" + iconColor + "; background-image:url(images/cart.png); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;'></td><td>" + buttonText + "</td></tr></table>";
-		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem(" + i + ")'>" + buttonContent + "</button>";
-		
-		var priceTable = document.getElementById("priceTable");				
-		if (priceTable)
-		{
-			if (Math.round(product["price"]) > 0)
-			{
-				var priceCell = document.getElementById("priceCell");
-				var priceCellName = document.getElementById("priceCellName");
-
-				if (priceCell && priceCellName)
-				{
-					priceCell.innerHTML = product["price"] + " Lei";
-					priceCell.style.display = "table-cell";
-					priceCellName.style.display = "table-cell";
-				}
-			}
-			
-			var quantityCell = document.getElementById("quantityCell");
-			if (quantityCell)
-			{
-				quantityCell.innerHTML = 
-				"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + -1 + ")'>-</button></td>" + 
-				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px; background:#fff;'><input class='textbox-numeric' type='text' value='" + products[i]["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + i + "," + 1 + ")'>+</button></td>" +										 
-				"</tr></table>";
-			}
-			
-			var buttonCell = document.getElementById("buttonCell");
-			if (buttonCell)
-			{	
-				buttonCell.innerHTML = button;
-			}
-		}
-	}
-}
-
 window.onload = function() 
 {
-	Page_OnLoad(true, false, true, true, "../images/", false, "../../");
-	
-	var localCart = GetCookie("storeCart");
-	if (localCart)
-	{
-		cart = JSON.parse(decodeURIComponent(localCart));
-	}
-	
-	RefreshCartItemsCount(cart);
-	
-	LoadXml();
+	Page_OnLoad(true, false, true, true, "../images/", false, "../../"); var cart = []; var localCart = GetCookie("cart"); if (localCart) { cart = JSON.parse(decodeURIComponent(localCart)); } RefreshCartItemsCount(cart); var url; var param = GetParameterByName("source"); if (param) { if (param.length > 0) { url = param; }} LoadSource(url, "DIHL3543");
 };
-
-function AddItem(index)
-{
-	if (products[index]["price"] > 0)
-	{
-		var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
-		if (product)
-		{
-			location.href = "../cart";
-		}
-		else			
-		{
-			cart.push(products[index]);
-			document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
-			
-			location.href = "../cart";
-			
-			//RefreshCartItemsCount(cart);
-		}
-	}
-	else
-	{
-		var shoppingBag = [];
-		shoppingBag.push(products[index]);
-		document.cookie = "shoppingBag=" + encodeURIComponent(JSON.stringify(shoppingBag)) + ";domain=store.mediosmedical.ro;path=/;";
-		RequestOffer();
-	}
-}
-
-function RequestOffer()
-{
-	window.location.href = "../requestoffer";
-}
-
-function CalculateTotal(index, value)
-{
-	if (value < 1)
-	{
-		if (products[index]["quantity"] == 1)
-		{
-			return;
-		}
-	}
-	products[index]["quantity"] = Math.round(products[index]["quantity"]) + value;
-	InitializePage();
-}
-	
-function PreviewImage(img)
-{
-	var container = document.getElementById("previewImage");
-	if (container)
-	{
-		container.src = img.name;
-		
-		var list = document.getElementById("galleryButtons").getElementsByTagName("a");
-		if (list)
-		{
-			for (var i=0; i<list.length; i++)
-			{
-				list[i].className = "galleryButton";
-			}
-			img.className = "selectedGalleryButton";
-		}
-	}
-}
 
 </script>
 
@@ -446,39 +77,33 @@ function PreviewImage(img)
 <table id="main-content" class="main-content" cellpadding="0" cellspacing="0">
 
 <!--SLIDER-->
-<tr><td class="section-title">Filme radiologice Fujifilm DI-HL 35x43 cm</td></tr>
+<tr><td class="section-title" id="mainTitle"></td></tr>
 <!--END SLIDER-->
 
 <tr>
-<td style="padding:5px 0px 20px 0px; vertical-align:top; background:#fff;">
+<td style="padding:22px 0px 54px 0px; vertical-align:top; background:#fff;">
 
 <table align="center" class="parent" cellpadding="0" cellspacing="0"><tr>
 <td class="container">
 
-<span style="display:block; background:#fff; text-align:right; vertical-align:bottom; height:32px; line-height:32px;">
+<span style="display:block; background:#fff; text-align:right; vertical-align:bottom; height:32px; line-height:32px; padding-right:10px;">
 <a class="highlight-text">← </a><a class="hyperlink-highlight" href="../../#products">Continuați cumpărăturile</a>
 </span>
 	
 <table cellpadding="0" cellspacing="0" class="sub-container"><tr>
 <td class="preview-container">
-<span class="preview"><img id="previewImage" src="images/filme-radiologice-fuji-di-hl-35x43-1.png" width="300px" alt="filme radiologice fuji di-hl 35x43" style="pointer-events:none;"/></span>
+<span class="preview"><img id="previewImage" width="300px" height="300px" style="pointer-events:none;"/></span>
 <span style="display:inline-block; border:none 1px #000; width:300px;">
-<table cellpadding="0" cellspacing="0" style="width:100%;">
-<tr>
-<td id="galleryButtons" style="text-align:center;">
-<a title="1/1" name="images/filme-radiologice-fuji-di-hl-35x43-1.png" class="selectedGalleryButton" onclick="PreviewImage(this)"/>
-</td>
-</tr>
-</table>
+<table cellpadding="0" cellspacing="0" style="width:100%;"><tr><td id="galleryButtons" style="text-align:center;"></td></tr></table>
 </span>
-<span class="subTitle"><a style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;">Filme radiologice Fujifilm DI-HL 35x43 cm</a></span>	
+<span class="subTitle"><a id="detailsTitle" style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;"></a></span>	
 </td>
 <td>
 
-<span class="description">
+<span id="description" class="description">
 <table id="detailsTable" class="detailsTable" cellpadding="0" cellspacing="0">
-<tr><td class="details-cell" style="font-weight:bold; border-top:0px;" colspan='2'>Filme radiologice Fujifilm DI-HL 35x43 cm</td></tr>
-<tr><td class="details-cell">Cod produs</td><td class="details-cell">DIHL3543</td></tr>
+<tr><td class="detailsTitle-cell" style="font-weight:bold; border-top:0px;" colspan='2'><a id="subTitle"></a></td></tr>
+<tr><td class="details-cell">Cod produs</td><td class="details-cell" id="detailsProductId"></td></tr>
 <tr><td class="details-cell">Producator</td><td class="details-cell">Fujifilm</td></tr>
 <tr><td class="details-cell">Tip film</td><td class="details-cell">Fuji Medical Dry Laser Imaging Film (DI-HL)</td></tr>
 <tr><td class="details-cell">Fabricat in</td><td class="details-cell">Japonia</td></tr>
@@ -509,20 +134,7 @@ function PreviewImage(img)
 </table>
 </span>
 
-<span class="subDescription">
-<table class="detailsTable" cellpadding="0" cellspacing="0">	
-<tr><td class="details-cell">Cod produs</td><td class="details-cell">DIHL3543</td></tr>
-<tr><td class="details-cell">Producator</td><td class="details-cell">Fujifilm</td></tr>
-<tr><td class="details-cell">Tip film</td><td class="details-cell">Fuji Medical Dry Laser Imaging Film (DI-HL)</td></tr>
-<tr><td class="details-cell">Fabricat in</td><td class="details-cell">Japonia</td></tr>
-<tr><td class="details-cell">Culoarea filmului</td><td class="details-cell">Albastru transparent (Blue base)</td></tr>
-<tr><td class="details-cell">Dimensiuni film</td><td class="details-cell">35x43 cm (14x17 inch)</td></tr>
-<tr><td class="details-cell">Ambalaj</td><td class="details-cell">100 filme / cutie</td></tr>
-<tr><td class="details-cell">Categorie</td><td class="details-cell">Filme radiologice</td></tr>
-<tr><td class="details-cell">Tehnologie printare</td><td class="details-cell">Laser, Uscata</td></tr>
-<tr><td class="details-cell">Compatibil cu imprimantele:</td><td class="details-cell">DRYPIX 4000<br/>DRYPIX 5000<br/>DRYPIX 7000<br/>DRYPIX Plus<br/>DRYPIX EDGE (8000)<br/>DRYPIX SMART<br/>DRYPIX PRIMA</td></tr>
-</table>	
-</span>
+<span id="subDescription" class="subDescription"></span>
 </td>
 
 </tr></table>
@@ -567,8 +179,6 @@ function PreviewImage(img)
 <!--END COPYRIGHT-->
 
 </table>
-
-<div id="messageBox"></div>
 
 </body>
 </html>

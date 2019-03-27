@@ -63,7 +63,7 @@ window.onload = function()
 {
 	Page_OnLoad(true, false, true, true, "images/", true, "");
 	
-	var localCart = GetCookie("storeCart");
+	var localCart = GetCookie("cart");
 	if (localCart)
 	{
 		cart = JSON.parse(decodeURIComponent(localCart));

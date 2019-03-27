@@ -71,16 +71,29 @@ window.onload = function()
 	
 	RefreshCartItemsCount(cart);
 
-	var url;
-	//var param = window.location.search.substr(1);
+	var url = "";
+	//var param = window.location.search.substr(1);	
 	var param = GetParameterByName("source");
 	if (param)
 	{
-		if (param.length > 0)
+		if (param.length > 0 && param !== "undefined")
 		{
 			url = param;
 		}
 	}
+	
+	if (url.length == 0)
+	{
+		var urlSource = GetCookie("urlSource");
+		if (urlSource)
+		{
+			if (urlSource.length > 0 && urlSource !== "undefined")
+			{
+				url = urlSource;
+			}
+		}
+	}
+	
 	LoadXml(url);
 	
 	try

@@ -427,7 +427,7 @@ function InitializePage()
 		}
 		var iconColor = "#fff";
 		var buttonContent = "<table style='background:transparent; height:100%; width:100%;' cellpadding='0' cellspacing='0'><tr><td style='width:0px; background-color:" + iconColor + "; background-image:url(images/cart.png); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;'></td><td>" + buttonText + "</td></tr></table>";
-		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem(\"" + urlSource + "\")'>" + buttonContent + "</button>";
+		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem()'>" + buttonContent + "</button>";
 		
 		var priceTable = document.getElementById("priceTable");				
 		if (priceTable)
@@ -476,7 +476,7 @@ function InitializePage()
 	}
 }
 
-function AddItem(urlParam)
+function AddItem()
 {
 	if (product["price"] > 0)
 	{
@@ -491,14 +491,14 @@ function AddItem(urlParam)
 		}
 		if (exists)
 		{
-			location.href = "../cart" + urlParam;
+			location.href = "../cart";
 		}
 		else			
 		{
 			cart.push(product);
 			document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
 			
-			location.href = "../cart" + urlParam;
+			location.href = "../cart";
 			
 			//RefreshCartItemsCount(cart);
 		}

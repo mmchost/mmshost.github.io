@@ -67,10 +67,11 @@ window.onload = function()
 {
 	Page_OnLoad(true, false, true, true, "../images/", false, "../../");
 	
-	var cart = GetCookie("cart");
-	if (cart)
+	var cart = [];
+	var localCart = GetCookie("cart");
+	if (localCart)
 	{
-		cart = JSON.parse(decodeURIComponent(cart));
+		cart = JSON.parse(decodeURIComponent(localCart));
 	}	
 	RefreshCartItemsCount(cart);
 	

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products>
+	<product>
+		<id>DIHL2025</id>
+		<name>Filme radiologice Fujifilm
+		DI-HL 20x25 cm (8x10 inch)
+		Blue base, 150 filme / cutie</name>
+		<available>true</available>
+		<price>100</price>
+		<quantity>1</quantity>
+		<images>filme-radiologice-fuji-di-hl-20x25-1.png</images>
+		<page>product/filme+radiologice+fuji+di-hl+20x25+blue+base?source=products2</page>
+	</product>
+	<product>
+		<id>DIHL3543</id>
+		<name>Filme radiologice Fujifilm
+		DI-HL 35x43 cm (14x17 inch)
+		Blue base, 100 filme / cutie</name>
+		<available>true</available>
+		<price>200</price>
+		<quantity>1</quantity>
+		<images>filme-radiologice-fuji-di-hl-35x43-1.png</images>
+		<page>product/filme+radiologice+fuji+di-hl+35x43+blue+base?source=products2</page>
+	</product>
+  	<product>
+		<id>ENVC4D1</id>
+		<name>Plicuri C4 pentru filme radiologice
+		150 buc / ambalaj</name>
+		<available>true</available>
+		<price>1.99</price>
+		<quantity>1</quantity>
+		<images>plicuri-c4-pentru-filme-radiologice-d1-1.png,plicuri-c4-pentru-filme-radiologice-d1-2.png,plicuri-c4-pentru-filme-radiologice-d1-3.png,plicuri-pentru-filme-radiologice-4.png</images>
+		<page>product/plicuri+c4+pentru+filme+radiologice+d1?source=products2</page>
+	</product>
+	<product>
+		<id>ENVC4D2</id>
+		<name>Plicuri C4 pentru filme radiologice
+		150 buc / ambalaj</name>
+		<available>true</available>
+		<price>0.99</price>
+		<quantity>1</quantity>
+		<images>plicuri-c4-pentru-filme-radiologice-d2-1.png,plicuri-c4-pentru-filme-radiologice-d2-2.png,plicuri-c4-pentru-filme-radiologice-d2-3.png,plicuri-pentru-filme-radiologice-4.png</images>
+		<page>product/plicuri+c4+pentru+filme+radiologice+d2?source=products2</page>
+	</product>
+	<product>
+		<id>ENVE4D1</id>
+		<name>Plicuri E4 pentru filme radiologice
+		150 buc / ambalaj</name>
+		<available>true</available>
+		<price>0.99</price>
+		<quantity>1</quantity>
+		<images>plicuri-e4-pentru-filme-radiologice-d1-1.png,plicuri-e4-pentru-filme-radiologice-d1-2.png,plicuri-e4-pentru-filme-radiologice-d1-3.png,plicuri-pentru-filme-radiologice-4.png</images>
+		<page>product/plicuri+e4+pentru+filme+radiologice+d1?source=products2</page>
+	</product>
+	<product>
+		<id>ENVE4D2</id>
+		<name>Plicuri E4 pentru filme radiologice
+		150 buc / ambalaj</name>
+		<available>true</available>
+		<price>0.99</price>
+		<quantity>1</quantity>
+		<images>plicuri-e4-pentru-filme-radiologice-d2-1.png,plicuri-e4-pentru-filme-radiologice-d2-2.png,plicuri-e4-pentru-filme-radiologice-d2-3.png,plicuri-pentru-filme-radiologice-4.png</images>
+		<page>product/plicuri+e4+pentru+filme+radiologice+d2?source=products2</page>
+	</product>
+	<product>
+		<id>ENVA3D1</id>
+		<name>Plicuri A3 pentru filme radiologice
+		100 buc / ambalaj</name>
+		<available>true</available>
+		<price>0.99</price>
+		<quantity>1</quantity>
+		<images>plicuri-a3-pentru-filme-radiologice-d1-1.png,plicuri-a3-pentru-filme-radiologice-d1-2.png,plicuri-a3-pentru-filme-radiologice-d1-3.png,plicuri-pentru-filme-radiologice-4.png</images>
+		<page>product/plicuri+a3+pentru+filme+radiologice+d1?source=products2</page>
+	</product>
+	<product>
+		<id>ENVA3D2</id>
+		<name>Plicuri A3 pentru filme radiologice
+		100 buc / ambalaj</name>
+		<available>true</available>
+		<price>0.99</price>
+		<quantity>1</quantity>
+		<images>plicuri-a3-pentru-filme-radiologice-d2-1.png,plicuri-a3-pentru-filme-radiologice-d2-2.png,plicuri-a3-pentru-filme-radiologice-d2-3.png,plicuri-pentru-filme-radiologice-4.png</images>
+		<page>product/plicuri+a3+pentru+filme+radiologice+d2?source=products2</page>
+	</product>
+</products>

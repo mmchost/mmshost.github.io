@@ -125,12 +125,12 @@ function LoadXml(url)
 	    {
 		    if (this.status == 200)
 		    {
-			document.cookie = "urlSource=" + url + ";domain=store.mediosmedical.ro;path=/;";
+			document.cookie = "urlSource=" + url + ";domain=.mediosmedical.ro;path=/;";
 			ReadProducts(this);
 		    }
 		    else
 		    {
-			document.cookie = "urlSource=" + "" + ";domain=store.mediosmedical.ro;path=/;";
+			document.cookie = "urlSource=;domain=.mediosmedical.ro;path=/;";
 		    	LoadDefault()
 		    }
 	    }	

@@ -67,21 +67,6 @@ window.onload = function()
 	
 	RefreshCart(cart);	
 	RefreshCartItemsCount(cart);
-	
-	var url = "";
-	var urlSource = GetCookie("urlSource");	
-	if (urlSource)
-	{
-		if (urlSource.length > 0 && urlSource !== "undefined")
-		{
-			url = "?source=" + urlSource;
-		}
-	}
-	var continueShopping = document.getElementById("continueShopping");
-	if (continueShopping)
-	{
-		continueShopping.innerHTML = "<a class='highlight-text'>← </a><a class='hyperlink-highlight' href='../" + url + "#products'>Continuați cumpărăturile</a>";
-	}
 };
 
 function RefreshCart(list)
@@ -264,7 +249,9 @@ function ContinueButton_Click()
 <td style="background:#fff; text-align:center; padding:5px 0px 1px 0px; height:100%; vertical-align:top;">
 		
 		<table class="cartTable"><tr><td></td></tr></table>
-		<table style="height:1px;" class="summaryTable"><tr><td id="continueShopping" style="text-align:right; padding:0px 5px 5px 5px;"></td></tr></table>
+		<table style="height:1px;" class="summaryTable"><tr><td style="text-align:right; padding:0px 5px 5px 5px;">
+		<a class="highlight-text">← </a><a class="hyperlink-highlight" href="../#products">Continuați cumpărăturile</a>
+		</td></tr></table>
 		
 		<table id="cart" class="cartTable" cellpadding="0" cellspacing="0"></table>
 		

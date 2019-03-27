@@ -62,37 +62,11 @@ window.onload = function()
 {
 	Page_OnLoad(true, false, true, true, "images/", true, "");
 	
-	var cart = [];
-	var localCart = GetCookie("cart");	
-	if (localCart)
-	{
-		cart = JSON.parse(decodeURIComponent(localCart));
-	}	
-	RefreshCartItemsCount(cart);
+	var cart = []; var localCart = GetCookie("cart"); if (localCart) { cart = JSON.parse(decodeURIComponent(localCart)); } RefreshCartItemsCount(cart);
 
-	var url = "";	
-	var param = GetParameterByName("source");
-	if (param)
-	{
-		if (param.length > 0 && param !== "undefined")
-		{
-			url = param;
-		}
-	}
+	var url = ""; var param = GetParameterByName("source");	if (param) { if (param.length > 0 && param !== "undefined") { url = param; } }
 	
-	if (url.length == 0)
-	{
-		var urlSource = GetCookie("urlSource");
-		if (urlSource)
-		{
-			if (urlSource.length > 0 && urlSource !== "undefined")
-			{
-				url = urlSource;
-			}
-		}
-	}
-	
-	LoadSource(url);
+	if (url.length == 0) { var urlSource = GetCookie("urlSource"); if (urlSource) { if (urlSource.length > 0 && urlSource !== "undefined") { url = urlSource; } } }	LoadSource(url);
 	
 	/*
 	try
@@ -245,8 +219,6 @@ window.onload = function()
 
 </table>
   
-<div id="messageBox"></div>
-
 <!--footerBar-->
 <div id="footerBar"></div>
 <!--end footerBar-->

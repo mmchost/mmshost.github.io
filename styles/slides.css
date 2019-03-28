@@ -1,6 +1,6 @@
-.light-theme .banner
+.light-theme .slides
 {
-	background-image:url(../images/banner/1920L.png);
+	background-image:url(../images/slides/1920L.png);
 	height:480px;
 	background-repeat:no-repeat;
 	background-attachment:scroll;
@@ -12,9 +12,9 @@
 	box-sizing:inherit;
 }
 
-.dark-theme .banner
+.dark-theme .slides
 {
-	background-image:url(../images/banner/1920D.png);
+	background-image:url(../images/slides/1920D.png);
 	height:480px;
 	background-repeat:no-repeat;
 	background-attachment:scroll;
@@ -28,30 +28,30 @@
 
 @media screen and (max-width:1080px) 
 {
-	.light-theme .banner
+	.light-theme .slides
 	{
-		background-image:url(../images/banner/720L.png);
+		background-image:url(../images/slides/720L.png);
 		height:320px;
 	}
 	
-	.dark-theme .banner
+	.dark-theme .slides
 	{
-		background-image:url(../images/banner/720D.png);
+		background-image:url(../images/slides/720D.png);
 		height:320px;
 	}
 }
 
 @media screen and (max-width:720px) 
 {
-	.light-theme .banner
+	.light-theme .slides
 	{
-		background-image:url(../images/banner/320L.png);
+		background-image:url(../images/slides/320L.png);
 		height:320px;
 	}
 	
-	.dark-theme .banner
+	.dark-theme .slides
 	{
-		background-image:url(../images/banner/320D.png);
+		background-image:url(../images/slides/320D.png);
 		height:320px;
 	}
 }

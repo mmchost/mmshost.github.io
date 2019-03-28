@@ -69,11 +69,7 @@
 	
 window.onload = function() 
 {
-	Page_OnLoad(true, false, true, true, "images/", true, "");
-
-	var url = ""; var param = GetParameterByName("source");	if (param) { if (param.length > 0 && param !== "undefined") { url = param; } }
-	
-	if (url.length == 0) { var urlSource = GetCookie("urlSource"); if (urlSource) { if (urlSource.length > 0 && urlSource !== "undefined") { url = urlSource; } } }	LoadSource(url);
+	Page_OnLoad(true, false, true, true, "images/", true, ""); LoadSource();
 	
 	/*
 	try

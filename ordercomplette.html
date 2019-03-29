@@ -3,7 +3,7 @@
 <head>
 <meta name="robots" content="noindex" />
 
-<title>Comanda trimisa - Medios Online Store</title>
+<title>Medios Online Store</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="Medios Online Store" />
@@ -67,6 +67,8 @@ window.onload = function()
 		if (message)
 		{
 			message.style.display = "block";
+			var title = document.title;
+			document.title = "Comanda trimisa - " + title;
 		}
 	}
 

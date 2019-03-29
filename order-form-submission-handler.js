@@ -366,7 +366,7 @@
 				}
 				else			
 				{
-					location.href = "orderfailed?true";
+					location.href = "ordercomplette?false";
 				}
 			}
 			return;

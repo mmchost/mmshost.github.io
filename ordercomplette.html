@@ -52,6 +52,10 @@
 	{
 		location.href = "./#products";
 	}
+	function RetrySend()
+	{
+		location.href = "requestoffer";
+	}
 </script>
 
 </head>
@@ -63,12 +67,22 @@ window.onload = function()
 	var param = window.location.search.substr(1);
 	if (param === "true")
 	{
-		var message = document.getElementById("message");
-		if (message)
+		var okMessage = document.getElementById("okMessage");
+		if (okMessage)
 		{
-			message.style.display = "block";
+			okMessage.style.display = "block";
 			var title = document.title;
-			document.title = "Comanda trimisa - " + title;
+			document.title = "Comandă trimisă - " + title;
+		}
+	}
+	if (param === "false")
+	{
+		var failedMessage = document.getElementById("failedMessage");
+		if (failedMessage)
+		{
+			failedMessage.style.display = "block";
+			var title = document.title;
+			document.title = "Comandă eșuată - " + title;
 		}
 	}
 
@@ -86,13 +100,20 @@ window.onload = function()
 <!--Thank you-->
 <tr>
 <td style="height:100%; text-align:center; padding-top:64px; padding-bottom:64px; padding-left:10px; padding-right:10px;">
-<span id="message" style="display:none;">
-<a class="large-fontsize">Va multumim!</a>
+<span id="okMessage" style="display:none;">
+<a class="large-fontsize">Vă mulțumim!</a>
 <br/><br/>
-<a class="normal-fontsize">Comanda dumneavoastra a fost trimisa cu succes.</a>
-</span>
+<a class="normal-fontsize">Comanda dumneavoastră a fost trimisă cu succes.</a>
 <br/><br/>
 <button class="button-default" onclick="ContinueShopping()">Continuați cumpărăturile</button>
+</span>
+<span id="failedMessage" style="display:none; color:#D3313E;">
+<a class="large-fontsize">Eroare!</a>
+<br/><br/>
+<a class="normal-fontsize">Comanda dumneavoastră nu a fost trimisă.</a>
+<br/><br/>
+<button class="button-default" onclick="RetrySend()">Încercați din nou</button>
+</span>
 </td>
 </tr>
 <!--end Thank you-->

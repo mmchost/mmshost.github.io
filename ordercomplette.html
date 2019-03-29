@@ -77,6 +77,11 @@ window.onload = function()
 	}
 	if (param === "false")
 	{
+		var continueButton = document.getElementById("continueButton");
+		if (continueButton)
+		{
+			continueButton.style.display = "none";
+		}
 		var failedMessage = document.getElementById("failedMessage");
 		if (failedMessage)
 		{
@@ -105,8 +110,8 @@ window.onload = function()
 <br/><br/>
 <a class="normal-fontsize">Comanda dumneavoastră a fost trimisă cu succes.</a>
 <br/><br/>
-<button class="button-default" onclick="ContinueShopping()">Continuați cumpărăturile</button>
 </span>
+<button id="continueButton" class="button-default" onclick="ContinueShopping()">Continuați cumpărăturile</button>
 <span id="failedMessage" style="display:none; color:#D3313E;">
 <a class="large-fontsize">Eroare!</a>
 <br/><br/>

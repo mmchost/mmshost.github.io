@@ -1,19 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
 <url>
-      <loc>https://store.mediosmedical.ro</loc>
-      <lastmod>2019-02-18</lastmod>
+      <loc>https://store.mediosmedical.ro</loc>      
 </url>
       
 <url>
-      <loc>https://store.mediosmedical.ro/filme+radiologice+fuji+di-hl+20x25+cm+blue+base</loc>
-      <lastmod>2019-02-18</lastmod>
+      <loc>https://store.mediosmedical.ro/product/filme+radiologice+fuji+di-hl+20x25+blue+base</loc>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/filme-radiologice-fuji-di-hl-20x25-1.png</image:loc>
+      </image:image>
 </url>
       
 <url>
-      <loc>https://store.mediosmedical.ro/filme+radiologice+fuji+di-hl+35x43+cm+blue+base</loc>
-      <lastmod>2019-02-18</lastmod>
+      <loc>https://store.mediosmedical.ro/product/filme+radiologice+fuji+di-hl+35x43+blue+base</loc>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/filme-radiologice-fuji-di-hl-35x43-1.png</image:loc>
+      </image:image>
+</url>
+      
+<url>
+      <loc>https://store.mediosmedical.ro/product/plicuri+c4+pentru+filme+radiologice+d1</loc>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-c4-pentru-filme-radiologice-d1-1.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-c4-pentru-filme-radiologice-d1-2.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-c4-pentru-filme-radiologice-d1-3.png</image:loc>
+      </image:image>
+</url>
+      
+<url>
+      <loc>https://store.mediosmedical.ro/product/plicuri+c4+pentru+filme+radiologice+d2</loc>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-c4-pentru-filme-radiologice-d2-1.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-c4-pentru-filme-radiologice-d2-2.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-c4-pentru-filme-radiologice-d2-3.png</image:loc>
+      </image:image>
+</url>
+      
+<url>
+      <loc>https://store.mediosmedical.ro/product/plicuri+e4+pentru+filme+radiologice+d1</loc>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-e4-pentru-filme-radiologice-d1-1.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-e4-pentru-filme-radiologice-d1-2.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-e4-pentru-filme-radiologice-d1-3.png</image:loc>
+      </image:image>
+</url>
+      
+<url>
+      <loc>https://store.mediosmedical.ro/product/plicuri+e4+pentru+filme+radiologice+d2</loc>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-e4-pentru-filme-radiologice-d2-1.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-e4-pentru-filme-radiologice-d2-2.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-e4-pentru-filme-radiologice-d2-3.png</image:loc>
+      </image:image>
+</url>
+      
+<url>
+      <loc>https://store.mediosmedical.ro/product/plicuri+a3+pentru+filme+radiologice+d1</loc>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d1-1.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d1-2.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d1-3.png</image:loc>
+      </image:image>
+</url>
+      
+<url>
+      <loc>https://store.mediosmedical.ro/product/plicuri+a3+pentru+filme+radiologice+d2</loc>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d2-1.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d2-2.png</image:loc>
+      </image:image>
+      <image:image>
+            <image:loc>https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d2-3.png</image:loc>
+      </image:image>
 </url>
 
 

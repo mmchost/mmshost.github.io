@@ -12,8 +12,8 @@
 .images-gallery{
     background-color: red;
     overflow: hidden;
-    height: 480px;
-	width:480px;
+    height: 320px;
+	width:320px;
     white-space: nowrap;
 	vertical-align:middle;
 	border-style:solid;
@@ -34,7 +34,7 @@
 	border-style:solid;
 	border-color:blue;
 	border-width:1px;
-	width:480px;
+	width:320px;
 	height:48px;
 	text-align:center;	
 }
@@ -110,9 +110,9 @@ function swipe(event)
 	if (px < midpoint)
 	{
 		var left = item.style.marginLeft.replace("px", "");
-		left = Math.round(left) - 480;
+		left = Math.round(left) - 320;
 		
-		var max = -480 * (items.length - 1);
+		var max = -320 * (items.length - 1);
 		index++;
 		if (left < max)
 		{
@@ -131,7 +131,7 @@ function swipe(event)
 	else
 	{
 		var left = item.style.marginLeft.replace("px", "");
-		left = Math.round(left) + 480;
+		left = Math.round(left) + 320;
 		
 		index--;
 		if (left > 0)
@@ -153,7 +153,7 @@ function swipe(event)
 function clicked(index, nav)
 {
 	var item = document.getElementById('firstItem');
-	var left = 480 - (480 * index);
+	var left = 320 - (320 * index);
 	item.style.marginLeft = left + 'px';
     item.style.transition = '1s';
 	
@@ -166,7 +166,7 @@ function clicked(index, nav)
 
 <body>
 
-<div class="images-gallery" ontouchend="swipe(event)" ontouchstart="touchstart(event)">
+<div class="images-gallery" ontouchmove="swipe(event)" ontouchstart="touchstart(event)">
     <div class="image-wrapper" id="firstItem">
         <img class="image" src="https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d2-1.png">
     </div><div class="image-wrapper">

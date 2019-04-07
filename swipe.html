@@ -90,15 +90,24 @@ function resetNavs()
 
 var midpoint;
 var index = 0;
+var active = false;
 
 function touchstart(event)
 {
 	var touch = event.targetTouches[0];
 	midpoint = touch.pageX;
+	active = true;
+}
+	
+function touchend(event)
+{
+	active = false;
 }
 
 function swipe(event)
 {
+	if (active)
+	{
 	var touch = event.targetTouches[0];
     //var midpoint = 240; //Math.floor(480/2);
     var px = touch.pageX;
@@ -147,6 +156,7 @@ function swipe(event)
 		{			
 			nvs[index].className = 'image-nav-active';
 		}
+	}
 	}
 }
 

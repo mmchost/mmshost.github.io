@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro-ro">
+<head>
+
+<meta name="Resource-type" content="Document" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<style>
+.images-gallery{
+    background-color: red;
+    overflow: hidden;
+    height: 480px;
+	width:480px;
+    white-space: nowrap;
+	vertical-align:middle;
+	border-style:solid;
+	border-color:red;
+	border-width:1px;
+}
+
+.image-wrapper{
+    width:100%;
+    display: inline-block;
+    text-align: center;
+	margin-left:0px;
+	//cursor: pointer;
+}
+
+.images-nav
+{
+	border-style:solid;
+	border-color:blue;
+	border-width:1px;
+	width:480px;
+	height:48px;
+	text-align:center;	
+}
+
+.image-nav
+{
+	width:32px;
+	height:32px;
+	border-radius:16px;
+	background:orange;	
+	margin-left:10px;
+	cursor:pointer;
+	display:inline-block;	
+	transition:1s;
+}
+
+.image-nav-active
+{
+	width:32px;
+	height:32px;
+	border-radius:16px;	
+	margin-left:10px;
+	cursor:pointer;
+	display:inline-block;
+	background:magenta;
+	transition:1s;
+}
+</style>
+
+<script>
+var items = document.getElementsByClassName('image-wrapper');
+var item;
+
+window.onload = function()
+{
+	item = document.getElementById('firstItem');
+}
+
+function resetNavs()
+{
+	var navs = document.getElementsByClassName('image-nav-active');
+	if (navs)
+	{
+		if (navs.length > 0)
+		{
+			for (var i=0; i<navs.length; i++)
+			{
+				navs[i].className = 'image-nav';
+			}
+		}
+	}
+}
+
+var midpoint;
+var index = 0;
+
+function touchstart(event)
+{
+	var touch = event.targetTouches[0];
+	midpoint = touch.pageX;
+}
+
+function swipe(event)
+{
+	var touch = event.targetTouches[0];
+    //var midpoint = 240; //Math.floor(480/2);
+    var px = touch.pageX;
+	
+	resetNavs();
+	
+	var nvs = document.getElementsByClassName('image-nav');
+	
+	if (px < midpoint)
+	{
+		var left = item.style.marginLeft.replace("px", "");
+		left = Math.round(left) - 480;
+		
+		var max = -480 * (items.length - 1);
+		index++;
+		if (left < max)
+		{
+			left = max;
+			index = items.length - 1;
+		}
+		
+		item.style.marginLeft = left + 'px';
+        item.style.transition = '1s';
+				
+		if (nvs)
+		{
+			nvs[index].className = 'image-nav-active';
+		}
+	}
+	else
+	{
+		var left = item.style.marginLeft.replace("px", "");
+		left = Math.round(left) + 480;
+		
+		index--;
+		if (left > 0)
+		{
+			left = 0;
+			index = 0;
+		}
+		
+		item.style.marginLeft = left + 'px';
+        item.style.transition = '1s';
+		
+		if (nvs)
+		{			
+			nvs[index].className = 'image-nav-active';
+		}
+	}
+}
+
+function clicked(index, nav)
+{
+	var item = document.getElementById('firstItem');
+	var left = 480 - (480 * index);
+	item.style.marginLeft = left + 'px';
+    item.style.transition = '1s';
+	
+	var navs = document.getElementsByClassName('image-nav-active');
+	navs[0].className = 'image-nav';
+	
+	nav.className = 'image-nav-active';
+}
+</script>
+
+<body>
+
+<div class="images-gallery" ontouchend="swipe(event)" ontouchstart="touchstart(event)">
+    <div class="image-wrapper" id="firstItem">
+        <img class="image" src="https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d2-1.png">
+    </div><div class="image-wrapper">
+        <img class="image" src="https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d2-2.png">
+    </div><div class="image-wrapper">
+        <img class="image" src="https://store.mediosmedical.ro/product/images/plicuri-a3-pentru-filme-radiologice-d2-3.png">
+    </div>
+</div>
+<div class="images-nav">	
+	<div class="image-nav-active" onclick="clicked(1, this)"></div>
+	<div class="image-nav" onclick="clicked(2, this)"></div>
+	<div class="image-nav" onclick="clicked(3, this)"></div>
+</div>
+
+</body>
+</html>

@@ -56,7 +56,7 @@
 <script type="text/javascript" src="https://source.mediosmedical.ro/js/getCookie.js"></script>
 <script type="text/javascript" src="https://source.mediosmedical.ro/js/messageBox.js"></script>
 	
-<script type="text/javascript" src="https://source.mediosmedical.ro/js/product.js"></script>
+<script type="text/javascript" src="https://source.mediosmedical.ro/js/product1.js"></script>
 
 </head>
 
@@ -69,101 +69,28 @@
 
 .gallery
 {
-  width:300px;
-  height:300px;
-  pointer-events:none;
+  	width:300px;
+  	height:300px;
+  	pointer-events:none;
+	display:inline-block;
+}
+	
+.preview
+{
+	display:inline-block;
+	vertical-align:top;
+	width:300px;	
+	/*overflow:hidden;*/
 }
 
 </style>
 
 <script>
 
-var item;
-var items;
-var midpoint;
-var index = 0;
-	
 window.onload = function() 
 {
 	Page_OnLoad(true, false, true, true, "../images/", false, "../../"); LoadSource("ENVC4D1");
-  
-  items = document.querySelectorAll("gallery");
-	item = document.getElementById('firstItem');
 };
-
-function resetNavs()
-{
-	var navs = document.getElementsByClassName('image-nav-active');
-	if (navs)
-	{
-		if (navs.length > 0)
-		{
-			for (var i=0; i<navs.length; i++)
-			{
-				navs[i].className = 'image-nav';
-			}
-		}
-	}
-}
-
-function GalleryTouchstart(event)
-{
-	var touch = event.targetTouches[0];
-	midpoint = touch.pageX;
-}
-
-function GalleryTouchend(event)
-{
-	var touch = event.targetTouches[0];
-    //var midpoint = 240; //Math.floor(480/2);
-    var px = touch.pageX;
-	
-	resetNavs();
-	
-	var nvs = document.getElementsByClassName('image-nav');
-	
-	if (px < midpoint)
-	{
-		var left = item.style.marginLeft.replace("px", "");
-		left = Math.round(left) - 480;
-		
-		var max = -480 * (items.length - 1);
-		index++;
-		if (left < max)
-		{
-			left = max;
-			index = items.length - 1;
-		}
-		
-		item.style.marginLeft = left + 'px';
-        item.style.transition = '1s';
-				
-		if (nvs)
-		{
-			nvs[index].className = 'image-nav-active';
-		}
-	}
-	else
-	{
-		var left = item.style.marginLeft.replace("px", "");
-		left = Math.round(left) + 480;
-		
-		index--;
-		if (left > 0)
-		{
-			left = 0;
-			index = 0;
-		}
-		
-		item.style.marginLeft = left + 'px';
-        item.style.transition = '1s';
-		
-		if (nvs)
-		{			
-			nvs[index].className = 'image-nav-active';
-		}
-	}
-}
 
 </script>
 

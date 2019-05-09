@@ -23,7 +23,18 @@
 		<images>filme-radiologice-fuji-di-hl-35x43-1.png</images>
 		<page>product/filme+radiologice+fuji+di-hl+35x43+blue+base</page>
 	</product>
-  	<product>
+	<product>
+		<id>MDVDP1</id>
+		<name>CD / DVD Personalizat
+		50 buc / ambalaj
+		Tiparire Ultra, Full Color</name>
+		<available>true</available>
+		<price>0</price>
+		<quantity>1</quantity>
+		<images>cd-dvd-personalizat-1.png,cd-dvd-personalizat-2.png,cd-dvd-personalizat-3.png</images>
+		<page>product/cd+dvd+personalizate</page>
+	</product>
+	<product>
 		<id>ENVC4D1</id>
 		<name>Plicuri C4 pentru filme radiologice
 		150 buc / ambalaj

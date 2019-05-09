@@ -3,8 +3,8 @@
 <products>
 	<product>
 		<id>DIHL2025</id>
-		<name>Filme radiologice Fujifilm
-		DI-HL 20x25 cm (8x10 inch)
+		<name>Filme radiologice Fujifilm,
+		DI-HL 20x25 cm (8x10 inch),
 		Blue base, 150 filme / cutie</name>
 		<available>true</available>
 		<price>0</price>
@@ -14,8 +14,8 @@
 	</product>
 	<product>
 		<id>DIHL3543</id>
-		<name>Filme radiologice Fujifilm
-		DI-HL 35x43 cm (14x17 inch)
+		<name>Filme radiologice Fujifilm,
+		DI-HL 35x43 cm (14x17 inch),
 		Blue base, 100 filme / cutie</name>
 		<available>true</available>
 		<price>0</price>
@@ -25,8 +25,8 @@
 	</product>
 	<product>
 		<id>MDVDP1</id>
-		<name>CD / DVD Personalizat
-		tiparire Ultra, full color
+		<name>CD / DVD Personalizat,
+		tiparire Ultra, full color,
 		viteza 16x, 50 buc</name>
 		<available>true</available>
 		<price>0</price>
@@ -36,9 +36,9 @@
 	</product>
 	<product>
 		<id>ENVC4D1</id>
-		<name>Plicuri C4 pentru filme radiologice
-		150 buc / ambalaj
-		23x32 cm (9x12 inch)</name>
+		<name>Plicuri C4 pentru filme radiologice,
+		23x32 cm (9x12 inch),
+		150 buc</name>
 		<available>true</available>
 		<price>89</price>
 		<quantity>1</quantity>
@@ -47,9 +47,9 @@
 	</product>
 	<product>
 		<id>ENVC4D2</id>
-		<name>Plicuri C4 pentru filme radiologice
-		150 buc / ambalaj
-		23x32 cm (9x12 inch)</name>
+		<name>Plicuri C4 pentru filme radiologice,
+		23x32 cm (9x12 inch),
+		150 buc</name>
 		<available>true</available>
 		<price>89</price>
 		<quantity>1</quantity>
@@ -58,9 +58,9 @@
 	</product>
 	<product>
 		<id>ENVE4D1</id>
-		<name>Plicuri E4 pentru filme radiologice
-		150 buc / ambalaj
-		28x40 cm (11x15 inch)</name>
+		<name>Plicuri E4 pentru filme radiologice,
+		28x40 cm (11x15 inch),
+		150 buc</name>
 		<available>true</available>
 		<price>149</price>
 		<quantity>1</quantity>
@@ -69,9 +69,9 @@
 	</product>
 	<product>
 		<id>ENVE4D2</id>
-		<name>Plicuri E4 pentru filme radiologice
-		150 buc / ambalaj
-		28x40 cm (11x15 inch)</name>
+		<name>Plicuri E4 pentru filme radiologice,
+		28x40 cm (11x15 inch),
+		150 buc</name>
 		<available>true</available>
 		<price>149</price>
 		<quantity>1</quantity>
@@ -80,9 +80,9 @@
 	</product>
 	<product>
 		<id>ENVA3D1</id>
-		<name>Plicuri A3 pentru filme radiologice
-		150 buc / ambalaj
-		32x42 cm (12x16 inch)</name>
+		<name>Plicuri A3 pentru filme radiologice,
+		32x42 cm (12x16 inch),
+		150 buc</name>
 		<available>true</available>
 		<price>179</price>
 		<quantity>1</quantity>
@@ -91,9 +91,9 @@
 	</product>
 	<product>
 		<id>ENVA3D2</id>
-		<name>Plicuri A3 pentru filme radiologice
-		150 buc / ambalaj
-		32x42 cm (12x16 inch)</name>
+		<name>Plicuri A3 pentru filme radiologice,
+		32x42 cm (12x16 inch),
+		150 buc</name>
 		<available>true</available>
 		<price>179</price>
 		<quantity>1</quantity>

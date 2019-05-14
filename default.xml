@@ -27,7 +27,7 @@
 		<id>MDVDP1</id>
 		<name>CD / DVD Personalizat,
 		tiparire Ultra, full color,
-		viteza 16x, 50 buc</name>
+		viteza 16x</name>
 		<available>true</available>
 		<price>1.99</price>
 		<quantity>50</quantity>
@@ -37,8 +37,7 @@
 	<product>
 		<id>ENVC4D1</id>
 		<name>Plicuri C4 pentru filme radiologice,
-		23x32 cm (9x12 inch),
-		150 buc</name>
+		23x32 cm (9x12 inch)</name>
 		<available>true</available>
 		<price>0.59</price>
 		<quantity>150</quantity>
@@ -48,8 +47,7 @@
 	<product>
 		<id>ENVE4D1</id>
 		<name>Plicuri E4 pentru filme radiologice,
-		28x40 cm (11x15 inch),
-		150 buc</name>
+		28x40 cm (11x15 inch)</name>
 		<available>true</available>
 		<price>0.99</price>
 		<quantity>150</quantity>
@@ -59,8 +57,7 @@
 	<product>
 		<id>ENVA3D1</id>
 		<name>Plicuri A3 pentru filme radiologice,
-		32x42 cm (12x16 inch),
-		150 buc</name>
+		32x42 cm (12x16 inch)</name>
 		<available>true</available>
 		<price>1.19</price>
 		<quantity>150</quantity>

@@ -123,9 +123,21 @@ window.onload = function()
 	
 <table cellpadding="0" cellspacing="0" class="sub-container"><tr>
 <td class="preview-container">
-<span class="preview" id="galleryContainer" ontouchend="GalleryTouchend(event)" ontouchstart="GalleryTouchstart(event)" onmousedown="GalleryMousedown(event)" onmouseup="GalleryMouseup(event)"></span>
+<span class="preview" id="galleryContainer" ontouchend="GalleryTouchend(event)" ontouchstart="GalleryTouchstart(event)" onmousedown="GalleryMousedown(event)" onmouseup="GalleryMouseup(event)">
+<img class="gallery" id="firstItem" src="images/plicuri-c4-pentru-filme-radiologice-d1-1.png" alt="Plicuri C4 Pentru Filme Radiologice"/>
+<img class="gallery" src="images/plicuri-c4-pentru-filme-radiologice-d1-2.png"/>
+<img class="gallery" src="images/plicuri-c4-pentru-filme-radiologice-d1-3.png"/>
+<img class="gallery" src="images/plicuri-pentru-filme-radiologice-4.png"/>
+</span>
 <span style="display:inline-block; border:none 1px #000; width:300px;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tr><td id="galleryButtons" style="text-align:center;"></td></tr></table>
+<table cellpadding="0" cellspacing="0" style="width:100%;"><tr>
+<td id="galleryButtons" style="text-align:center;">
+<a title="1/4" name="0" class="selectedGalleryButton" onclick="GalleryClick(0, this)"/>
+<a title="2/4" name="1" class="galleryButton" onclick="GalleryClick(1, this)"/>
+<a title="3/4" name="2" class="galleryButton" onclick="GalleryClick(2, this)"/>
+<a title="4/4" name="3" class="galleryButton" onclick="GalleryClick(3, this)"/>
+</td>
+</tr></table>
 </span>
 <span class="subTitle"><a id="detailsTitle" style="font-weight:bold; padding-left:5px; padding-bottom:5px; border-width:0px;"></a></span>	
 </td>

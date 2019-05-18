@@ -76,21 +76,30 @@ window.onload = function()
 	Page_OnLoad(true, false, true, true, "../images/", false, "../../"); LoadSource("MDVDP1");
 };
 	
-function GalleryMouseenter(source)
+function GalleryMouseover()
 {
 	if (source)
 	{
+		var items = document.getElementsByTagName("img");
+		
+		var firstItem = document.getElementById("firstItem");
+		
+		var left = firstItem.style.marginLeft.replace("px", "");
+		left = Math.abs(left);
+		
+		var index = left / 300;
+		
 		var largePreview = document.getElementById("largePreview");
 		var largeImg = document.getElementById("largeImg");
 		if (largePreview && largeImg)
 		{
 			largePreview.style.display = "block";
-			largeImg.src = source.src;
+			largeImg.src = items[index].src;
 		}
 	}
 }
 	
-function GalleryMouseleave()
+function GalleryMouseout()
 {
 	var largePreview = document.getElementById("largePreview");
 	var largeImg = document.getElementById("largeImg");
@@ -125,8 +134,8 @@ function GalleryMouseleave()
 
 <table cellpadding="0" cellspacing="0" class="sub-container"><tr>
 <td class="preview-container">
-<span class="preview" id="galleryContainer" ontouchend="GalleryTouchend(event, 4)" onmouseup="GalleryMouseup(event, 4)" ontouchstart="GalleryTouchstart(event)" onmousedown="GalleryMousedown(event)">
-<img class="gallery" id="firstItem" src="images/cd-dvd-personalizat-1.png" alt="CD, DVD Personalizat" onmouseenter="GalleryMouseenter(this)" onmouseleave="GalleryMouseleave()"/><!--
+<span class="preview" id="galleryContainer" ontouchend="GalleryTouchend(event, 4)" onmouseup="GalleryMouseup(event, 4)" ontouchstart="GalleryTouchstart(event)" onmousedown="GalleryMousedown(event)" onmouseover="GalleryMouseover()" onmouseout="GalleryMouseout()">
+<img class="gallery" id="firstItem" src="images/cd-dvd-personalizat-1.png" alt="CD, DVD Personalizat"/><!--
 --><img class="gallery" src="images/cd-dvd-personalizat-2.png"/><!--
 --><img class="gallery" src="images/cd-dvd-personalizat-3.png"/><!--
 --><img class="gallery" src="images/cd-dvd-personalizat-4.png"/>

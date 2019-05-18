@@ -78,21 +78,22 @@ window.onload = function()
 	
 function GalleryMouseover()
 {
-	var items = document.getElementsByTagName("img");
-	
-	var firstItem = document.getElementById("firstItem");
-	
-	var left = firstItem.style.marginLeft.replace("px", "");
-	left = Math.abs(left);
-	
-	var index = left / 300;
-	
-	var largePreview = document.getElementById("largePreview");
-	var largeImg = document.getElementById("largeImg");
-	if (largePreview && largeImg)
+	var container = document.getElementById("galleryContainer");
+	if (container)
 	{
-		largePreview.style.display = "block";
-		largeImg.src = items[index].src;
+		var items = container.getElementsByTagName("img");
+		var firstItem = document.getElementById("firstItem");
+		var left = firstItem.style.marginLeft.replace("px", "");
+		left = Math.abs(left);
+		var index = left / 300;
+		
+		var largePreview = document.getElementById("largePreview");
+		var largeImg = document.getElementById("largeImg");
+		if (largePreview && largeImg)
+		{
+			largePreview.style.display = "block";
+			largeImg.src = items[index].src;
+		}
 	}
 }
 	

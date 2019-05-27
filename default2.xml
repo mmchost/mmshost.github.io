@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products>
+	<product>
+		<id>DIHL2025</id>
+		<name>Filme radiologice Fujifilm,
+		DI-HL 20x25 cm (8x10 inch),
+		Blue base, 150 filme / cutie</name>
+		<available>true</available>
+		<price>0</price>
+		<quantity>1</quantity>
+		<image>filme-radiologice-fuji-di-hl-20x25-1.png</image>
+		<page>product/filme+radiologice+fuji+di-hl+20x25+blue+base</page>
+    <similarItems>DIHL3543</similarItems>
+	</product>
+	<product>
+		<id>DIHL3543</id>
+		<name>Filme radiologice Fujifilm,
+		DI-HL 35x43 cm (14x17 inch),
+		Blue base, 100 filme / cutie</name>
+		<available>true</available>
+		<price>0</price>
+		<quantity>1</quantity>
+		<image>filme-radiologice-fuji-di-hl-35x43-1.png</image>
+		<page>product/filme+radiologice+fuji+di-hl+35x43+blue+base</page>
+    <similarItems>DIHL2025</similarItems>
+	</product>
+	<product>
+		<id>MDVDP1</id>
+		<name>CD / DVD Personalizat,
+		tiparire Ultra, full color,
+		viteza 16x</name>
+		<available>true</available>
+		<price>1.99</price>
+		<quantity>50</quantity>
+		<image>cd-dvd-personalizat-1.png</image>
+		<page>product/cd+dvd+personalizat</page>
+    <similarItems>ENVC4D1,ENVE4D1,ENVA3D1</similarItems>
+	</product>
+	<product>
+		<id>ENVC4D1</id>
+		<name>Plicuri C4 pentru filme radiologice,
+		23x32 cm (9x12 inch)</name>
+		<available>true</available>
+		<price>0.59</price>
+		<quantity>150</quantity>
+		<image>plicuri-c4-pentru-filme-radiologice-d1-1.png</image>
+		<page>product/plicuri+c4+pentru+filme+radiologice+d1</page>
+    <similarItems>MDVDP1,ENVE4D1,ENVA3D1</similarItems>
+	</product>	
+	<product>
+		<id>ENVE4D1</id>
+		<name>Plicuri E4 pentru filme radiologice,
+		28x40 cm (11x15 inch)</name>
+		<available>true</available>
+		<price>0.99</price>
+		<quantity>150</quantity>
+		<image>plicuri-e4-pentru-filme-radiologice-d1-1.png</image>
+		<page>product/plicuri+e4+pentru+filme+radiologice+d1</page>
+    <similarItems>MDVDP1,ENVC4D1,ENVA3D1</similarItems>
+	</product>	
+	<product>
+		<id>ENVA3D1</id>
+		<name>Plicuri A3 pentru filme radiologice,
+		32x42 cm (12x16 inch)</name>
+		<available>true</available>
+		<price>1.19</price>
+		<quantity>150</quantity>
+		<image>plicuri-a3-pentru-filme-radiologice-d1-1.png</image>
+		<page>product/plicuri+a3+pentru+filme+radiologice+d1</page>
+    <similarItems>MDVDP1,ENVC4D1,ENVE4D1</similarItems>
+	</product>	
+</products>

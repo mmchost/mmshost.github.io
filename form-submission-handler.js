@@ -259,11 +259,11 @@
 				if (status == "OK")
 				{
 					//document.cookie = "cart=";
-					location.href = "ordercomplette";
+					location.href = "ordercomplette?true";
 				}
 				else			
 				{
-					location.href = "orderfailed";
+					location.href = "ordercomplette?false";
 				}
 			}
 			return;

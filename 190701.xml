@@ -42,12 +42,12 @@
 		<name>Plicuri C4 pentru filme radiologice,
 		23x32 cm (9x12 inch)</name>
 		<available>true</available>
-		<price>0.40</price>
+		<price>1.40</price>
 		<quantity>150</quantity>
 		<image>plicuri-c4-pentru-filme-radiologice-d1-1.png</image>
 		<page>plicuri+c4+pentru+filme+radiologice+d1</page>
 		<similarItems>MDVDP1,ENVE4D1,ENVA3D1</similarItems>
-	</product>	
+	</product>
 	<product>
 		<id>ENVE4D1</id>
 		<name>Plicuri E4 pentru filme radiologice,
@@ -58,7 +58,7 @@
 		<image>plicuri-e4-pentru-filme-radiologice-d1-1.png</image>
 		<page>plicuri+e4+pentru+filme+radiologice+d1</page>
 		<similarItems>MDVDP1,ENVC4D1,ENVA3D1</similarItems>
-	</product>	
+	</product>
 	<product>
 		<id>ENVA3D1</id>
 		<name>Plicuri A3 pentru filme radiologice,
